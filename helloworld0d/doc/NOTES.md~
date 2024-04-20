@@ -1,0 +1,13 @@
+update: I'm having success converting to acmart latex format by using ChatGPT.
+
+I wrote the content in a WYSIWYG editor (Pages on MacOS)
+
+then exported it to .docx format
+
+then converted the .docx to .md with the following magic:
+$ pandoc -f docx --extract-media=./ -t markdown 'Towards DPLs.docx' -o dpls.md
+
+then used this query in ChatGPT "convert the following markdown to acmart latex format:" and pasted the .md file into ChatGPT and copied its output into a file "test3.tex"
+
+then ran
+$ pdflatex test3.tex

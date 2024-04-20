@@ -1,0 +1,4 @@
+#!/bin/bash
+# see https://stackoverflow.com/questions/16383237/how-can-doc-docx-files-be-converted-to-markdown-or-structured-text
+#pandoc -f docx --extract-media=./ -t gfm foo.docx -o foo.markdown
+pandoc -f docx --extract-media=./ -t markdown 'Towards DPLs.docx' -o dpls.md
