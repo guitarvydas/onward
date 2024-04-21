@@ -8,7 +8,7 @@ Then...
 
 2. $ pandoc -f docx --extract-media=./ -t markdown 'Towards DPLs.docx' -o dpls.md
 
-3. used the query in ChatGPT "convert the following markdown to acmart latex format:" and pasted the .md file into ChatGPT and copied its output into a file "test3.tex"
+3. used the query in ChatGPT "convert the following markdown to acmart latex format using 10pt:" and pasted the .md file into ChatGPT and copied its output into a file "test3.tex"
 
 4. $ pdflatex test3.tex
 

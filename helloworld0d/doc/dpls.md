@@ -1,4 +1,97 @@
+\\title{Extending Programming with Diagrammatic Programming Languages}
+
+\\author{Zac Nowicki}
+
+\\affiliation{
+
+\\institution{Kagi Inc.}
+
+\\city{Palo Alto}
+
+\\state{CA}
+
+\\country{USA}
+
+}
+
+\\email{znowicki@kagi.com}
+
+\\author{Paul Tarvydas}
+
+\\affiliation{
+
+\\institution{Retired}
+
+\\city{Toronto}
+
+\\state{Ontario}
+
+\\country{Canada}
+
+}
+
+\\email{paultarvydas@gmail.com}
+
 Abstract
+
+We assert that DPLs - Diagrammatic Programming Languages - can be used
+as an adjunct syntax for creating programs.
+
+We give an example of a simple DPL syntax and describe a method for
+creating executable code using diagrams drawn with off-the-shelf graphic
+editors.
+
+Certain forms of expression are more easily expressed in DPL form rather
+than TPL form. TPL-only expression of programs can lead to perceived
+complexity and increased program sizes. The use of DPLs makes it
+possible to address these sorts of issues using fresh notations.
+
+1\. Introduction - Diagrams as Additional Syntax for Programming
+Languages
+
+The goal of programming is to create sequences of instructions -
+programs - that cause electronic hardware to perform useful tasks.
+
+To that end, programmers have been employing a single kind of syntax -
+text.
+
+Use of text for programs was based on the early limitations of
+electronic hardware and on the convention that human thought needs to be
+expressed as equations written on a two-dimensional medium - paper -
+using printing presses.
+
+Early electronic hardware was only capable of supporting grids of
+non-overlapping bitmaps called "characters". Today, though, hardware can
+support vector graphics and overlapping, resizable windows and widgets.
+
+Early electronic hardware was made reprogrammable by the invention of
+the Central Processing Unit - CPU. CPUs were originally designed to be
+non-reentrant and single threaded. The high cost of early CPU-based
+computers prevented use of multiple CPUs in projects, thus, causing the
+insertion of extra software for simulating multiple CPUs on single
+hardware devices. Today, though, CPUs - and memory - are inexpensive and
+plentiful, a fact which should allow the use of alternate forms of
+expressing programs.
+
+The name "CPU" indicates the prevalent notion in early programming, that
+hardware designs needed to be controlled by a central authority. This
+belief is being strained as hardware becomes more distributed in the
+form of internet, robotics, etc. The notion of centrality and
+sequentiality was crystallized in early forms of TPL programming,
+beginning at least with the FORTRAN programming language in 1954.
+
+FORTRAN made the simplifying assumption that CPU subroutines could be
+used to express mathematical equations ("formulae"). This assumption was
+calcified and led to the invention of the callstack using shared memory.
+Preemption was invented when the prevalent use of shared memory between
+subroutines was found to conflict with the simulation of multiple CPUs.
+
+These early kinds of expression continue to permeate most common
+programming languages.
+
+In essence, this paper shows that these habits of thought can be easily
+re-cast using modern hardware realities, which include the internet,
+robotics, video, etc.
 
 This paper describes a technique for extending the syntax of programming
 languages.
@@ -11,7 +104,10 @@ referring to this class of new programming syntax.
 
 We assert that DPLs might be used *along side* of existing TPLs (Textual
 Programming Languages) and that DPLs are hybrids of diagram and textual
-notations.
+notations. TPLs are useful for expressing a specific kind of program -
+computation - whereas other syntaxes make it more fruitful to express
+other kinds of programs that don't lend themselves to being expresses in
+equation form.
 
 There are multiple possible DPL syntaxes. This paper suggests but a
 single DPL syntax. It is assumed that a variety of syntaxes might be
@@ -24,26 +120,36 @@ understandable drawings of programs, e.g. 0D, syntactic simplicity, DI
 We do not discuss fundamental DPL principles in this paper and refer the
 reader to other related writings on these subjects.
 
-\[TBD\] This paper is laid out in XXX (???) sections.
+This paper is laid out in 8 sections.
 
-[Example]{.underline}
+1\. [Introduction - Diagrams as Additional Syntax for Programming
+Languages]{.underline}
 
-[Principles]{.underline} lays out the basic principles for convenient
-development of programs
+2\. [Motivating Example]{.underline}
 
-[Other Examples and Extensions]{.underline} lists brief descriptions and
+3\. [Leaf Component "Echo"]{.underline}
+
+4\. [Compilation and Execution]{.underline}
+
+5\. [Other Examples and Usage]{.underline} lists brief descriptions and
 code repositories for other POCs that employee this technique, along
 with possible future directions.
 
-Example![Screenshot 2024-04-16 at 9.13.29
+6\. [Fundamental Principles]{.underline} lays out the basic principles
+for convenient development of programs
+
+7\. [Relevant Principles and Issues]{.underline} lists various
+principles whose discussion is deferred.
+
+8\. [Future]{.underline} lists possible avenues for further research.
+
+2\. Motivating Example![Screenshot 2024-04-16 at 9.13.29
 AM.png](./media/image1.png){width="6.5in" height="4.663989501312336in"}
 
-The above diagram is a motivating example.
-
-The above diagram shows but one sample of a practical DPL syntax.
-Variations and improvements on this syntax can be imagined. The above
-syntax is being used to produce actual applications like term-rewriting
-(*t2t* text-to-text rewriting) compilers, LLMs, DSLs for creating DSLs,
+Fig. 1 shows but one sample of a practical DPL syntax. Variations and
+improvements on this syntax can be imagined. This syntax is being used
+to produce actual applications like term-rewriting (*t2t* -
+text-to-text - rewriting) compilers, LLMs, DSLs for creating DSLs,
 Visual Shell prototypes, games, etc.
 
 This DPL syntax consists of only a few kinds of closed figures plus
@@ -62,7 +168,9 @@ The graphML file can be processed using off-the-shelf tools, like an XML
 parser or a PEG-based parser\[3\]\[4\].
 
 In our case, we used the Odin programming language\[5\] and the XML
-parsing library that is included in the Odin library\[6\].
+parsing library that is included in the Odin library\[6\]. Other
+languages and libraries and parsing techniques can be used, and, are
+being actively explored.
 
 We choose not to reproduce the code for the actual diagram parser here,
 due to space limitations for this paper. The full source code for the
@@ -137,13 +245,45 @@ A bag of Children components.
 A bag of Connections between children (including connections to/from the
 parent containing diagram).
 
-Compilation and Execution
+3\. Leaf Component "Echo"
+
+In our implementation, we used the Odin programming language for
+creating the diagram parser, but, we used the Python programming
+language to load and execute the parsed results.
+
+Figure 1 refers to a Leaf component template called "Echo". The "Echo"
+component is instantiated three (3) times. Leaf components are
+implemented with code in some host language (Python, in our case). A
+sample of such an implementation is shown below. Software components
+appear as rectangles on the drawing. The implementation provides two (2)
+entry points for each software component:
+
+The code to instantiate a component from the "Echo" template. In Figure
+1, the "Echo" code creates three (3) instances, each being unique, but,
+derived from the same template.
+
+The code to handle incoming messages for each instance derived from the
+template. In this example, an "Echo" component does nothing more than
+forwarding the received message. The *handler* code is activated for
+*each* incoming message.
+
+def Echo (reg, owner, name, template_data):
+
+name_with_id = gensym (\"Echo\")
+
+return make_leaf (name_with_id, owner, None, Echo_handler)
+
+def Echo_handler (eh, msg):
+
+send_string (eh, \"\", msg.datum.srepr (), msg)
+
+4\. Compilation and Execution
 
 Compilation and execution of this DPL consists of the following steps:
 
-1.  Convert DPL program diagrams to JSON![Towards DPLs-1. Convert
-    diagram to JSON.drawio.png](./media/image2.png){width="6.5in"
-    height="0.9731988188976378in"}
+A. Convert DPL program diagrams to JSON![Towards DPLs-1. Convert diagram
+to JSON.drawio.png](./media/image2.png){width="6.5in"
+height="0.9731988188976378in"}
 
 Transpilation of the diagrams (XML) into JSON (or internal data
 structures, if efficiency is at a premium). The diagrams represent
@@ -152,13 +292,14 @@ structures, if efficiency is at a premium). The diagrams represent
 In our implementation, das2json[^1] is implemented[^2] in the Odin
 programming language. The process begins with a straight-forward call to
 the XML parsing library. The XML data is then deconstructed into a
-convenient internal format (see 0d/ir/ir_odin)
+convenient internal format (defined in 0d/ir/ir_odin/ir.odin in the code
+repository)
 
 xml, xml_err := xml.parse(file)
 
 > \...
 
-2\. Load component templates from JSON![Towards DPLs-2.
+B. Load component templates from JSON![Towards DPLs-2.
 loader.drawio.png](./media/image3.png){width="5.013888888888889in"
 height="1.125in"}
 
@@ -170,22 +311,22 @@ routings = json.loads(json_data)
 
 > \...
 
-3\. Instantiate system![Towards DPLs-3.
+C. Instantiate system![Towards DPLs-3.
 instantiate.drawio.png](./media/image4.png){width="6.5in"
 height="2.6686996937882763in"}
 
 Instantiation[^3] of an application beginning with a top-level diagram
-and proceeding downwards to instantiate all children components needed
-in the top-level diagram and, recursively, instantiating their children.
-Components are instantiated based on their DPL templates. Containers are
-instantiated by instantiating all child components and all routings
-between components. Note that more than one child component can refer to
-the same DPL template. Components must be uniquely instantiated -
-typically their (x,y) position is enough to differentiate components,
-but, [[draw.io]{.underline}](http://draw.io) assigns unique id's to each
-template component, which we ended up using instead of relying on (x,y)
-graphical information. Assigning unique id's is a convenience, not a
-requirement.
+and proceeds downwards to instantiate all children components needed in
+the top-level diagram and, recursively, instantiating the childrens'
+children. Components are instantiated based on their DPL templates.
+Containers are instantiated by instantiating all child components and
+all routings between components. Note that more than one child component
+can refer to the same DPL template. Components must be uniquely
+instantiated - typically their (x,y) position is enough to differentiate
+components, but, [[draw.io]{.underline}](http://draw.io) assigns unique
+id's to each template component, which we ended up using instead of
+relying on (x,y) graphical information. Assigning unique id's is a
+convenience, not a requirement.
 
 \...
 
@@ -196,9 +337,10 @@ requirement.
 
 \...
 
-4\. Inject first message
+Software components are fully isolated from one another through the use
+of FIFO queues.
 
-![Towards DPLs-4 Inject first
+D. Inject first message![Towards DPLs-4 Inject first
 message(s).drawio.png](./media/image5.png){width="6.5in"
 height="2.4615912073490813in"}
 
@@ -217,7 +359,7 @@ injected[^4] into the input queue of the top-most component.
 
 \...
 
-5\. Run![Towards DPLs-5.
+E. Run![Towards DPLs-5.
 Run.drawio.png](./media/image6.png){width="6.5in" height="3.25in"}
 
 The application is executed.
@@ -226,11 +368,11 @@ The application is interpreted by repeatedly delivering messages along
 connections, recursively, until no messages remain in any input queues.
 
 *It is possible to invoke already-written library code written in some
-other host language using the active flag - see the code repo for more
-details.*
+other host language using an activity indicator - see the code repo for
+more details.*
 
 Containers must consume only one input message at a time while waiting
-for all children to reach quiescence\[ceptre\].
+for all children to reach quiescence.
 
 \...
 
@@ -240,7 +382,7 @@ for all children to reach quiescence\[ceptre\].
 
 \...
 
-6\. Display outputs![Towards DPLs-6. Display
+F. Display outputs![Towards DPLs-6. Display
 Outputs.drawio.png](./media/image7.png){width="6.5in"
 height="2.4516786964129484in"}
 
@@ -263,32 +405,66 @@ use named and anonymous functions and closures, instead of operating
 system processes. As such, programs written this way "feel" like
 *programs* instead of as *processes* in terms of efficiency.
 
-Other Examples and Usage:
+5\. Other Examples and Usage
 
-VSH
+We have built working examples of various other technologies, using the
+DPL described in this paper, including,
 
-Arith0d,
+[VSH]{.underline} a Visual SHell that works like /bin/sh pipelines
+employing more input and output ports,
 
-llm0d,
+[arith0d]{.underline} OhmJS' arithmetic grammar that concurrently emits
+four (4) target languages (Javascript, Python, Common Lisp, WASM),
 
-transpiler
+[LLM0D]{.underline} a single component diagram that uses the Go
+programming language as a host language to connect to openai's LLM for
+experimenting with LLMs,
 
-kinopio2md
+[transpiler]{.underline} a workbench for creating new textual syntaxes,
+uses OhmJS more than once in a pipeline
 
-Scheme to Javascript, Scheme to Python
+[kinopio2md]{.underline} experiment for converting Kinopio "mindmaps"
+into markdown based on connections between ideas expressed in Kinopio
 
-Prolog inferencing of diagram semantics when editor does not supply
-convenient information
+[Scheme to Javascript]{.underline}, Scheme to Python - conversion of
+Nils Holm's Scheme code used in "Prolog Control Flow in 6 Slides"
+([[http://www.t3x.org/bits/prolog-6-code.scm.html]{.underline}](http://www.t3x.org/bits/prolog-6-code.scm.html))
+to produce a Prolog-like inferencing engine for Javascript, currently
+working on conversion to Python
 
-Generate components automatically
+[delay0d]{.underline}
 
-\- delay0d
+[Dc0d]{.underline} game engine based on Chris Marten's Ceptre language
+and "dungeon crawler" example
+([[https://www.cs.cmu.edu/\~cmartens/ceptre.pdf]{.underline}](https://www.cs.cmu.edu/~cmartens/ceptre.pdf))
+; spin-off - gen0D generates components (in Odin) from the diagram
+(instead of interpreting the diagram, gen0D creates leaf components that
+are used in conjunction with the diagram)
 
-\- 0D odin
+[0D odin]{.underline} a DPL engine written in the Odin programming
+language (Odin does not provide garbage collection, similar to languages
+like C)
 
-\- 0D cookbook
+[0D cookbook]{.underline} ongoing effort to document all standard DPL
+components as [[draw.io]{.underline}](http://draw.io) diagrams
 
-Principles
+6\. Fundamental Principles
+
+Software components are fully isolated from one another through the use
+of FIFO queues. Using the LIFO callstack for inter-component
+communication leads to hidden dependencies which leads to avoidance of
+DPLs.
+
+There is exactly one input queue and one output queue per component. We
+do not use, for semantic reasons, one queue per port. In general, single
+queues allow programs to track relative time-ordering of messages - an
+important feature when programming devices that perform sequencing
+instead of computation. In addition, multiple queues can lead to
+deadlock issues. These issues still exist in the large, but are
+mitigated through the use of single input and output queues and tend not
+to occur in hidden, unexpected ways.
+
+7\. Relevant Principles and Issues
 
 We do not discuss the following principles in detail in this paper, due
 to reasons of space.
@@ -310,13 +486,13 @@ Scoping of names
 Every diagram is stable, every diagram can be understood on its own.
 Children cannot change the behaviour of their parents.
 
-\- All components are asynchronous by default.
+All components are asynchronous by default.
 
-\- CPUs are meant to be single-threaded
+CPUs are meant to be single-threaded
 
-\- There is no single happy path in many applications
+There is no single happy path in many applications
 
-\- Subroutines are not functions
+Subroutines are not functions
 
 Hidden dependencies
 
@@ -325,19 +501,23 @@ Build-and-forget
 LEGO® block-like composition of software components (needs full
 isolation).
 
-Modern tooling for developers, breaking free of function-based paradigm.
+Modern tooling for developers, breaking free of the function-based
+paradigm.
 
 Building new paradigms using existing tools.
 
 T2t transpilation pipelines.
 
-Future
+8\. Future
 
-Compilation to other languages, instead of interpretation.
+Compilation, instead of interpretation, to other languages.
 
 Parsing XML using OhmJS instead of calling XML parsing libraries.
 
-Testing, unit testing, coverage testing
+Testing, unit testing, coverage testing.
+
+Depending on the graphical editor used, Prolog (among other languages)
+can be used to inference semantic information.
 
 References
 
