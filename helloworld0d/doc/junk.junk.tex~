@@ -1,0 +1,72 @@
+\section{References}
+
+\begin{thebibliography}{9}
+
+\bibitem{diagrams_net}
+Diagrams.net.
+\url{https://app.diagrams.net}
+
+\bibitem{ceptre_paper}
+Martens, Chris. Ceptre: A Language for Modeling Generative Interactive Systems. \url{https://www.cs.cmu.edu/~cmartens/ceptre.pdf} (Accessed: January 19, 2024).
+
+\bibitem{graphml}
+\url{https://en.wikipedia.org/wiki/GraphML} (Accessed: April 22, 2024)
+
+\bibitem{peg}
+\url{https://en.wikipedia.org/wiki/Parsing_expression_grammar} (Accessed: April 22, 2024)
+
+\bibitem{fortran}
+\url{https://en.wikipedia.org/wiki/Fortran} (Accessed: April 22, 2024)
+
+\bibitem{ohmjs}
+\url{https://ohmjs.org} (Accessed: April 22, 2024)
+
+\bibitem{odin}
+\url{https://odin-lang.org} (Accessed: April 22, 2024)
+
+\bibitem{d2j}
+\emph{anonymous repository}
+
+\bibitem{json}
+\url{https://www.json.org/json-en.html} (Accessed: April 22, 2024)
+
+\bibitem{d2jrepo}
+\emph{anonymous repository}
+
+\bibitem{run}
+\emph{anonymous repository}
+
+\bibitem{main}
+\emph{anonymous repository}
+
+\bibitem{vsh}
+\emph{anonymous repository}
+
+\bibitem{arith0d}
+\emph{anonymous repository}
+
+\bibitem{transpiler}
+\emph{anonymous repository}
+
+\bibitem{llm0d}
+\emph{anonymous repository}
+
+\bibitem{scm2js}
+\emph{anonymous repository}
+
+\bibitem{scm2py}
+\emph{anonymous repository}
+
+\bibitem{delay0d}
+\emph{anonymous repository}
+
+\bibitem{odin0d}
+\emph{anonymous repository}
+
+\bibitem{crystal0d}
+\emph{anonymous repository}
+
+\bibitem{0dcookbook}
+\emph{anonymous repository}
+
+\end{thebibliography}

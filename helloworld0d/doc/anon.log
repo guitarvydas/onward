@@ -1,9 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  22 APR 2024 09:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  22 APR 2024 10:16
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**extending-programming-with-diagrammatic-programming-languages.tex
-(./extending-programming-with-diagrammatic-programming-languages.tex
+**anon.tex
+(./anon.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/acmart/acmart.cls
@@ -728,13 +729,8 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count315
 \l__pdf_internal_box=\box62
 )
-(./extending-programming-with-diagrammatic-programming-languages.aux
-
-LaTeX Warning: Label `fig:convert_to_json' multiply defined.
-
-)
-\openout1 = `extending-programming-with-diagrammatic-programming-languages.aux'
-.
+(./anon.aux)
+\openout1 = `anon.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 22.
 LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line
@@ -852,12 +848,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package hyperref Info: Link coloring OFF on input line 22.
-
-(./extending-programming-with-diagrammatic-programming-languages.out)
-(./extending-programming-with-diagrammatic-programming-languages.out)
+ (./anon.out)
+(./anon.out)
 \@outlinefile=\write4
-\openout4 = `extending-programming-with-diagrammatic-programming-languages.out'
-.
+\openout4 = `anon.out'.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -966,6 +960,10 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 9.0pt on input line 33.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 33.
+
+
+LaTeX Warning: Reference `TotPages' on page 1 undefined on input line 33.
+
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 33.
 Package microtype Info: Loading generic protrusion settings for font family
@@ -974,7 +972,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 7.3pt on input line 33.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
+(/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -985,149 +983,260 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 (Font)              scaled to size 10.0pt on input line 35.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 61.
+(Font)              scaled to size 7.0pt on input line 65.
  [1.1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/us
 r/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/usr
 /local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/
 local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/usr/l
 ocal/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 90.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 71.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package natbib Warning: Citation `fortran' on page 2 undefined on input line 71
+.
+
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 94.
+
+Underfull \vbox (badness 3965) has occurred while \output is active []
 
  [2.2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.
 enc}]
-<./media/HelloWorld0D.png, id=73, 749.80125pt x 538.01pt>
+<./media/HelloWorld0D.png, id=40, 749.80125pt x 538.01pt>
 File: ./media/HelloWorld0D.png Graphic file (type png)
 <use ./media/HelloWorld0D.png>
-Package pdftex.def Info: ./media/HelloWorld0D.png  used on input line 138.
+Package pdftex.def Info: ./media/HelloWorld0D.png  used on input line 142.
 (pdftex.def)             Requested size: 344.005pt x 246.83907pt.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 139.
+(Font)              scaled to size 9.0pt on input line 143.
 
 
-Class acmart Warning: A possible image without description on input line 141.
+Class acmart Warning: A possible image without description on input line 145.
 
-[3.3 <./media/HelloWorld0D.png>]
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 17
+
+Package natbib Warning: Citation `diagrams_net' on page 3 undefined on input li
+ne 160.
+
+
+Package natbib Warning: Citation `graphml' on page 3 undefined on input line 16
 0.
 
+[3.3 <./media/HelloWorld0D.png>]
+
+Package natbib Warning: Citation `peg' on page 4 undefined on input line 162.
+
+
+Package natbib Warning: Citation `ohmjs' on page 4 undefined on input line 162.
+
+
+
+Package natbib Warning: Citation `odin' on page 4 undefined on input line 164.
+
+
+Package natbib Warning: Citation `d2j' on page 4 undefined on input line 166.
+
+
+Package natbib Warning: Citation `json' on page 4 undefined on input line 168.
+
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 18
+5.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 170.
+(Font)              scaled to size 10.0pt on input line 185.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [4.4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.en
 c}]
-<./media/image2.png, id=106, 543.02875pt x 81.30376pt>
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 218.
+ [5.5]
+<./media/image2.png, id=71, 543.02875pt x 81.30376pt>
 File: ./media/image2.png Graphic file (type png)
 <use ./media/image2.png>
-Package pdftex.def Info: ./media/image2.png  used on input line 245.
+Package pdftex.def Info: ./media/image2.png  used on input line 264.
 (pdftex.def)             Requested size: 344.005pt x 51.50696pt.
 
 
-Class acmart Warning: A possible image without description on input line 248.
+Class acmart Warning: A possible image without description on input line 267.
 
-[5.5 <./media/image2.png>]
-<./media/image3.png, id=115, 362.35374pt x 81.30376pt>
+
+Package natbib Warning: Citation `d2jrepo' on page 6 undefined on input line 27
+1.
+
+<./media/image3.png, id=72, 362.35374pt x 81.30376pt>
 File: ./media/image3.png Graphic file (type png)
 <use ./media/image3.png>
-Package pdftex.def Info: ./media/image3.png  used on input line 263.
+Package pdftex.def Info: ./media/image3.png  used on input line 282.
 (pdftex.def)             Requested size: 258.00539pt x 57.89105pt.
 
+Class acmart Warning: A possible image without description on input line 285.
 
-Class acmart Warning: A possible image without description on input line 266.
-
-<./media/image4.png, id=116, 740.7675pt x 304.13625pt>
+<./media/image4.png, id=73, 740.7675pt x 304.13625pt>
 File: ./media/image4.png Graphic file (type png)
 <use ./media/image4.png>
-Package pdftex.def Info: ./media/image4.png  used on input line 278.
+Package pdftex.def Info: ./media/image4.png  used on input line 297.
 (pdftex.def)             Requested size: 344.005pt x 141.23625pt.
 
-Class acmart Warning: A possible image without description on input line 281.
-
-[6.6 <./media/image3.png> <./media/image4.png>]
-<./media/image5.png, id=130, 744.7825pt x 282.05376pt>
-File: ./media/image5.png Graphic file (type png)
-<use ./media/image5.png>
-Package pdftex.def Info: ./media/image5.png  used on input line 312.
-(pdftex.def)             Requested size: 344.005pt x 130.27997pt.
-
-
-Class acmart Warning: A possible image without description on input line 315.
-
-<./media/image7.png, id=132, 747.79375pt x 282.05376pt>
-File: ./media/image7.png Graphic file (type png)
-<use ./media/image7.png>
-Package pdftex.def Info: ./media/image7.png  used on input line 332.
-(pdftex.def)             Requested size: 344.005pt x 129.7506pt.
-
-Class acmart Warning: A possible image without description on input line 335.
+Class acmart Warning: A possible image without description on input line 300.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7.7 <./media/image5.png>]
+
+Package natbib Warning: Citation `run' on page 6 undefined on input line 302.
+
+[6.6 <./media/image2.png> <./media/image3.png>]
+<./media/image5.png, id=83, 744.7825pt x 282.05376pt>
+File: ./media/image5.png Graphic file (type png)
+<use ./media/image5.png>
+Package pdftex.def Info: ./media/image5.png  used on input line 332.
+(pdftex.def)             Requested size: 344.005pt x 130.27997pt.
+
+
+Class acmart Warning: A possible image without description on input line 335.
+
+
+Package natbib Warning: Citation `main' on page 7 undefined on input line 338.
+
+[7.7 <./media/image4.png> <./media/image5.png>]
+<./media/image7.png, id=93, 747.79375pt x 282.05376pt>
 File: ./media/image7.png Graphic file (type png)
 <use ./media/image7.png>
-Package pdftex.def Info: ./media/image7.png  used on input line 356.
+Package pdftex.def Info: ./media/image7.png  used on input line 352.
 (pdftex.def)             Requested size: 344.005pt x 129.7506pt.
 
 
-Class acmart Warning: A possible image without description on input line 359.
+Class acmart Warning: A possible image without description on input line 355.
+
+File: ./media/image7.png Graphic file (type png)
+<use ./media/image7.png>
+Package pdftex.def Info: ./media/image7.png  used on input line 376.
+(pdftex.def)             Requested size: 344.005pt x 129.7506pt.
+
+Class acmart Warning: A possible image without description on input line 379.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8.8 <./media/image7.png>]
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 387.
 
-Underfull \vbox (badness 4621) has occurred while \output is active []
+Package natbib Warning: Citation `vsh' on page 9 undefined on input line 407.
+
+
+Package natbib Warning: Citation `arith0d' on page 9 undefined on input line 40
+8.
+
+
+Package natbib Warning: Citation `llm0d' on page 9 undefined on input line 409.
+
+
+
+Package natbib Warning: Citation `transpiler' on page 9 undefined on input line
+ 410.
+
+
+Package natbib Warning: Citation `k2m' on page 9 undefined on input line 411.
+
+
+Package natbib Warning: Citation `scm2js' on page 9 undefined on input line 412
+.
+
+
+Package natbib Warning: Citation `scm2py' on page 9 undefined on input line 412
+.
+
+
+Package natbib Warning: Citation `delay0d' on page 9 undefined on input line 41
+3.
+
+
+Package natbib Warning: Citation `dc0d' on page 9 undefined on input line 414.
+
+
+Package natbib Warning: Citation `ceptre_paper' on page 9 undefined on input li
+ne 414.
+
+
+Underfull \vbox (badness 2452) has occurred while \output is active []
 
  [9.9]
-LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 435.
 
+Package natbib Warning: Citation `odin0d' on page 10 undefined on input line 41
+5.
+
+
+Package natbib Warning: Citation `crystal0d' on page 10 undefined on input line
+ 416.
+
+
+Package natbib Warning: Citation `0dcookbook' on page 10 undefined on input lin
+e 417.
+
+LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 424.
 [10.10]
+Underfull \vbox (badness 1137) has occurred while \output is active []
+
+ [11.11]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 8.0pt on input line 519.
+
+
+Package natbib Warning: There were undefined citations.
+
 
 Class acmart Warning: Some images may lack descriptions.
 
-
-Class acmart Warning: ACM keywords are mandatory for papers over two pages.
-
-
-Class acmart Warning: CCS concepts are mandatory for papers over two pages.
-
-(/usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
+[12.12] (/usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
-)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/se-utf8.def
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [11.11]
-(./extending-programming-with-diagrammatic-programming-languages.aux)
+)
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 7.3pt on input line 565.
+
+[13.12] (./anon.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `extending-programming-with-diagrammatic-prog
-ramming-languages.out' has not changed.
-(rerunfilecheck)             Checksum: 486D7B086FB0DEEDBC8619E20C497C97;1817.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+LaTeX Warning: Temporary extra page added at the end. Rerun to get it removed.
+
+
+Package rerunfilecheck Warning: File `anon.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `anon.out':
+(rerunfilecheck)             Before: A8ACE9347AAE3A1FC6C1BFD609C96C30;772
+(rerunfilecheck)             After:  486D7B086FB0DEEDBC8619E20C497C97;1817.
  ) 
 Here is how much of TeX's memory you used:
- 21000 strings out of 474116
- 338675 string characters out of 5743682
+ 21086 strings out of 474116
+ 339402 string characters out of 5743682
  1945187 words of memory out of 5000000
- 42522 multiletter control sequences out of 15000+600000
- 687620 words of font info for 272 fonts, out of 8000000 for 9000
+ 42557 multiletter control sequences out of 15000+600000
+ 706053 words of font info for 296 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,17n,131p,1058b,836s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,131p,1001b,733s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolat
 a-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/Lin
 BiolinumT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/
@@ -1136,11 +1245,10 @@ ine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/li
 bertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
 ic/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
 /public/newtx/txsys.pfb>
-Output written on extending-programming-with-diagrammatic-programming-languages
-.pdf (11 pages, 477461 bytes).
+Output written on anon.pdf (13 pages, 480542 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 188 compressed objects within 2 object streams
- 56 named destinations out of 1000 (max. 500000)
- 72327 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 220 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 84559 words of extra memory for PDF output out of 89155 (max. 10000000)
 
