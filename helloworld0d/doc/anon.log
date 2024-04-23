@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  23 APR 2024 09:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  23 APR 2024 14:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1025,89 +1025,107 @@ LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8.8]
-[9.9]
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 348.
-
-Overfull \hbox (99.5293pt too wide) in paragraph at lines 367--371
-[]\T1/LinuxLibertineT-TLF/m/n/10 (-20) connections=[ down,self,^^Q^^Q,1,^^Q^^Q,
- across,1,^^Q^^Q,2,^^Q^^Q,up,2,^^Q^^Q,self,^^Qseq^^Q down,self,^^Q^^Q,3,^^Q^^Q,
-up,3,^^Q^^Q,self,^^Qpar^^Q down,self,^^Q^^Q,4,^^Q^^Q,up,2,^^Q^^Q,self,^^Qpar^^Q
- 
- []
-
-[10.10]
-<./media/image2.png, id=148, 543.02875pt x 81.30376pt>
-File: ./media/image2.png Graphic file (type png)
-<use ./media/image2.png>
-Package pdftex.def Info: ./media/image2.png  used on input line 415.
-(pdftex.def)             Requested size: 344.005pt x 51.50696pt.
+<./media/fanin.png, id=140, 743.77875pt x 501.875pt>
+File: ./media/fanin.png Graphic file (type png)
+<use ./media/fanin.png>
+Package pdftex.def Info: ./media/fanin.png  used on input line 367.
+(pdftex.def)             Requested size: 171.99922pt x 116.05676pt.
 
 
-Class acmart Warning: A possible image without description on input line 418.
-
-<./media/image3.png, id=150, 362.35374pt x 81.30376pt>
-File: ./media/image3.png Graphic file (type png)
-<use ./media/image3.png>
-Package pdftex.def Info: ./media/image3.png  used on input line 433.
-(pdftex.def)             Requested size: 258.00539pt x 57.89105pt.
-
-Class acmart Warning: A possible image without description on input line 436.
-
-[11.11 <./media/image2.png> <./media/image3.png>]
-<./media/image4.png, id=163, 740.7675pt x 304.13625pt>
-File: ./media/image4.png Graphic file (type png)
-<use ./media/image4.png>
-Package pdftex.def Info: ./media/image4.png  used on input line 448.
-(pdftex.def)             Requested size: 344.005pt x 141.23625pt.
-
-
-Class acmart Warning: A possible image without description on input line 451.
-
-<./media/image5.png, id=165, 744.7825pt x 282.05376pt>
-File: ./media/image5.png Graphic file (type png)
-<use ./media/image5.png>
-Package pdftex.def Info: ./media/image5.png  used on input line 483.
-(pdftex.def)             Requested size: 344.005pt x 130.27997pt.
-
-Class acmart Warning: A possible image without description on input line 486.
+Class acmart Warning: A possible image without description on input line 370.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12.12 <./media/image4.png>]
-<./media/image7.png, id=177, 747.79375pt x 282.05376pt>
+<./media/fanout.png, id=142, 753.81625pt x 501.875pt>
+File: ./media/fanout.png Graphic file (type png)
+<use ./media/fanout.png>
+Package pdftex.def Info: ./media/fanout.png  used on input line 378.
+(pdftex.def)             Requested size: 171.99922pt x 114.50986pt.
+
+Class acmart Warning: A possible image without description on input line 381.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9.9] [10.10 <./media/fanin.png> <./media/fanout.png>]
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 393.
+ [11.11]
+<./media/image2.png, id=161, 543.02875pt x 81.30376pt>
+File: ./media/image2.png Graphic file (type png)
+<use ./media/image2.png>
+Package pdftex.def Info: ./media/image2.png  used on input line 464.
+(pdftex.def)             Requested size: 344.005pt x 51.50696pt.
+
+
+Class acmart Warning: A possible image without description on input line 467.
+
+<./media/image3.png, id=163, 362.35374pt x 81.30376pt>
+File: ./media/image3.png Graphic file (type png)
+<use ./media/image3.png>
+Package pdftex.def Info: ./media/image3.png  used on input line 482.
+(pdftex.def)             Requested size: 258.00539pt x 57.89105pt.
+
+Class acmart Warning: A possible image without description on input line 485.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12.12 <./media/image2.png>]
+<./media/image4.png, id=174, 740.7675pt x 304.13625pt>
+File: ./media/image4.png Graphic file (type png)
+<use ./media/image4.png>
+Package pdftex.def Info: ./media/image4.png  used on input line 497.
+(pdftex.def)             Requested size: 344.005pt x 141.23625pt.
+
+
+Class acmart Warning: A possible image without description on input line 500.
+
+<./media/image5.png, id=176, 744.7825pt x 282.05376pt>
+File: ./media/image5.png Graphic file (type png)
+<use ./media/image5.png>
+Package pdftex.def Info: ./media/image5.png  used on input line 532.
+(pdftex.def)             Requested size: 344.005pt x 130.27997pt.
+
+Class acmart Warning: A possible image without description on input line 535.
+
+[13.13 <./media/image3.png> <./media/image4.png>]
+<./media/image7.png, id=189, 747.79375pt x 282.05376pt>
 File: ./media/image7.png Graphic file (type png)
 <use ./media/image7.png>
-Package pdftex.def Info: ./media/image7.png  used on input line 503.
+Package pdftex.def Info: ./media/image7.png  used on input line 552.
 (pdftex.def)             Requested size: 344.005pt x 129.7506pt.
 
 
-Class acmart Warning: A possible image without description on input line 506.
+Class acmart Warning: A possible image without description on input line 555.
 
-[13.13 <./media/image5.png> <./media/image7.png>]
+[14.14 <./media/image5.png> <./media/image7.png>]
 File: ./media/image7.png Graphic file (type png)
 <use ./media/image7.png>
-Package pdftex.def Info: ./media/image7.png  used on input line 527.
+Package pdftex.def Info: ./media/image7.png  used on input line 576.
 (pdftex.def)             Requested size: 344.005pt x 129.7506pt.
 
 
-Class acmart Warning: A possible image without description on input line 530.
-
-[14.14]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 565.
-
-
-Package natbib Warning: Citation `dc0d' on page 15 undefined on input line 565.
-
+Class acmart Warning: A possible image without description on input line 579.
 
 [15.15]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 614.
+
+
+Package natbib Warning: Citation `dc0d' on page 16 undefined on input line 614.
+
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16.16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17.17]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 666.
+(Font)              scaled to size 8.0pt on input line 715.
 
 
 Package natbib Warning: There were undefined citations.
@@ -1126,23 +1144,23 @@ File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [17.17]
+) [18.18]
 (./anon.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `anon.out' has not changed.
-(rerunfilecheck)             Checksum: B16CE3776C2A8D66A381BC9EF17FAB45;2231.
+(rerunfilecheck)             Checksum: 627FE92B815287038C5378BD2039920D;2231.
  ) 
 Here is how much of TeX's memory you used:
- 21143 strings out of 474116
- 340450 string characters out of 5743682
- 1950187 words of memory out of 5000000
- 42566 multiletter control sequences out of 15000+600000
- 705050 words of font info for 322 fonts, out of 8000000 for 9000
+ 21165 strings out of 474116
+ 340919 string characters out of 5743682
+ 1945187 words of memory out of 5000000
+ 42582 multiletter control sequences out of 15000+600000
+ 705564 words of font info for 324 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,17n,131p,1433b,840s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,131p,1433b,824s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolat
 a-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/Lin
 BiolinumT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/
@@ -1151,10 +1169,10 @@ ine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/li
 bertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
 ic/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
 /public/newtx/txsys.pfb>
-Output written on anon.pdf (17 pages, 510134 bytes).
+Output written on anon.pdf (18 pages, 562949 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
- 80 named destinations out of 1000 (max. 500000)
- 80535 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 313 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
+ 83 named destinations out of 1000 (max. 500000)
+ 80545 words of extra memory for PDF output out of 89155 (max. 10000000)
 

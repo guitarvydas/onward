@@ -1,2 +1,2 @@
-- Other Examples - list repos
-- add section for Container components as per Leaf "Echo" section
+- diagram of fan-out and fan-in
+- diagram of abstraction
