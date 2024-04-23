@@ -1,4 +1,5 @@
 \documentclass[10pt,anonymous,review]{acmart}
+\usepackage{wrapfig}
 
 \title{Extending Programming with Diagrammatic Programming Languages}
 \author{Zac Nowicki}
@@ -347,39 +348,35 @@ A key feature of any DPL is that components are truly isolated from one another 
 
 One cannot determine “from the outside” whether a component is a Container or a Leaf, nor know anything about its implementation. One cannot know if a component contains state or is a pure function. In fact, knowledge of these kinds of details is unnecessary. Programmers can dig deeper into the innards of components if they want to know such low-level details.
 
-Components process each incoming message. Processing is based on internal component state and the port tag contained in a message. A message is a 2-tuple \{port X payload\}.
+Components process each incoming message. Processing is based on internal component state and the port tag contained in a message. A message is a 2-tuple \{port, payload\}.
 
-Output message processing consists of placing tagged messages \{tag X payload\} onto the component’s (single) output queue. Output messages are sent in a deferred manner. Output messages sit in a component’s output queue until the component has finished processing a step of its potential actions and returns control back to its parent (which is always a Container). The parent container empties a child’s output queue and routes messages in first to last (oldest to newest) order of output message creation (note that “recursion” works in an opposite manner, in a last to first order - most recent first).
+Output message processing consists of placing tagged messages \{tag, payload\} onto the component’s (single) output queue. Output messages are sent in a deferred manner. Output messages sit in a component’s output queue until the component has finished processing a step of its potential actions and returns control back to its parent (which is always a Container). The parent container empties a child’s output queue and routes messages in first to last (oldest to newest) order of output message creation (note that “recursion” works in an opposite manner, in a last to first order - most recent first).
 
 Output queues contain messages with port tags that are relative to the \emph{sender}. Input queues contains messages with port tags that are relative to the \emph{receiver}. Routers, i.e. Containers, must map from output tag of the sender to the appropriate input tags of the receivers.
 
 Component instances need not be explicitly named. Their (x,y) position on a diagram uniquely identifies each instance. This agrees with normal human convention - visual placement on the diagram has semantic meaning.
 
 
-Connections are triples \{direction X sender X receiver\}.
+Connections are triples \{direction, sender, receiver\}.
+
+
+  \begin{wrapfigure}{l}{0.4\textwidth}
+    \includegraphics[scale=0.2]{./media/fanin.png}
+    \caption{Fan In}
+    \label{fanin}
+  \end{wrapfigure}
 
 Fan-in and fan-out are supported. Fan-in means that a single input port/gate can receive messages from multiple sources. This is straight-forward to implement using the FIFO queue structure of components. Fan-out, though, means that a single port/gate can send messages to several receivers. This requires copying of message payloads or the application of copy-on-write semantics in the receivers. There is no semantic difference between these two techniques - the choice of implementation (copying vs. copy-on-write) is purely one of optimization and does not matter at the design stages. Efficiency of implementation matters only during Production Engineering stages, i.e. when a design is stable enough to be productized.
 
-Figure \ref{mot} shows, both, fan-in and fan-out on the subnet labelled "Parallel Routing". 
-
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\linewidth]{./media/fanin.png}
-    \caption{Fan In}
-    \label{fanin}
-  \end{figure}
+In Figure \ref{fanin} the output gate "par" shows fan-in, as it receives inputs from two different component instances. The outputs from the two "Echo" instances do not collide. The outputs are queued up on the diagram's output queue in the order that they were generated. See Figure \ref{fanin}.
 
 
-The output gate "par" shows fan-in, as it receives inputs from two different component instances. The outputs from the two "Echo" instances do not collide. The outputs are queued up on the diagram's output queue in the order that they were generated. See Figure \ref{fanin}.
-
-
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\linewidth]{./media/fanout.png}
+  \begin{wrapfigure}{r}{0.4\textwidth}
+    \includegraphics[scale=0.2]{./media/fanout.png}
     \caption{Fan Out}
     \label{fanout}
-  \end{figure}
-The corresponding input gate demonstrates fan out. Any message on the input gate is routed to both instances of the "Echo" component on the "Parallel Routing" subnet.See Figure \ref{fanout}.
+  \end{wrapfigure}
+The corresponding input gate demonstrates fan out in Figure \ref{fanout}. Any message on the input gate is routed to both instances of the "Echo" component on the "Parallel Routing" subnet.
 
 
 Furthermore, fan-out requires atomic routing. A single output message must be delivered to all receivers in an atomic fashion without allowing interleaving messages to arrive from other sources. This requirement ensures that messages are queued in a consistent manner relative to one another. The actual, absolute timestamp of any message does not matter, and the final order of messages does not matter, but message relative-order does matter. If “A” arrives before “B” at one receiver, then, “A” must arrive before “B” at \emph{all} receivers. Physics informs us that, ultimately, we cannot tell if “A” arrived before “B” or if “B” arrived before “A”, and that that is the only real “race condition”. Programmers can deal with that single kind of “race condition” as long as message-relativity is preserved. In general, though, message relativity cannot be preserved across large distances (“A” might arrive before “B” at one receiver, but, “B” might arrive before “A” at another receiver because “B” has less-far to travel). Preserving message relativity in-the-small, inside a single application, makes it easier to write such application programs. Note that this DPL is “yet another notation”, like function-based programming, which can simplify programming in many cases, but, cannot be used in \emph{all} cases.
@@ -402,8 +399,8 @@ As already mentioned, mapping from sender-ports to receiver-ports must be done b
 Each diagram is compiled into a container component containing the following information:
 \begin{itemize}
 \item template name - the name of the diagram
-\item bag of children 2-tuples \{template X instance-id\}
-\item bag of connection 3-tuples \{direction X \{sender X port\} X \{receiver X port\}\}
+\item bag of children 2-tuples \{template, instance-id\}
+\item bag of connection 3-tuples \{direction, \{sender, port\}, \{receiver, port\}\}
 \end{itemize}
 The example diagram is compiled into a container component containing the following information:
 \begin{itemize}
@@ -456,8 +453,7 @@ def Echo_handler (eh, msg):
 Compilation and execution of this DPL consists of the steps listed below. Note that the diagrams are rough sketches intentionally simplified
 for overview purposes only.
 
-\begin{enumerate}
-\item Convert DPL program diagrams to JSON.
+1. Convert DPL program diagrams to JSON.
 
   \begin{figure}[h]
     \centering
