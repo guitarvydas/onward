@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 17:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 17:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1305,21 +1305,8 @@ Overfull \hbox (10.63669pt too wide) in paragraph at lines 461--462
 [][] 
  []
 
-
-Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 477.
-
-
-Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 477.
-
-<./media/run.png, id=236, 381.425pt x 61.22874pt>
-File: ./media/run.png Graphic file (type png)
-<use ./media/run.png>
-Package pdftex.def Info: ./media/run.png  used on input line 478.
-(pdftex.def)             Requested size: 152.56729pt x 24.49104pt.
-[12.12 <./media/loader.png> <./media/instantiate.png> <./media/inject.png> <./m
-edia/run.png>] [13.13]
+[12.12 <./media/loader.png> <./media/instantiate.png> <./media/inject.png>]
+[13.13]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 8.0pt on input line 627.
  [14.14]
@@ -1353,19 +1340,19 @@ Package rerunfilecheck Warning: File `anon.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `anon.out':
-(rerunfilecheck)             Before: 00E166927986C56F83028FAEDE674552;3373
-(rerunfilecheck)             After:  A5966AAAFEE0F374F24996A21B734FC2;3373.
+(rerunfilecheck)             Before: A5966AAAFEE0F374F24996A21B734FC2;3373
+(rerunfilecheck)             After:  83659DBCB41AA59BB01B6EA3D593FD82;3373.
  ) 
 Here is how much of TeX's memory you used:
- 21334 strings out of 474116
- 344405 string characters out of 5743682
+ 21325 strings out of 474116
+ 344222 string characters out of 5743682
  1945187 words of memory out of 5000000
- 42743 multiletter control sequences out of 15000+600000
+ 42735 multiletter control sequences out of 15000+600000
  705116 words of font info for 320 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  90i,17n,131p,1433b,731s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{section*.23} has been referenced but does not exist
+pdfTeX warning (dest): name{section*.22} has been referenced but does not exist
 , replaced by a fixed one
 
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-
@@ -1376,10 +1363,10 @@ e/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libe
 rtine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public
 /libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
 ublic/newtx/txsys.pfb>
-Output written on anon.pdf (15 pages, 1063245 bytes).
+Output written on anon.pdf (15 pages, 1058932 bytes).
 PDF statistics:
- 363 PDF objects out of 1000 (max. 8388607)
- 287 compressed objects within 3 object streams
- 92 named destinations out of 1000 (max. 500000)
- 80648 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 360 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 91 named destinations out of 1000 (max. 500000)
+ 80643 words of extra memory for PDF output out of 89155 (max. 10000000)
 
