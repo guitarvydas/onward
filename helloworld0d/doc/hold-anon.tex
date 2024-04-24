@@ -169,8 +169,8 @@ In our case, we used the Odin programming language\cite{odin} and the XML parsin
 
 We choose not to reproduce the code for the actual diagram parser here, due to space limitations. The draw.io-specific parser consists of under 250 lines of Odin code (including comments and blank lines). The full source code for the functioning diagram parser is in an open-source repo\cite{d2j}.
 
-\begin{figure}
-    \includegraphics[scale=0.4]{./media/main.png}
+\begin{figure}[h]
+    \includegraphics[trim=1cm 2cm 1cm 1cm 1cm, clip, scale=0.4]{./media/main.png}
     \caption{DPL diagram semantics as JSON}
     \label{main}
 \end{figure}
@@ -193,7 +193,7 @@ The structure of the information needed by the DPL runtime is minimal, consistin
 
 %  \begin{wrapfigure}{l}{0.8\textwidth}
   \begin{figure}
-    \includegraphics[scale=0.4]{./media/drawio1.png}
+    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/drawio1.png}
     \caption{Raw .drawio}
     \label{drawio1}
 %  \end{wrapfigure}
@@ -209,7 +209,7 @@ In this DPL, the \emph{style} information is mostly noise from the perspective o
 
 %\begin{wrapfigure}{l}{0.7\textwidth}
 \begin{figure}
-    \includegraphics[scale=0.4]{./media/drawio2.png}
+    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/drawio2.png}
     \caption{Cull style noise}
     \label{Darwin}
 %\end{wrapfigure}
@@ -218,7 +218,7 @@ When we remove the \emph{style} noise, we get pseudo-XML shown in Figure \ref{dr
 
  
 \begin{wrapfigure}{l}{0.4\textwidth}
-    \includegraphics[scale=0.4]{./media/drawio3.png}
+    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/drawio3.png}
     \caption{cull mxGeometry}
     \label{drawio3}
 \end{wrapfigure}
@@ -226,7 +226,7 @@ Similarly, the \emph{mxGeometry} information affects the visual display of the d
 Figure \ref{drawio3} shows the pseudo-XML after culling the mxGeometry information.
   
 \begin{wrapfigure}{l}{0.8\textwidth}
-    \includegraphics[scale=0.4]{./media/drawio4.png}
+    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/drawio4.png}
     \caption{reduced id}
     \label{drawio4}
 \end{wrapfigure}
@@ -234,7 +234,7 @@ Furthermore, the id can be internally hashed on a per-file manner, resulting in 
 
 
 \begin{wrapfigure}{l}{0.4\textwidth}
-    \includegraphics[scale=0.4]{./media/json5.png}
+    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/json5.png}
     \caption{Resulting JSON snippet}
     \label{json5}
 \end{wrapfigure}
@@ -249,7 +249,7 @@ by a PEG parser which performs \emph{t2t} (text-to-text) transformations.
 
 %  \begin{wrapfigure}{l}{0.7\textwidth}
 \begin{figure}[h]
-    \includegraphics[scale=0.4]{./media/ioports.png}
+    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/ioports.png}
     \caption{Input and Output Ports of id=6}
     \label{ioports}
  % \end{wrapfigure}
@@ -258,7 +258,7 @@ In this example, the component id=6, derived from the Echo template, has one inp
 
 %  \begin{wrapfigure}{l}{0.4\textwidth}
 \begin{figure}
-    \includegraphics[scale=0.4]{./media/ioportsculled.png}
+    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/ioportsculled.png}
     \caption{Input and Output Ports of id=6, culled}
     \label{ioportsculled}
  % \end{wrapfigure}
@@ -269,14 +269,14 @@ Culling, we get Figure \ref{ioportsculled}.
 Note that "" is a valid port name - the null string. The input port and the output port have the same name (the null string), but, the names do not conflict since they are in different namespaces (input namespace of template "Echo" vs. output namespace of template "Echo").
 
 \begin{wrapfigure}{l}{0.7\textwidth}
-    \includegraphics[scale=0.4]{./media/connection1.png}
+    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/connection1.png}
     \caption{Raw connection}
     \label{connection}
 \end{wrapfigure}
 Grinding further through the XML, we see several connections, one of which contains a reference to "kChx-vSpJG1CHjQ2RL-N-45". In this case, the reference lists the id as a \emph{source}. This implies that "kChx-vSpJG1CHjQ2RL-N-45" is an output port (there is more nuance to this, but, for simplicity, we'll skip over the nuance for now).
 
 \begin{wrapfigure}{r}{0.4\textwidth}
-    \includegraphics[scale=0.4]{./media/connection2.png}
+    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/connection2.png}
     \caption{Culled connection}
     \label{connection2}
 \end{wrapfigure}
@@ -373,7 +373,7 @@ Each diagram is compiled into a container component containing the following inf
 
 \subsection{Leaf Component "Echo"}
 \begin{wrapfigure}{r}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/echo.png}
+    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/echo.png}
     \caption{Echo}
     \label{fig:echo}
 \end{wrapfigure}
@@ -400,44 +400,42 @@ forwarding the received message. The \emph{handler} code is activated for
 \end{itemize}
 
 \section{Compilation and Execution}
-Compilation and execution of this DPL consists of the steps listed below. Note that the diagrams are rough sketches intentionally simplified
-for overview purposes only.
+Compilation and execution of this DPL consists of the steps listed below.
+ \begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{./media/full.png}
+    \caption{DPL to executable code}
+    \label{full}
+ \end{figure}
+
 
 \subsection{Convert DPL program diagrams to JSON.}
-
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\linewidth]{./media/convert.png}
-    \caption{Convert diagram to JSON}
-    \label{fig:convert_to_json}
-  \end{figure}
-
   Transpilation of the diagrams (XML) into JSON (or internal data structures, if efficiency is at a premium). The diagrams represent \emph{templates} for components.
   
   In our implementation, \texttt{das2json} is implemented\cite{d2jrepo} in the Odin programming language. The process begins with a straightforward call to the XML parsing library. The XML data is then deconstructed into a convenient internal format (see \texttt{0d/ir/ir\_odin/ir.odin} in the code repository).
-%
-%\begin{verbatim}
-%    xml, xml_err := xml.parse(file)
-%\end{verbatim}
+%% %
+%% %\begin{verbatim}
+%% %    xml, xml_err := xml.parse(file)
+%% %\end{verbatim}
   
 \subsection{Load component templates from JSON.}
-\begin{wrapfigure}[4]{r}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/loader.png}
-    \caption{Loader}
-    \label{fig:load_templates}
-  \end{wrapfigure}
+%% \begin{wrapfigure}[4]{r}{0.5\textwidth}
+%%     \includegraphics[scale=0.4]{./media/loader.png}
+%%     \caption{Loader}
+%%     \label{fig:load_templates}
+%%   \end{wrapfigure}
   Ingestion of the JSON, or internal data structures into an internal database that we call a \emph{registry}. Registries can be implemented as a \emph{dictionaries, maps} or \emph{databases}.
-%
-%\begin{verbatim}
- %   routings = json.loads(json_data)
-%\end{verbatim}
+%% %
+%% %\begin{verbatim}
+%%  %   routings = json.loads(json_data)
+%% %\end{verbatim}
 
-\subsection{Instantiate system.}
-  \begin{wrapfigure}{l}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/instantiate.png}
-    \caption{Instantiate}
-    \label{fig:instantiate_system}
-  \end{wrapfigure}
+%% \subsection{Instantiate system.}
+%%   \begin{wrapfigure}{l}{0.5\textwidth}
+%%     \includegraphics[scale=0.4]{./media/instantiate.png}
+%%     \caption{Instantiate}
+%%     \label{fig:instantiate_system}
+%%   \end{wrapfigure}
 
   Instantiation\cite{run} of an application beginning with a top-level diagram
 and proceeds downwards to instantiate all children components needed in
@@ -459,11 +457,11 @@ Software components are fully isolated from one another through the use
 of FIFO queues.
 
 \subsection{Inject first message.}
-  \begin{wrapfigure}{r}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/inject.png}
-    \caption{Inject first message(s)}
-    \label{fig:inject_first_message}
-  \end{wrapfigure}
+%%   \begin{wrapfigure}{r}{0.5\textwidth}
+%%     \includegraphics[scale=0.4]{./media/inject.png}
+%%     \caption{Inject first message(s)}
+%%     \label{fig:inject_first_message}
+%%   \end{wrapfigure}
 
 The first message is constructed using the host language. The message is
 injected\cite{main} into the input queue of the top-most component.
@@ -476,11 +474,11 @@ injected\cite{main} into the input queue of the top-most component.
 %\end{verbatim}
   
 \subsection{Run.}
-  \begin{wrapfigure}{m}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/run.png}
-    \caption{Run}
-    \label{fig:run}
-  \end{wrapfigure}
+%%   \begin{wrapfigure}{m}{0.5\textwidth}
+%%     \includegraphics[scale=0.4]{./media/run.png}
+%%     \caption{Run}
+%%     \label{fig:run}
+%%   \end{wrapfigure}
 The application is executed.
 
 The application is interpreted by repeatedly delivering messages along
@@ -497,12 +495,12 @@ for all children to reach quiescence.
 %\end{verbatim}
   
 \subsection{Display outputs.}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.4]{./media/display.png}
-    \caption{Display Outputs}
-    \label{fig:display}
-  \end{figure}
+%%   \begin{figure}[h]
+%%     \centering
+%%     \includegraphics[scale=0.4]{./media/display.png}
+%%     \caption{Display Outputs}
+%%     \label{fig:display}
+%%   \end{figure}
 
 The outputs in the output queue of the top-level component are displayed
 using the host language.
@@ -522,7 +520,7 @@ files of code containing about 430 lines of code.
 %system processes. As such, programs written this way "feel" like
 %\emph{programs} instead of as \emph{processes} in terms of efficiency.
 Programs written this way "feel" like
-\emph{programs} instead of as \emph{processes} in terms of efficiency because anonymous functions and closures are used instead of processes.
+\emph{programs} instead of as \emph{processes} in terms of efficiency because functions and closures are used instead of processes.
 
 \section{Work In Progress}
 We have built working examples of various other technologies, using the
@@ -565,29 +563,29 @@ Routings are handled solely by parent Containers of components. Components, them
 We do not discuss the following principles in detail in this paper, due
 to reasons of space.
 
-\emph{Structured Message Passing},
-\emph{Rule of 7},
-\emph{Parental Authority},
-\emph{Asynchronicity and time-relative ordering},
-\emph{SEND in addition to CALL},
-\emph{Locality of Reference},
-\emph{Scoping of names},
-\emph{Children cannot change the behaviour of their parents},
-\emph{CPUs are meant to be single-threaded},
-\emph{Multiple happy paths of equal importance},
-\emph{Subroutines are not functions},
-\emph{Hidden dependencies},
-\emph{Build-and-forget},
-\emph{Breaking free of the function-based paradigm},
-\emph{Building new paradigms using existing tools},
-\emph{t2t - text-to-text transpilation pipelines},
-\emph{Multiple syntaxes - notations - instead of general purpose programming languages},
-\emph{Using existing GPLs as assemblers},
-\emph{Writing code that writes code},
-\emph{Inferencing semantic information from diagrams using various techniques},
-\emph{Simple relations, like intersection, larger, smaller, above, below, left-of, right-of},
-\emph{Low-level concepts like \emph{loop}, and \emph{recursion}, don't make sense in a distributed environment},
-\emph{if-then-else is too low level and ad-hoc for expressing control-flow}.
+%% Structured Message Passing ~ 
+%% Rule of 7 ~ 
+%% Parental Authority ~ 
+%% Asynchronicity and time-relative ordering ~ 
+%% SEND in addition to CALL ~ 
+%% Locality of Reference ~ 
+%% Scoping of names ~ 
+%% Children cannot change the behaviour of their parents ~ 
+%% CPUs are meant to be single-threaded ~ 
+%% Multiple happy paths of equal importance ~ 
+%% Subroutines are not functions ~ 
+%% Hidden dependencies ~ 
+%% Build-and-forget ~ 
+%% Breaking free of the function-based paradigm ~ 
+%% Building new paradigms using existing tools ~ 
+%% t2t - text-to-text transpilation pipelines ~ 
+%% Multiple syntaxes - notations - instead of general purpose programming languages ~ 
+%% Using existing GPLs as assemblers ~ 
+%% Writing code that writes code ~ 
+%% Inferencing semantic information from diagrams using various techniques ~ 
+%% Simple relations, like intersection, larger, smaller, above, below, left-of, right-of ~ 
+%% Low-level concepts like loop ~  and recursion ~  don't make sense in a distributed environment ~ 
+%% if-then-else is too low level and ad-hoc for expressing control-flow.
 
 \section{Future}
 \begin{itemize}
