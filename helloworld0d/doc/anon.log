@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 18:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 18:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1122,32 +1122,28 @@ Class acmart Warning: \vspace should only be used to provide space above/below
 surrounding objects on input line 244.
 
 
-Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 249.
-
-[5.5 <./media/drawio1.png> <./media/drawio2.png> <./media/drawio3.png> <./media
-/drawio4.png> <./media/json5.png>]
-
 Package wrapfig Warning: Collision between wrapping environments on input line 
-252.
+251.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 252.
+surrounding objects on input line 251.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 252.
+surrounding objects on input line 251.
 
-<./media/ioports.png, id=179, 695.59875pt x 393.47pt>
+<./media/ioports.png, id=160, 695.59875pt x 393.47pt>
 File: ./media/ioports.png Graphic file (type png)
 <use ./media/ioports.png>
-Package pdftex.def Info: ./media/ioports.png  used on input line 253.
+Package pdftex.def Info: ./media/ioports.png  used on input line 252.
 (pdftex.def)             Requested size: 232.71098pt x 115.27592pt.
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 25
-7.
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 256.
 
+[5.5 <./media/drawio1.png> <./media/drawio2.png> <./media/drawio3.png> <./media
+/drawio4.png>]
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
 260.
@@ -1160,16 +1156,18 @@ surrounding objects on input line 260.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 260.
 
-<./media/ioportsculled.png, id=182, 611.28375pt x 309.155pt>
+<./media/ioportsculled.png, id=179, 611.28375pt x 309.155pt>
 File: ./media/ioportsculled.png Graphic file (type png)
 <use ./media/ioportsculled.png>
 Package pdftex.def Info: ./media/ioportsculled.png  used on input line 261.
 (pdftex.def)             Requested size: 184.06203pt x 75.43439pt.
 
-Overfull \hbox (2.43347pt too wide) in paragraph at lines 265--267
-[][]\T1/LinuxLibertineT-TLF/m/n/10 (-20) Here, the ports re-fer to parent="kChx
--vSpJG1CHjQ2RL-
- []
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 26
+5.
+
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+271.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
@@ -1179,7 +1177,7 @@ surrounding objects on input line 271.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 271.
 
-<./media/connection1.png, id=185, 737.75626pt x 323.2075pt>
+<./media/connection1.png, id=182, 737.75626pt x 323.2075pt>
 File: ./media/connection1.png Graphic file (type png)
 <use ./media/connection1.png>
 Package pdftex.def Info: ./media/connection1.png  used on input line 272.
@@ -1190,10 +1188,12 @@ Overfull \hbox (24.88335pt too wide) in paragraph at lines 272--273
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 276--277
-\T1/LinuxLibertineT-TLF/m/n/10 (+20) con-nec-tions, one of which con-tains a re
-f-er-ence to
- []
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 27
+6.
+
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+280.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
@@ -1203,13 +1203,13 @@ surrounding objects on input line 280.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 280.
 
-<./media/connection2.png, id=187, 477.785pt x 309.155pt>
+<./media/connection2.png, id=184, 477.785pt x 309.155pt>
 File: ./media/connection2.png Graphic file (type png)
 <use ./media/connection2.png>
 Package pdftex.def Info: ./media/connection2.png  used on input line 281.
 (pdftex.def)             Requested size: 145.58702pt x 81.55052pt.
-[6.6 <./media/ioports.png> <./media/ioportsculled.png> <./media/connection1.png
-> <./media/connection2.png>]
+[6.6 <./media/json5.png> <./media/ioports.png> <./media/ioportsculled.png> <./m
+edia/connection1.png> <./media/connection2.png>]
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 307.
 
@@ -1284,7 +1284,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \vbox (badness 1888) has occurred while \output is active []
+Underfull \vbox (badness 1389) has occurred while \output is active []
 
  [10.10 <./media/full.png> <./media/echo.png>] [11.11{/usr/local/texlive/2024/t
 exmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}]
@@ -1341,7 +1341,7 @@ ine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/li
 bertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
 ic/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
 /public/newtx/txsys.pfb>
-Output written on anon.pdf (14 pages, 1059188 bytes).
+Output written on anon.pdf (14 pages, 1059225 bytes).
 PDF statistics:
  365 PDF objects out of 1000 (max. 8388607)
  288 compressed objects within 3 object streams

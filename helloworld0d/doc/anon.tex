@@ -1,7 +1,7 @@
 \documentclass[10pt,anonymous,review]{acmart}
 \usepackage{wrapfig}
 
-\setlength{\intextsep}{1pt}
+\setlength{\intextsep}{2pt}
 \setlength{\abovecaptionskip}{1pt}
 
 \title{Extending Programming with Diagrammatic Programming Languages}
@@ -234,7 +234,7 @@ Furthermore, the id can be internally hashed on a per-file manner, resulting in 
 
 
 %%%% JSON snippet
-\begin{wrapfigure}{r}{0.3\textwidth}
+\begin{wrapfigure}{L}{0.3\textwidth}
     \includegraphics[trim=2cm 2cm 2cm 1.7cm, clip, scale=0.4]{./media/json5.png}
     \caption{Resulting JSON snippet}
     \label{json5}
@@ -246,14 +246,14 @@ All of the above is currently achieved using an XML parser and by cherry-picking
 the seemingly-complicated XML data. We argue, though, that this could, also, be replaced
 by a PEG parser which performs \emph{t2t} (text-to-text) transformations.
 
-\vspace{5.3\baselineskip}
 
 %%%% IO Ports of 6 culled
-\begin{wrapfigure}{l}{0.6\textwidth}
+\begin{wrapfigure}{R}{0.6\textwidth}
     \includegraphics[trim=2cm 2cm 2cm 1.7cm, clip, scale=0.4]{./media/ioports.png}
     \caption{Input and Output Ports of id=6}
     \label{ioports}
 \end{wrapfigure}
+\vspace{1\baselineskip}
 In this example, the component id=6, derived from the Echo template, has one input port and one output port, seen in Figure \ref{ioports}.
 
 %%%% IO Ports of 6 culled
