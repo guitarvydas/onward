@@ -166,11 +166,13 @@ In our case, we used the Odin programming language\cite{odin} and the XML parsin
 
 We choose not to reproduce the code for the actual diagram parser here, due to space limitations. The draw.io-specific parser consists of under 250 lines of Odin code (including comments and blank lines). The full source code for the functioning diagram parser is in an open-source repo\cite{d2j}.
 
-  \begin{wrapfigure}{r}{0.7\textwidth}
+%  \begin{wrapfigure}{r}{0.7\textwidth}
+\begin{figure}[h]
     \includegraphics[scale=0.4]{./media/json.png}
     \caption{JSON Container Component}
     \label{json}
-  \end{wrapfigure}
+%  \end{wrapfigure}
+\end{figure}
 
 The diagram parser produces internal data structures in the host programming language and/or JSON\cite{json} files.
 
@@ -189,11 +191,13 @@ The structure of the information needed by the DPL runtime is minimal, consistin
 
 \end{enumerate}
 
-  \begin{wrapfigure}{l}{0.8\textwidth}
+%  \begin{wrapfigure}{l}{0.8\textwidth}
+  \begin{figure}
     \includegraphics[scale=0.4]{./media/drawio1.png}
     \caption{Raw .drawio}
     \label{drawio1}
-  \end{wrapfigure}
+%  \end{wrapfigure}
+\end{figure}
 
 The .drawio file containing this information is verbose and contains a great deal of graphic layout information that is not relevant at the semantic level.
 
@@ -203,89 +207,89 @@ A Child derived from the Echo template is saved in the .drawio file as: (shown w
 
 In this DPL, the \emph{style} information is mostly noise from the perspective of semantics. We do need, though, to peer into the style information to determine if the mxCell is a node or a connector (vertex="1" versus edge="1").
 
-When we remove the \emph{style} noise, we get pseudo-XML something like:
-  \begin{wrapfigure}{l}{0.8\textwidth}
+When we remove the \emph{style} noise, we get pseudo-XML shown in Figure \ref{drawio2}.
+%  \begin{wrapfigure}{l}{0.8\textwidth}
+\begin{figure}
     \includegraphics[scale=0.4]{./media/drawio2.png}
-    \caption{Raw .drawio}
+    \caption{Cull style noise}
     \label{drawio2}
-  \end{wrapfigure}
-Similarly, the \emph{mxGeometry} information affects the visual display of the diagram, but has no semantic value for this DPL.
+%  \end{wrapfigure}
+\end{figure}
 
-Figure \ref{drawio3} shows the pseudo-XML after culling that form of noise out.
-  \begin{wrapfigure}{l}{0.4\textwidth}
+Similarly, the \emph{mxGeometry} information affects the visual display of the diagram, but has no semantic value for this DPL.
+Figure \ref{drawio3} shows the pseudo-XML after culling the mxGeometry information.
+  
+%  \begin{wrapfigure}{l}{0.2\textwidth}
+\begin{figure}
     \includegraphics[scale=0.4]{./media/drawio3.png}
-    \caption{cull style noise}
+    \caption{cull mxGeometry}
     \label{drawio3}
-  \end{wrapfigure}
+%  \end{wrapfigure}
+\end{figure}
+  
 Furthermore, the id can be internally hashed on a per-file manner, resulting in even less noise:
-  \begin{wrapfigure}{l}{0.8\textwidth}
+
+%  \begin{wrapfigure}{l}{0.8\textwidth}
+\begin{figure}
     \includegraphics[scale=0.4]{./media/drawio4.png}
     \caption{reduced id}
     \label{drawio4}
-  \end{wrapfigure}
+%  \end{wrapfigure}
+\end{figure}
+
 And, from here we can derive the JSON form for a child component
-  \begin{wrapfigure}{l}{0.4\textwidth}
+
+%  \begin{wrapfigure}{l}{0.4\textwidth}
+\begin{figure}
     \includegraphics[scale=0.4]{./media/json5.png}
     \caption{Resulting JSON snippet}
     \label{json5}
-  \end{wrapfigure}
+ % \end{wrapfigure}
+\end{figure}
+
 All of the above is currently achieved using an XML parser and by cherry-picking information out of
 the seemingly-complicated XML data. We argue, though, that this could, also, be replaced
 by a PEG parser which performs \emph{t2t} (text-to-text) transformations.
 
-In this example, the component id=6, derived from the Echo template, has one input port and one output port, seen in the graphml as
-\begin{verbatim}
-...
-        <mxCell id="kChx-vSpJG1CHjQ2RL-N-44" value="" style="rounded=1;\
-             whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];\
-             arcSize=50;fontFamily=Helvetica;fontSize=11;fontColor=default;" \
-             parent="kChx-vSpJG1CHjQ2RL-N-43" vertex="1">
-          <mxGeometry x="-16.75" y="27.5" width="36.75" height="25" as="geometry" />
-        </mxCell>
-        <mxCell id="kChx-vSpJG1CHjQ2RL-N-45" value="" style="rounded=1;\
-            whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],\
-            [1,0.5,0,0,0]];fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;a\
-            rcSize=50;fontFamily=Helvetica;fontSize=11;" \
-            parent="kChx-vSpJG1CHjQ2RL-N-43" vertex="1">
-          <mxGeometry x="120" y="27.5" width="36" height="25" as="geometry" />
-        </mxCell>
-...  
-\end{verbatim}
+In this example, the component id=6, derived from the Echo template, has one input port and one output port, seen in Figure \ref{ioports}.
+%  \begin{wrapfigure}{l}{0.4\textwidth}
+\begin{figure}[h]
+    \includegraphics[scale=0.4]{./media/ioports.png}
+    \caption{Input and Output Ports of id=6}
+    \label{ioports}
+ % \end{wrapfigure}
+\end{figure}
+
 Here, the ports refer to parent="kChx-vSpJG1CHjQ2RL-N-43" and contain a great deal of graphic information that has no bearing on the semantics.
-Culling, we get:
-\begin{verbatim}
-...
-        <mxCell id="kChx-vSpJG1CHjQ2RL-N-44" value="" parent=6 node=True>
-        </mxCell>
-        <mxCell id="kChx-vSpJG1CHjQ2RL-N-45" value="" parent=6 node=True>
-        </mxCell>
-...  
-\end{verbatim}
+Culling, we get Figure \ref{ioportsculled}.
+%  \begin{wrapfigure}{l}{0.4\textwidth}
+\begin{figure}[h]
+    \includegraphics[scale=0.4]{./media/ioportsculled.png}
+    \caption{Input and Output Ports of id=6, culled}
+    \label{ioportsculled}
+ % \end{wrapfigure}
+\end{figure}
+
 Note that "" is a valid port name - the null string. The input port and the output port have the same name (the null string), but, the names do not conflict since they are in different namespaces (input namespace of template "Echo" vs. output namespace of template "Echo").
 
 Grinding further through the XML, we see several connections, one of which contains a reference to "kChx-vSpJG1CHjQ2RL-N-45". In this case, the reference lists the id as a \emph{source}. This implies that "kChx-vSpJG1CHjQ2RL-N-45" is an output port (there is more nuance to this, but, for simplicity, we'll skip over the nuance for now).
-\begin{verbatim}
-...
-        <mxCell id="fJIQP-pnwGc3qDgAUfr9-5" style="edgeStyle=orthogonalEdgeStyle;\
-            curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;\
-            exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\
-            entryPerimeter=0;strokeColor=default;strokeWidth=2;align=center;\
-            verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;\
-            labelBackgroundColor=default;endArrow=classic;" parent="1" \
-            source="kChx-vSpJG1CHjQ2RL-N-45" target="kChx-vSpJG1CHjQ2RL-N-74" edge="1">
-        </mxCell>
-...  
-\end{verbatim}
+%  \begin{wrapfigure}{l}{0.4\textwidth}
+\begin{figure}[h]
+    \includegraphics[scale=0.4]{./media/connection1.png}
+    \caption{Raw connection}
+    \label{connection}
+ % \end{wrapfigure}
+\end{figure}
+
 The connection can be culled down to semantically interesting information, somewhat like
-\begin{verbatim}
-...
-        <mxCell id="fJIQP-pnwGc3qDgAUfr9-5" parent="1"
-             source="kChx-vSpJG1CHjQ2RL-N-45"
-             target="kChx-vSpJG1CHjQ2RL-N-74"
-             connector=True>
-        </mxCell>
-...  
-\end{verbatim}
+%  \begin{wrapfigure}{l}{0.4\textwidth}
+\begin{figure}[h]
+    \includegraphics[scale=0.4]{./media/connection2.png}
+    \caption{Culled connection}
+    \label{connection2}
+ % \end{wrapfigure}
+\end{figure}
+
 Since the source and the targets are children of children of the drawing, the connection is deemed to be of type \emph{across}.
 We see these relationships because "...-74" has parent "...-73" which has parent "1" and "...-45" has parent "...-43 which has parent="1". 
 
