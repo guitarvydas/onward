@@ -1,0 +1,33 @@
+The astute reader might notice a resemblance of this DPL with electronic components. In electronics, components are called “ICs”, and ports are called “pins”. Container diagrams are akin to “schematics”. ICs are black boxes encased in epoxy or plastic. One cannot peer “inside” of any IC to determine how it is implemented. Templates are called “connection diagrams” (found on IC datasheets). Components in this DPL and electronics ICs share the characteristic that they are completely asynchronous and completely isolated from one another. In contrast, software \emph{functions} and \emph{libraries} are tightly coupled and synchronous.
+
+\begin{itemize}
+\item Structured Message Passing
+\item Rule of 7
+\item Parental Authority
+\item This technique implies no built-in paradigm. Components are asynchronous and ordered-in-time by default. 
+The default behaviour can be explicitly altered by software architects.
+\item SEND in addition to CALL
+\item Locality of Reference
+\item Scoping of names
+\item Every diagram is stable, every diagram can be understood on its own.
+Children cannot change the behaviour of their parents.
+\item CPUs are meant to be single-threaded
+\item There is no single happy path in many applications.
+In general, applications can have multiple happy paths of equal importance.
+\item Subroutines are not functions
+\item Hidden dependencies
+\item Build-and-forget
+\item Enable breaking free of the function-based
+paradigm.
+\item Building new paradigms using existing tools.
+\item \emph{t2t} text-to-text transpilation pipelines.
+\item Multiple syntaxes - notations - instead of general purpose programming languages.
+\item Using existing GPLs as \emph{assemblers}.
+\item Writing code that writes code.
+\item Inferencing semantic information from diagrams using various techniques, when 
+the graphical editor does not provide sufficient information. E.g. using Prolog to inference
+space-relationships, based on (x,y) coordinates and simple mathematical relationships 
+like \emph{intersection}, \emph{larger/smaller}, \emph{above/below/left-of/right-of}
+\item The low-level concepts of \emph{loop} and \emph{recursion} don't make sense in a distributed environment, like the internet. Modern programming languages can be used to program single \emph{nodes} but are cumbersome notations for expressing designs of systems of networked nodes. 
+\item if-then-else is too low level and ad-hoc for expressing control-flow
+\end{itemize}
