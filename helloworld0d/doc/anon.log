@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 17:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 17:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1235,18 +1235,9 @@ Overfull \hbox (23.88596pt too wide) in paragraph at lines 374--375
  []
 
 [10.10]
-<./media/convert.png, id=219, 543.02875pt x 81.30376pt>
-File: ./media/convert.png Graphic file (type png)
-<use ./media/convert.png>
-Package pdftex.def Info: ./media/convert.png  used on input line 408.
-(pdftex.def)             Requested size: 258.00539pt x 38.63084pt.
-
-
-Class acmart Warning: A possible image without description on input line 411.
-
 LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 41
 5.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
@@ -1256,44 +1247,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-
-Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 422.
-
-
-Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 422.
-
-<./media/loader.png, id=221, 362.35374pt x 81.30376pt>
-File: ./media/loader.png Graphic file (type png)
-<use ./media/loader.png>
-Package pdftex.def Info: ./media/loader.png  used on input line 423.
-(pdftex.def)             Requested size: 144.93892pt x 32.52092pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11.11{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.
-enc} <./media/echo.png> <./media/convert.png>]
-
-Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 434.
-
-
-Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 434.
-
-<./media/instantiate.png, id=232, 470.75874pt x 193.72375pt>
-File: ./media/instantiate.png Graphic file (type png)
-<use ./media/instantiate.png>
-Package pdftex.def Info: ./media/instantiate.png  used on input line 435.
-(pdftex.def)             Requested size: 188.30016pt x 77.48811pt.
-
-Underfull \vbox (badness 3701) has occurred while \output is active []
-
- [12.12 <./media/loader.png> <./media/instantiate.png>] [13.13]
+[11.11{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.e
+nc} <./media/echo.png>] [12.12] [13.13]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 8.0pt on input line 627.
- [14.14]
+
 
 Class acmart Warning: Some images may lack descriptions.
 
@@ -1308,7 +1266,7 @@ File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [15.15]
+) [14.14]
 (./anon.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1324,19 +1282,19 @@ Package rerunfilecheck Warning: File `anon.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `anon.out':
-(rerunfilecheck)             Before: 83659DBCB41AA59BB01B6EA3D593FD82;3373
-(rerunfilecheck)             After:  E08351BC45761E45FD89BE4BA957312F;3373.
+(rerunfilecheck)             Before: 6676BFDA04F4DCFC7BA98B1F2ECEDA71;3373
+(rerunfilecheck)             After:  156F3B12409882B1B930203569F51B18;3373.
  ) 
 Here is how much of TeX's memory you used:
- 21316 strings out of 474116
- 344022 string characters out of 5743682
+ 21285 strings out of 474116
+ 343255 string characters out of 5743682
  1945187 words of memory out of 5000000
- 42727 multiletter control sequences out of 15000+600000
- 705116 words of font info for 320 fonts, out of 8000000 for 9000
+ 42703 multiletter control sequences out of 15000+600000
+ 704843 words of font info for 318 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,17n,131p,1433b,731s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,131p,1433b,600s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{section*.21} has been referenced but does not exist
+pdfTeX warning (dest): name{section*.18} has been referenced but does not exist
 , replaced by a fixed one
 
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-
@@ -1347,10 +1305,10 @@ e/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libe
 rtine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public
 /libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
 ublic/newtx/txsys.pfb>
-Output written on anon.pdf (15 pages, 1052018 bytes).
+Output written on anon.pdf (14 pages, 1032020 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
- 90 named destinations out of 1000 (max. 500000)
- 80638 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 343 PDF objects out of 1000 (max. 8388607)
+ 278 compressed objects within 3 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 80623 words of extra memory for PDF output out of 89155 (max. 10000000)
 
