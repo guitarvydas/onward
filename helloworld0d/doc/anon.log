@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 17:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 18:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1263,23 +1263,38 @@ Package pdftex.def Info: ./media/echo.png  used on input line 378.
 Underfull \vbox (badness 1968) has occurred while \output is active []
 
  [9.9]
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 41
-9.
+<./media/full.png, id=234, 844.15375pt x 432.61626pt>
+File: ./media/full.png Graphic file (type png)
+<use ./media/full.png>
+Package pdftex.def Info: ./media/full.png  used on input line 412.
+(pdftex.def)             Requested size: 337.65552pt x 173.04343pt.
 
+
+Class acmart Warning: A possible image without description on input line 416.
+
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 42
+7.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 419.
+(Font)              scaled to size 10.0pt on input line 427.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [10.10{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.
-enc} <./media/echo.png>] [11.11] [12.12]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 631.
 
+Underfull \vbox (badness 1888) has occurred while \output is active []
+
+ [10.10 <./media/full.png> <./media/echo.png>] [11.11{/usr/local/texlive/2024/t
+exmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}]
+Underfull \vbox (badness 2698) has occurred while \output is active []
+
+ [12.12]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 8.0pt on input line 639.
+
+[13.13]
 
 Class acmart Warning: Some images may lack descriptions.
 
@@ -1294,7 +1309,7 @@ File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [13.13]
+) [14.14]
 (./anon.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1308,16 +1323,16 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `anon.out' has not changed.
-(rerunfilecheck)             Checksum: 156F3B12409882B1B930203569F51B18;3373.
+(rerunfilecheck)             Checksum: 6676BFDA04F4DCFC7BA98B1F2ECEDA71;3373.
  ) 
 Here is how much of TeX's memory you used:
- 21279 strings out of 474116
- 343147 string characters out of 5743682
+ 21289 strings out of 474116
+ 343341 string characters out of 5743682
  1945187 words of memory out of 5000000
- 42702 multiletter control sequences out of 15000+600000
+ 42710 multiletter control sequences out of 15000+600000
  704472 words of font info for 316 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,17n,131p,1433b,600s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,131p,1433b,739s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolat
 a-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/Lin
 BiolinumT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/
@@ -1326,10 +1341,10 @@ ine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/li
 bertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
 ic/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
 /public/newtx/txsys.pfb>
-Output written on anon.pdf (13 pages, 1033780 bytes).
+Output written on anon.pdf (14 pages, 1059188 bytes).
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
- 283 compressed objects within 3 object streams
- 84 named destinations out of 1000 (max. 500000)
- 80683 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 288 compressed objects within 3 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 80688 words of extra memory for PDF output out of 89155 (max. 10000000)
 
