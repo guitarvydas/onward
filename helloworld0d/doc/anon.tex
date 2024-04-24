@@ -189,55 +189,46 @@ The structure of the information needed by the DPL runtime is minimal, consistin
 
 \end{enumerate}
 
+  \begin{wrapfigure}{l}{0.8\textwidth}
+    \includegraphics[scale=0.4]{./media/drawio1.png}
+    \caption{Raw .drawio}
+    \label{drawio1}
+  \end{wrapfigure}
+
 The .drawio file containing this information is verbose and contains a great deal of graphic layout information that is not relevant at the semantic level.
 
-(In the following, we wave our hands in an attempt to simplify discussion of our approach...)
+\emph{The following is simplified for discussion purposes.}
 
 A Child derived from the Echo template is saved in the .drawio file as: (shown with artificial line breaks)
-\begin{verbatim}
-        <mxCell id="kChx-vSpJG1CHjQ2RL-N-43" value="Echo" style="rounded=1; \
-                  whiteSpace=wrap;html=1;sketch=0;container=1;recursiveResize=0;\
-                  verticalAlign=top;arcSize=6;fontStyle=1;autosize=0;points=[];\
-                  absoluteArcSize=1;shadow=1;strokeColor=#6c8ebf;fillColor=#dae8fc;\
-                  fontFamily=Helvetica;fontSize=11;gradientColor=#0050EF;\
-                  fontColor=default;" parent="1" vertex="1">
-          <mxGeometry x="172" y="190.5" width="138" height="100" as="geometry">
-            <mxRectangle x="-98" y="-1230" width="99" height="26" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-\end{verbatim}
 
 In this DPL, the \emph{style} information is mostly noise from the perspective of semantics. We do need, though, to peer into the style information to determine if the mxCell is a node or a connector (vertex="1" versus edge="1").
 
 When we remove the \emph{style} noise, we get pseudo-XML something like:
-\begin{verbatim}
-        <mxCell id="kChx-vSpJG1CHjQ2RL-N-43" value="Echo" node=True
-          <mxGeometry x="172" y="190.5" width="138" height="100" as="geometry">
-            <mxRectangle x="-98" y="-1230" width="99" height="26" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-\end{verbatim}
+  \begin{wrapfigure}{l}{0.8\textwidth}
+    \includegraphics[scale=0.4]{./media/drawio2.png}
+    \caption{Raw .drawio}
+    \label{drawio2}
+  \end{wrapfigure}
 Similarly, the \emph{mxGeometry} information affects the visual display of the diagram, but has no semantic value for this DPL.
 
-Culling that form of noise out, we get
-\begin{verbatim}
-        <mxCell id="kChx-vSpJG1CHjQ2RL-N-43" value="Echo" node=True>
-        </mxCell>
-\end{verbatim}
+Figure \ref{drawio3} shows the pseudo-XML after culling that form of noise out.
+  \begin{wrapfigure}{l}{0.4\textwidth}
+    \includegraphics[scale=0.4]{./media/drawio3.png}
+    \caption{cull style noise}
+    \label{drawio3}
+  \end{wrapfigure}
 Furthermore, the id can be internally hashed on a per-file manner, resulting in even less noise:
-\begin{verbatim}
-        <mxCell id=6 value="Echo" node=True>
-        </mxCell>
-\end{verbatim}
+  \begin{wrapfigure}{l}{0.8\textwidth}
+    \includegraphics[scale=0.4]{./media/drawio4.png}
+    \caption{reduced id}
+    \label{drawio4}
+  \end{wrapfigure}
 And, from here we can derive the JSON form for a child component
-\begin{verbatim}
-...
-    {
-        "name": "Echo",
-        "id": 6
-    },
-...
-\end{verbatim}
+  \begin{wrapfigure}{l}{0.4\textwidth}
+    \includegraphics[scale=0.4]{./media/json5.png}
+    \caption{Resulting JSON snippet}
+    \label{json5}
+  \end{wrapfigure}
 All of the above is currently achieved using an XML parser and by cherry-picking information out of
 the seemingly-complicated XML data. We argue, though, that this could, also, be replaced
 by a PEG parser which performs \emph{t2t} (text-to-text) transformations.

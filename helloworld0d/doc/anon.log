@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 05:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 05:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1031,159 +1031,404 @@ Underfull \hbox (badness 1460) in paragraph at lines 175--176
 [][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) The di-a-gram parser pro-
  []
 
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 19
-7.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/t1zi4.fd
-File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
-)
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 197.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `zi4' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [4.4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.en
-c} <./media/json.png>] [5.5] [6.6]
-LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 318.
- [7.7]
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 340.
+surrounding objects on input line 192.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 340.
+surrounding objects on input line 192.
 
-<./media/fanin.png, id=164, 743.77875pt x 501.875pt>
-File: ./media/fanin.png Graphic file (type png)
-<use ./media/fanin.png>
-Package pdftex.def Info: ./media/fanin.png  used on input line 341.
-(pdftex.def)             Requested size: 148.75311pt x 100.37321pt.
-[8.8 <./media/fanin.png>]
+<./media/drawio1.png, id=134, 786.94pt x 351.3125pt>
+File: ./media/drawio1.png Graphic file (type png)
+<use ./media/drawio1.png>
+Package pdftex.def Info: ./media/drawio1.png  used on input line 193.
+(pdftex.def)             Requested size: 314.77042pt x 140.5225pt.
 
-Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 351.
+Underfull \hbox (badness 2894) in paragraph at lines 198--199
+\T1/LinuxLibertineT-TLF/m/n/10 (+20) for-ma-tion is ver-
+ []
 
 
-Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 351.
+Overfull \hbox (10.1838pt too wide) in paragraph at lines 198--199
+\T1/LinuxLibertineT-TLF/m/n/10 (-20) a great deal of graphic
+ []
 
-<./media/fanout.png, id=172, 753.81625pt x 501.875pt>
-File: ./media/fanout.png Graphic file (type png)
-<use ./media/fanout.png>
-Package pdftex.def Info: ./media/fanout.png  used on input line 352.
-(pdftex.def)             Requested size: 150.76057pt x 100.37321pt.
+
+Underfull \hbox (badness 5175) in paragraph at lines 198--199
+\T1/LinuxLibertineT-TLF/m/n/10 (+20) that is not rel-e-
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 200--201
+\T1/LinuxLibertineT-TLF/m/it/10 (+20) sim-pli-fied for dis-
+ []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9.9 <./media/fanout.png>]
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 367.
- [10.10]
-<./media/convert.png, id=186, 543.02875pt x 81.30376pt>
-File: ./media/convert.png Graphic file (type png)
-<use ./media/convert.png>
-Package pdftex.def Info: ./media/convert.png  used on input line 437.
-(pdftex.def)             Requested size: 258.00539pt x 38.63084pt.
-
-
-Class acmart Warning: A possible image without description on input line 440.
-
-<./media/loader.png, id=188, 362.35374pt x 81.30376pt>
-File: ./media/loader.png Graphic file (type png)
-<use ./media/loader.png>
-Package pdftex.def Info: ./media/loader.png  used on input line 453.
-(pdftex.def)             Requested size: 144.93892pt x 32.52092pt.
-
-Class acmart Warning: A possible image without description on input line 456.
-
-[11.11 <./media/convert.png> <./media/loader.png>]
+ [4.4 <./media/json.png> <./media/drawio1.png>]
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 465.
+surrounding objects on input line 207.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 465.
+surrounding objects on input line 207.
 
-<./media/instantiate.png, id=198, 470.75874pt x 193.72375pt>
-File: ./media/instantiate.png Graphic file (type png)
-<use ./media/instantiate.png>
-Package pdftex.def Info: ./media/instantiate.png  used on input line 466.
-(pdftex.def)             Requested size: 188.30016pt x 77.48811pt.
+<./media/drawio2.png, id=152, 716.6775pt x 309.155pt>
+File: ./media/drawio2.png Graphic file (type png)
+<use ./media/drawio2.png>
+Package pdftex.def Info: ./media/drawio2.png  used on input line 208.
+(pdftex.def)             Requested size: 286.66592pt x 123.6598pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--211
+[]\T1/LinuxLibertineT-TLF/m/n/10 (+20) When we re-move the \T1/LinuxLibertineT-
+TLF/m/it/10 (+20) style \T1/LinuxLibertineT-TLF/m/n/10 (+20) noise, we get pseu
+do-XML some-thing like:
+ []
+
+
+Underfull \hbox (badness 1968) in paragraph at lines 211--213
+\T1/LinuxLibertineT-TLF/m/n/10 (+20) di-a-gram, but has
+ []
+
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+215.
+
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 497.
+surrounding objects on input line 215.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 497.
+surrounding objects on input line 215.
 
-<./media/inject.png, id=200, 564.1075pt x 81.30376pt>
-File: ./media/inject.png Graphic file (type png)
-<use ./media/inject.png>
-Package pdftex.def Info: ./media/inject.png  used on input line 498.
-(pdftex.def)             Requested size: 225.63899pt x 32.52092pt.
+<./media/drawio3.png, id=154, 576.1525pt x 309.155pt>
+File: ./media/drawio3.png Graphic file (type png)
+<use ./media/drawio3.png>
+Package pdftex.def Info: ./media/drawio3.png  used on input line 216.
+(pdftex.def)             Requested size: 230.45691pt x 123.6598pt.
 
-Overfull \hbox (10.63669pt too wide) in paragraph at lines 498--499
+Overfull \hbox (58.45769pt too wide) in paragraph at lines 216--217
 [][] 
  []
 
 
-Overfull \hbox (106.64731pt too wide) in paragraph at lines 514--514
+Overfull \hbox (2.87366pt too wide) in paragraph at lines 214--219
+\T1/LinuxLibertineT-TLF/m/n/10 (-20) ter culling that form
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--219
+\T1/LinuxLibertineT-TLF/m/n/10 (+20) of noise out.
+ []
+
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 21
+9.
+
+
+Underfull \hbox (badness 7981) in paragraph at lines 219--221
+\T1/LinuxLibertineT-TLF/m/n/10 (+20) Furthermore, the
+ []
+
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+221.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 221.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 221.
+
+<./media/drawio4.png, id=155, 407.5225pt x 309.155pt>
+File: ./media/drawio4.png Graphic file (type png)
+<use ./media/drawio4.png>
+Package pdftex.def Info: ./media/drawio4.png  used on input line 222.
+(pdftex.def)             Requested size: 163.0061pt x 123.6598pt.
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 22
+6.
+
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+227.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 227.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 227.
+
+<./media/json5.png, id=156, 407.5225pt x 309.155pt>
+File: ./media/json5.png Graphic file (type png)
+<use ./media/json5.png>
+Package pdftex.def Info: ./media/json5.png  used on input line 228.
+(pdftex.def)             Requested size: 163.0061pt x 123.6598pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5.5 <./media/drawio2.png> <./media/drawio3.png>]
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 23
+7.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 237.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (275.623pt too wide) in paragraph at lines 253--253
+ []        \T1/zi4/m/n/10 <mxCell id="kChx-vSpJG1CHjQ2RL-N-44" value="" style="
+rounded=1;\[] 
+ []
+
+
+Overfull \hbox (327.28285pt too wide) in paragraph at lines 253--253
+ []             \T1/zi4/m/n/10 whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0
+,0,0],[1,0.5,0,0,0]];\[] 
+ []
+
+
+Overfull \hbox (300.61278pt too wide) in paragraph at lines 253--253
+ []             \T1/zi4/m/n/10 arcSize=50;fontFamily=Helvetica;fontSize=11;font
+Color=default;" \[] 
+ []
+
+
+Overfull \hbox (195.61278pt too wide) in paragraph at lines 253--253
+ []             \T1/zi4/m/n/10 parent="kChx-vSpJG1CHjQ2RL-N-43" vertex="1">[] 
+ []
+
+
+Overfull \hbox (327.27263pt too wide) in paragraph at lines 253--253
+ []          \T1/zi4/m/n/10 <mxGeometry x="-16.75" y="27.5" width="36.75" heigh
+t="25" as="geometry" />[] 
+ []
+
+
+Overfull \hbox (5.63322pt too wide) in paragraph at lines 253--253
+ []        \T1/zi4/m/n/10 </mxCell>[] 
+ []
+
+
+Overfull \hbox (275.623pt too wide) in paragraph at lines 253--253
+ []        \T1/zi4/m/n/10 <mxCell id="kChx-vSpJG1CHjQ2RL-N-45" value="" style="
+rounded=1;\[] 
+ []
+
+
+Overfull \hbox (248.95293pt too wide) in paragraph at lines 253--253
+ []            \T1/zi4/m/n/10 whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,
+0,0],\[] 
+ []
+
+
+Overfull \hbox (338.95293pt too wide) in paragraph at lines 253--253
+ []            \T1/zi4/m/n/10 [1,0.5,0,0,0]];fillColor=#1ba1e2;fontColor=#fffff
+f;strokeColor=#006EAF;a\[] 
+ []
+
+
+Overfull \hbox (202.28285pt too wide) in paragraph at lines 253--253
+ []            \T1/zi4/m/n/10 rcSize=50;fontFamily=Helvetica;fontSize=11;" \[] 
+
+ []
+
+
+Overfull \hbox (192.28285pt too wide) in paragraph at lines 253--253
+ []            \T1/zi4/m/n/10 parent="kChx-vSpJG1CHjQ2RL-N-43" vertex="1">[] 
+ []
+
+
+Overfull \hbox (297.27263pt too wide) in paragraph at lines 253--253
+ []          \T1/zi4/m/n/10 <mxGeometry x="120" y="27.5" width="36" height="25"
+ as="geometry" />[] 
+ []
+
+
+Overfull \hbox (5.63322pt too wide) in paragraph at lines 253--253
+ []        \T1/zi4/m/n/10 </mxCell>[] 
+ []
+
+[6.6{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc
+} <./media/drawio4.png> <./media/json5.png>]
+Overfull \hbox (278.95293pt too wide) in paragraph at lines 263--263
+ []        \T1/zi4/m/n/10 <mxCell id="kChx-vSpJG1CHjQ2RL-N-44" value="" parent=
+6 node=True>[] 
+ []
+
+
+Overfull \hbox (5.63322pt too wide) in paragraph at lines 263--263
+ []        \T1/zi4/m/n/10 </mxCell>[] 
+ []
+
+
+Overfull \hbox (278.95293pt too wide) in paragraph at lines 263--263
+ []        \T1/zi4/m/n/10 <mxCell id="kChx-vSpJG1CHjQ2RL-N-45" value="" parent=
+6 node=True>[] 
+ []
+
+
+Overfull \hbox (5.63322pt too wide) in paragraph at lines 263--263
+ []        \T1/zi4/m/n/10 </mxCell>[] 
+ []
+
+
+Underfull \vbox (badness 1147) has occurred while \output is active []
+
+ [7.7]
+LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 309.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8.8]
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 331.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 331.
+
+<./media/fanin.png, id=185, 743.77875pt x 501.875pt>
+File: ./media/fanin.png Graphic file (type png)
+<use ./media/fanin.png>
+Package pdftex.def Info: ./media/fanin.png  used on input line 332.
+(pdftex.def)             Requested size: 148.75311pt x 100.37321pt.
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 342.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 342.
+
+<./media/fanout.png, id=187, 753.81625pt x 501.875pt>
+File: ./media/fanout.png Graphic file (type png)
+<use ./media/fanout.png>
+Package pdftex.def Info: ./media/fanout.png  used on input line 343.
+(pdftex.def)             Requested size: 150.76057pt x 100.37321pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9.9 <./media/fanin.png>]
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 358.
+
+Underfull \vbox (badness 6204) has occurred while \output is active []
+
+ [10.10 <./media/fanout.png>] [11.11]
+<./media/convert.png, id=206, 543.02875pt x 81.30376pt>
+File: ./media/convert.png Graphic file (type png)
+<use ./media/convert.png>
+Package pdftex.def Info: ./media/convert.png  used on input line 428.
+(pdftex.def)             Requested size: 258.00539pt x 38.63084pt.
+
+
+Class acmart Warning: A possible image without description on input line 431.
+
+<./media/loader.png, id=208, 362.35374pt x 81.30376pt>
+File: ./media/loader.png Graphic file (type png)
+<use ./media/loader.png>
+Package pdftex.def Info: ./media/loader.png  used on input line 444.
+(pdftex.def)             Requested size: 144.93892pt x 32.52092pt.
+
+Class acmart Warning: A possible image without description on input line 447.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 456.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 456.
+
+<./media/instantiate.png, id=209, 470.75874pt x 193.72375pt>
+File: ./media/instantiate.png Graphic file (type png)
+<use ./media/instantiate.png>
+Package pdftex.def Info: ./media/instantiate.png  used on input line 457.
+(pdftex.def)             Requested size: 188.30016pt x 77.48811pt.
+[12.12 <./media/convert.png> <./media/loader.png> <./media/instantiate.png>]
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 488.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 488.
+
+<./media/inject.png, id=223, 564.1075pt x 81.30376pt>
+File: ./media/inject.png Graphic file (type png)
+<use ./media/inject.png>
+Package pdftex.def Info: ./media/inject.png  used on input line 489.
+(pdftex.def)             Requested size: 225.63899pt x 32.52092pt.
+
+Overfull \hbox (10.63669pt too wide) in paragraph at lines 489--490
+[][] 
+ []
+
+
+Overfull \hbox (106.64731pt too wide) in paragraph at lines 505--505
 []\T1/zi4/m/n/10 def start_function (root_project, root_0D, arg, main_container
 ):[] 
  []
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-517.
+508.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 517.
+surrounding objects on input line 508.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 517.
+surrounding objects on input line 508.
 
-<./media/run.png, id=202, 381.425pt x 61.22874pt>
+<./media/run.png, id=225, 381.425pt x 61.22874pt>
 File: ./media/run.png Graphic file (type png)
 <use ./media/run.png>
-Package pdftex.def Info: ./media/run.png  used on input line 518.
+Package pdftex.def Info: ./media/run.png  used on input line 509.
 (pdftex.def)             Requested size: 152.56729pt x 24.49104pt.
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 52
-2.
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 51
+3.
 
-[12.12 <./media/instantiate.png> <./media/inject.png>]
-<./media/display.png, id=213, 555.07375pt x 81.30376pt>
+[13.13 <./media/inject.png> <./media/run.png>]
+<./media/display.png, id=236, 555.07375pt x 81.30376pt>
 File: ./media/display.png Graphic file (type png)
 <use ./media/display.png>
-Package pdftex.def Info: ./media/display.png  used on input line 542.
+Package pdftex.def Info: ./media/display.png  used on input line 533.
 (pdftex.def)             Requested size: 222.02556pt x 32.52092pt.
 
 
-Class acmart Warning: A possible image without description on input line 545.
+Class acmart Warning: A possible image without description on input line 536.
 
-[13.13 <./media/run.png> <./media/display.png>]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 579.
+(Font)              scaled to size 10.0pt on input line 570.
+
+Package natbib Warning: Citation `dc0d' on page 14 undefined on input line 570.
 
 
-Package natbib Warning: Citation `dc0d' on page 14 undefined on input line 579.
+[14.14 <./media/display.png>] [15.15]
+Underfull \vbox (badness 1137) has occurred while \output is active []
 
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14.14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15.15]
+ [16.16]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 680.
+(Font)              scaled to size 8.0pt on input line 671.
 
 
 Package natbib Warning: There were undefined citations.
@@ -1202,23 +1447,23 @@ File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [16.16]
+) [17.17]
 (./anon.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `anon.out' has not changed.
-(rerunfilecheck)             Checksum: 6CD5FD9F8F67C749D215E97A2844E019;3416.
+(rerunfilecheck)             Checksum: 63D11F12FEF3575506B78B2B4E3727C8;3416.
  ) 
 Here is how much of TeX's memory you used:
- 21247 strings out of 474116
- 342413 string characters out of 5743682
+ 21296 strings out of 474116
+ 343514 string characters out of 5743682
  1945187 words of memory out of 5000000
- 42668 multiletter control sequences out of 15000+600000
- 704660 words of font info for 319 fonts, out of 8000000 for 9000
+ 42708 multiletter control sequences out of 15000+600000
+ 705031 words of font info for 321 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,17n,131p,1433b,724s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,131p,1433b,733s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolat
 a-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/Lin
 BiolinumT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/
@@ -1227,10 +1472,10 @@ ine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/li
 bertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
 ic/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
 /public/newtx/txsys.pfb>
-Output written on anon.pdf (16 pages, 578074 bytes).
+Output written on anon.pdf (17 pages, 782806 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
- 270 compressed objects within 3 object streams
- 82 named destinations out of 1000 (max. 500000)
- 80603 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 350 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 88 named destinations out of 1000 (max. 500000)
+ 80628 words of extra memory for PDF output out of 89155 (max. 10000000)
 
