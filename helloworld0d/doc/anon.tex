@@ -1,8 +1,8 @@
 \documentclass[10pt,anonymous,review]{acmart}
 \usepackage{wrapfig}
 
-\setlength{\intextsep}{2pt}
-\setlength{\abovecaptionskip}{2pt}
+\setlength{\intextsep}{1pt}
+\setlength{\abovecaptionskip}{1pt}
 
 \title{Extending Programming with Diagrammatic Programming Languages}
 \author{Zac Nowicki}
@@ -276,8 +276,6 @@ Note that "" is a valid port name - the null string. The input port and the outp
 \end{wrapfigure}
 Grinding further through the XML, we see several connections, one of which contains a reference to "kChx-vSpJG1CHjQ2RL-N-45". In this case, the reference lists the id as a \emph{source}. This implies that "kChx-vSpJG1CHjQ2RL-N-45" is an output port (there is more nuance to this, but, for simplicity, we'll skip over the nuance for now).
 
-\newpage
-
 \begin{wrapfigure}{r}{0.4\textwidth}
     \includegraphics[scale=0.4]{./media/connection2.png}
     \caption{Culled connection}
@@ -389,14 +387,20 @@ Specifically, one of the children is deemed to have id=6, instead of the of one 
 
 
 \subsection{Leaf Component "Echo"}
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \includegraphics[scale=0.4]{./media/echo.png}
+    \caption{Echo}
+    \label{fig:echo}
+\end{wrapfigure}
 In our implementation, we used the Odin programming language for
 creating the diagram parser, but, we use the Python programming
 language to load and execute the parsed results.
 
 Figure 1 refers to a Leaf component template called "Echo". The "Echo"
-component is instantiated three (3) times. Leaf components are
-implemented with code in some host language (Python, in our case). A
-sample of such an implementation is shown below. Software components
+component is instantiated three (3) times. 
+
+Leaf components are
+implemented with code in some host language (Python, in our case) as in Figure \ref{fig:echo}. Software components
 appear as rectangles on the drawing. The implementation provides two (2)
 entry points for each software component:
 \begin{itemize}
@@ -409,15 +413,6 @@ template. In this example, an "Echo" component does nothing more than
 forwarding the received message. The \emph{handler} code is activated for
 \emph{each} incoming message.
 \end{itemize}
-
-\begin{verbatim}
-def Echo (reg, owner, name, template_data):
-    name_with_id = gensym ("Echo")
-    return make_leaf (name_with_id, owner, None, Echo_handler)
-
-def Echo_handler (eh, msg):
-    send_string (eh, "", msg.datum.srepr (), msg)
-\end{verbatim}
 
 \section{Compilation and Execution}
 Compilation and execution of this DPL consists of the steps listed below. Note that the diagrams are rough sketches intentionally simplified
@@ -435,10 +430,10 @@ for overview purposes only.
   Transpilation of the diagrams (XML) into JSON (or internal data structures, if efficiency is at a premium). The diagrams represent \emph{templates} for components.
   
   In our implementation, \texttt{das2json} is implemented\cite{d2jrepo} in the Odin programming language. The process begins with a straightforward call to the XML parsing library. The XML data is then deconstructed into a convenient internal format (see \texttt{0d/ir/ir\_odin/ir.odin} in the code repository).
-
-\begin{verbatim}
-    xml, xml_err := xml.parse(file)
-\end{verbatim}
+%
+%\begin{verbatim}
+%    xml, xml_err := xml.parse(file)
+%\end{verbatim}
   
 \subsection{Load component templates from JSON.}
 \begin{wrapfigure}[4]{r}{0.5\textwidth}
@@ -447,10 +442,10 @@ for overview purposes only.
     \label{fig:load_templates}
   \end{wrapfigure}
   Ingestion of the JSON, or internal data structures into an internal database that we call a \emph{registry}. Registries can be implemented as a \emph{dictionaries, maps} or \emph{databases}.
-
-\begin{verbatim}
-    routings = json.loads(json_data)
-\end{verbatim}
+%
+%\begin{verbatim}
+ %   routings = json.loads(json_data)
+%\end{verbatim}
 
 \subsection{Instantiate system.}
   \begin{wrapfigure}{l}{0.5\textwidth}
@@ -472,12 +467,9 @@ id's to each template component, which we ended up using instead of
 relying on (x,y) graphical information. Assigning unique id's is a
 convenience, not a requirement, since the same information can be inferenced 
 using multiple approaches.
-
-
-\begin{verbatim}
-main_container = get_component_instance(pregistry, main_container_name,  owner=None)
-\end{verbatim}
-
+%\begin{verbatim}
+%main_container = get_component_instance(pregistry, main_container_name,  owner=None)
+%\end{verbatim}
 Software components are fully isolated from one another through the use
 of FIFO queues.
 
@@ -490,13 +482,13 @@ of FIFO queues.
 
 The first message is constructed using the host language. The message is
 injected\cite{main} into the input queue of the top-most component.
-
-\begin{verbatim}
-def start_function (root_project, root_0D, arg, main_container):
-    arg = new_datum_string (arg)
-    msg = make_message("", arg)
-    inject (main_container, msg)
-\end{verbatim}
+%
+%\begin{verbatim}
+%def start_function (root_project, root_0D, arg, main_container):
+%   arg = new_datum_string (arg)
+%   msg = make_message("", arg)
+%    inject (main_container, msg)
+%\end{verbatim}
   
 \subsection{Run.}
   \begin{wrapfigure}{m}{0.5\textwidth}
@@ -513,11 +505,11 @@ connections, recursively, until no messages remain in any input queues.
 
 Containers must consume only one input message at a time while waiting
 for all children to reach quiescence.
-
-\begin{verbatim}
-    if not load_errors:
-        injectfn (root_project, root_0D, arg, main_container)
-\end{verbatim}
+%
+%\begin{verbatim}
+%    if not load_errors:
+%       injectfn (root_project, root_0D, arg, main_container)
+%\end{verbatim}
   
 \subsection{Display outputs.}
   \begin{figure}[h]
@@ -529,10 +521,10 @@ for all children to reach quiescence.
 
 The outputs in the output queue of the top-level component are displayed
 using the host language.
-
-\begin{verbatim}
-    dump_outputs (main_container)
-\end{verbatim}
+%
+%\begin{verbatim}
+%   dump_outputs (main_container)
+%\end{verbatim}
   
 
 The Python version of the runtime system consists of roughly 9 files of
@@ -540,10 +532,12 @@ code consisting of about 2,500 lines of code (including blank lines and
 comments) and is supported by a standard library consisting of another 5
 files of code containing about 430 lines of code.
 
-At the basic level, runtime component instances are asynchronous, but,
-use named and anonymous functions and closures, instead of operating
-system processes. As such, programs written this way "feel" like
-\emph{programs} instead of as \emph{processes} in terms of efficiency.
+%At the basic level, runtime component instances are asynchronous, but,
+%use named and anonymous functions and closures, instead of operating
+%system processes. As such, programs written this way "feel" like
+%\emph{programs} instead of as \emph{processes} in terms of efficiency.
+Programs written this way "feel" like
+\emph{programs} instead of as \emph{processes} in terms of efficiency because anonymous functions and closures are used instead of processes.
 
 \section{Work In Progress}
 We have built working examples of various other technologies, using the
