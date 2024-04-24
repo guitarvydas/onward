@@ -31,3 +31,19 @@ like \emph{intersection}, \emph{larger/smaller}, \emph{above/below/left-of/right
 \item The low-level concepts of \emph{loop} and \emph{recursion} don't make sense in a distributed environment, like the internet. Modern programming languages can be used to program single \emph{nodes} but are cumbersome notations for expressing designs of systems of networked nodes. 
 \item if-then-else is too low level and ad-hoc for expressing control-flow
 \end{itemize}
+
+
+The example diagram is compiled into a container component containing the following information:
+\begin{itemize}
+\item name=“main”
+\item children=[\{“Echo”, 1\}, \{“Echo”, 2\}, \{“Echo”, 3\}, \{“Echo”, 4\}]
+\item connections=[
+\begin{itemize}
+  \item[] \{down,\{self,``''\},\{1,``”\}\},\{across,\{1,``”\},\{2,``”\}\},\{up,\{2,``”\},\{self,``seq''\}\}
+  \item[] \{down,\{self,``”\},\{3,``”\}\},\{up,\{3,``”\},\{self,``par”\}\},
+  \item[] \{down,\{self,``”\},\{4,``”\}\},\{up,\{2,``”\},\{self,``par”\}\}
+\end{itemize}
+]
+\end{itemize}
+Further below, we will see that the compiler chose different values for ids.
+Specifically, one of the children is deemed to have id=6, instead of the of one of the idealized ids listed above.

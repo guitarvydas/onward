@@ -1,2 +1,2 @@
-- diagram of fan-out and fan-in
-- diagram of abstraction
+- fix up 1,2,3,4 as ids
+
