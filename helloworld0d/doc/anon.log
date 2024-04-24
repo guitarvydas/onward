@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 17:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 17:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1228,9 +1228,9 @@ surrounding objects on input line 373.
 File: ./media/echo.png Graphic file (type png)
 <use ./media/echo.png>
 Package pdftex.def Info: ./media/echo.png  used on input line 374.
-(pdftex.def)             Requested size: 238.88826pt x 123.6598pt.
+(pdftex.def)             Requested size: 216.12648pt x 89.51712pt.
 
-Overfull \hbox (23.88596pt too wide) in paragraph at lines 374--375
+Overfull \hbox (1.12418pt too wide) in paragraph at lines 374--375
 [][] 
  []
 
@@ -1276,39 +1276,29 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `anon.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `anon.out':
-(rerunfilecheck)             Before: 6676BFDA04F4DCFC7BA98B1F2ECEDA71;3373
-(rerunfilecheck)             After:  156F3B12409882B1B930203569F51B18;3373.
+Package rerunfilecheck Info: File `anon.out' has not changed.
+(rerunfilecheck)             Checksum: 156F3B12409882B1B930203569F51B18;3373.
  ) 
 Here is how much of TeX's memory you used:
- 21285 strings out of 474116
- 343255 string characters out of 5743682
+ 21280 strings out of 474116
+ 343151 string characters out of 5743682
  1945187 words of memory out of 5000000
- 42703 multiletter control sequences out of 15000+600000
- 704843 words of font info for 318 fonts, out of 8000000 for 9000
+ 42702 multiletter control sequences out of 15000+600000
+ 704570 words of font info for 316 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  90i,17n,131p,1433b,600s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{section*.18} has been referenced but does not exist
-, replaced by a fixed one
-
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-
-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinBi
-olinumT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/Li
-nBiolinumTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertin
-e/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libe
-rtine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public
-/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
-ublic/newtx/txsys.pfb>
-Output written on anon.pdf (14 pages, 1032020 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolat
+a-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/Lin
+BiolinumT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/
+LinBiolinumTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libert
+ine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/li
+bertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
+ic/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
+/public/newtx/txsys.pfb>
+Output written on anon.pdf (14 pages, 1032278 bytes).
 PDF statistics:
- 343 PDF objects out of 1000 (max. 8388607)
+ 344 PDF objects out of 1000 (max. 8388607)
  278 compressed objects within 3 object streams
- 86 named destinations out of 1000 (max. 500000)
- 80623 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 85 named destinations out of 1000 (max. 500000)
+ 80629 words of extra memory for PDF output out of 89155 (max. 10000000)
 
