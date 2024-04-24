@@ -420,12 +420,12 @@ for overview purposes only.
 
 \subsection{Convert DPL program diagrams to JSON.}
 
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\linewidth]{./media/convert.png}
-    \caption{Convert diagram to JSON}
-    \label{fig:convert_to_json}
-  \end{figure}
+%  \begin{figure}[h]
+%    \centering
+%    \includegraphics[width=0.6\linewidth]{./media/convert.png}
+%    \caption{Convert diagram to JSON}
+%    \label{fig:convert_to_json}
+%  \end{figure}
 
   Transpilation of the diagrams (XML) into JSON (or internal data structures, if efficiency is at a premium). The diagrams represent \emph{templates} for components.
   
@@ -436,11 +436,11 @@ for overview purposes only.
 %\end{verbatim}
   
 \subsection{Load component templates from JSON.}
-\begin{wrapfigure}[4]{r}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/loader.png}
-    \caption{Loader}
-    \label{fig:load_templates}
-  \end{wrapfigure}
+%\begin{wrapfigure}[4]{r}{0.5\textwidth}
+%    \includegraphics[scale=0.4]{./media/loader.png}
+%    \caption{Loader}
+%    \label{fig:load_templates}
+%  \end{wrapfigure}
   Ingestion of the JSON, or internal data structures into an internal database that we call a \emph{registry}. Registries can be implemented as a \emph{dictionaries, maps} or \emph{databases}.
 %
 %\begin{verbatim}
@@ -448,11 +448,11 @@ for overview purposes only.
 %\end{verbatim}
 
 \subsection{Instantiate system.}
-  \begin{wrapfigure}{l}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/instantiate.png}
-    \caption{Instantiate}
-    \label{fig:instantiate_system}
-  \end{wrapfigure}
+%  \begin{wrapfigure}{l}{0.5\textwidth}
+%    \includegraphics[scale=0.4]{./media/instantiate.png}
+%    \caption{Instantiate}
+%    \label{fig:instantiate_system}
+%  \end{wrapfigure}
 
   Instantiation\cite{run} of an application beginning with a top-level diagram
 and proceeds downwards to instantiate all children components needed in
@@ -474,11 +474,11 @@ Software components are fully isolated from one another through the use
 of FIFO queues.
 
 \subsection{Inject first message.}
-  \begin{wrapfigure}{r}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/inject.png}
-    \caption{Inject first message(s)}
-    \label{fig:inject_first_message}
-  \end{wrapfigure}
+%  \begin{wrapfigure}{r}{0.5\textwidth}
+%    \includegraphics[scale=0.4]{./media/inject.png}
+%    \caption{Inject first message(s)}
+%    \label{fig:inject_first_message}
+%  \end{wrapfigure}
 
 The first message is constructed using the host language. The message is
 injected\cite{main} into the input queue of the top-most component.
@@ -491,11 +491,11 @@ injected\cite{main} into the input queue of the top-most component.
 %\end{verbatim}
   
 \subsection{Run.}
-  \begin{wrapfigure}{m}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/run.png}
-    \caption{Run}
-    \label{fig:run}
-  \end{wrapfigure}
+%  \begin{wrapfigure}{m}{0.5\textwidth}
+%    \includegraphics[scale=0.4]{./media/run.png}
+%    \caption{Run}
+%    \label{fig:run}
+%  \end{wrapfigure}
 The application is executed.
 
 The application is interpreted by repeatedly delivering messages along
@@ -512,12 +512,12 @@ for all children to reach quiescence.
 %\end{verbatim}
   
 \subsection{Display outputs.}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.4]{./media/display.png}
-    \caption{Display Outputs}
-    \label{fig:display}
-  \end{figure}
+%  \begin{figure}[h]
+%    \centering
+%    \includegraphics[scale=0.4]{./media/display.png}
+%    \caption{Display Outputs}
+%    \label{fig:display}
+%  \end{figure}
 
 The outputs in the output queue of the top-level component are displayed
 using the host language.
