@@ -273,15 +273,17 @@ Note that "" is a valid port name - the null string. The input port and the outp
 \end{wrapfigure}
 Grinding further through the XML, we see several connections, one of which contains a reference to "kChx-vSpJG1CHjQ2RL-N-45". In this case, the reference lists the id as a \emph{source}. This implies that "kChx-vSpJG1CHjQ2RL-N-45" is an output port (there is more nuance to this, but, for simplicity, we'll skip over the nuance for now).
 
-\begin{wrapfigure}{r}{0.4\textwidth}
-    \includegraphics[scale=0.4]{./media/connection2.png}
+
+%%%%% Culled connection
+\begin{wrapfigure}{r}{0.37\textwidth}
+    \includegraphics[trim=2cm 2cm 2cm 1.7cm, clip, scale=0.4]{./media/connection2.png}
     \caption{Culled connection}
     \label{connection2}
 \end{wrapfigure}
-The connection can be culled down to semantically interesting information, as in Figure \ref{connection2}
-
+The connection can be culled down to semantically interesting information, as in Figure \ref{connection2}.
 Since the source and the targets are children of children of the drawing, the connection is deemed to be of type \emph{across}.
 We see these relationships because "...-74" has parent "...-73" which has parent "1" and "...-45" has parent "...-43 which has parent="1". 
+
 
 \section{Container and Leaf Components} \label{containerleaf}
 The diagram in Figure \ref{mot} represents two (2) kinds of components.
