@@ -205,13 +205,12 @@ A Child derived from the Echo template is saved in the .drawio file as: (shown w
 
 In this DPL, the \emph{style} information is mostly noise from the perspective of semantics. We do need, though, to peer into the style information to determine if the mxCell is a node or a connector (vertex="1" versus edge="1").
 
-%\begin{wrapfigure}{l}{0.7\textwidth}
-\begin{figure}
-    \includegraphics[scale=0.4]{./media/drawio2.png}
+%%%% cull style
+\begin{wrapfigure}{l}{0.6\textwidth}
+    \includegraphics[trim=1cm 2cm 1.5cm 1cm, clip, scale=0.4]{./media/drawio2.png}
     \caption{Cull style noise}
     \label{Darwin}
-%\end{wrapfigure}
-\end{figure}
+\end{wrapfigure}
 When we remove the \emph{style} noise, we get pseudo-XML shown in Figure \ref{drawio2}.
 
  
