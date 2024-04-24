@@ -55,12 +55,12 @@ Early electronic hardware was made to be reprogrammable by the invention of
 the Central Processing Unit - CPU. CPUs were originally designed to be
 non-reentrant and single threaded. The high cost of early CPU-based
 computers prevented use of multiple CPUs in projects, thus, causing the
-insertion of extra software for simulating multiple CPUs on single
+need for extra software for simulating multiple CPUs on single
 hardware devices. Today, though, CPUs - and memory - are inexpensive and
 plentiful, a fact which enables the use of alternate forms of
 expressing programs. Additionally, the simulation of multiple CPUs via software 
 allowed for direct memory sharing between simulated CPUs by default. Physical 
-hardware CPUs do not share memory by default unless such features are specifically 
+hardware CPUs do not share memory unless such features are specifically 
 designed into the hardware. The addition of memory sharing by default in CPU simulations
 has been the cause of various kinds of accidental complexity.
 
@@ -80,7 +80,7 @@ subroutines was found to conflict with the simulation of multiple CPUs.
 These early kinds of expression continue to permeate most common
 programming languages even today.
 
-In essence, this paper shows that these habits of thought can be easily
+This paper shows that these habits of thought can be easily
 re-cast using modern hardware and modern software.
 
 This paper describes a technique for extending the syntax of programming
@@ -92,11 +92,11 @@ figures and arrows.
 We use the the term "DPL" - Diagrammatic Programming Languages - when
 referring to this class of new programming syntax.
 
-We assert that DPLs might be used \emph{alongside} of existing TPLs (Textual
+DPLs might be used \emph{alongside} of existing TPLs (Textual
 Programming Languages) and that DPLs are hybrids of diagram and textual
 notations. TPLs are useful for expressing a specific kind of program -
 computation - whereas other syntaxes make it more fruitful to express
-other kinds of programs that don't lend themselves to being expresses in
+other kinds of programs that don't lend themselves to being expressed in
 equation form.
 
 There are multiple possible DPL syntaxes. This paper suggests but a
@@ -110,7 +110,7 @@ understandable drawings of programs, e.g. 0D, syntactic simplicity, DI
 We do not discuss fundamental DPL principles in this paper and refer the
 reader to other related writings on these subjects.
 
-This paper is laid out in 8 sections.
+This paper is laid out in ??? sections.
 
 \begin{enumerate}
 \item Introduction - Diagrams as Additional Syntax for Programming
@@ -118,7 +118,7 @@ Languages
 
 \item Motivating Example
 
-\item Leaf Component "Echo"
+\item Container and Leaf Components
 
 \item Compilation and Execution
 
@@ -146,7 +146,7 @@ principles whose discussion is deferred.
   \end{figure}
 
 Figure \ref{mot} shows but one sample of a practical DPL syntax. Variations and
-improvements on this syntax can be imagined. This syntax is being used
+improvements on this syntax can be imagined. This syntax is currently being used
 to produce actual applications like term-rewriting (\emph{t2t} -
 text-to-text - rewriting) compilers, LLMs, DSLs for creating DSLs,
 Visual Shell prototypes, games, etc.
@@ -157,20 +157,26 @@ considered to be a comment, and, is ignored. For example the bold text
 "Sequential Routing" is ignored. Colors are ignored. Line shapes and
 line widths are ignored, and so on.
 
-This diagram was drawn using the off-the-shelf diagram editor
-draw.io\cite{diagrams_net}. The editor saves the diagram in a modified form of XML, called graphML\cite{graphml}.
+Figure \ref{mot}was drawn using an off-the-shelf diagram editor -
+draw.io\cite{diagrams_net}. Draw.io saves the diagram in a modified form of XML, called graphML\cite{graphml}.
 
-The graphML file can be processed using off-the-shelf tools, like an XML parser or a PEG\cite{peg}-based parser\cite{ohmjs}.
+The graphML file can be processed using off-the-shelf tools, like an XML parser library or a PEG\cite{peg}-based parser\cite{ohmjs}.
 
 In our case, we used the Odin programming language\cite{odin} and the XML parsing library that is included in the Odin library.
 
-We choose not to reproduce the code for the actual diagram parser here, due to space limitations. The draw.io-specific parser is under 250 lines of Odin code (including comments and blank lines). The full source code for the functioning diagram parser is in an open-source repo\cite{d2j}.
+We choose not to reproduce the code for the actual diagram parser here, due to space limitations. The draw.io-specific parser consists of under 250 lines of Odin code (including comments and blank lines). The full source code for the functioning diagram parser is in an open-source repo\cite{d2j}.
+
+  \begin{wrapfigure}{r}{0.7\textwidth}
+    \includegraphics[scale=0.4]{./media/json.png}
+    \caption{JSON Container Component}
+    \label{json}
+  \end{wrapfigure}
 
 The diagram parser produces internal data structures in the host programming language and/or JSON\cite{json} files.
 
 A \href{http://draw.io}{draw.io} file can contain several diagrams, each on a separate tab (window) in the editor.
 
-The structure of the information needed by the DPL runtime is minimal, consisting of about four (4) fields for each diagram:
+The structure of the information needed by the DPL runtime is minimal, consisting of about four (4) fields for each diagram, as seen in Figure \ref{json}:
 
 \begin{enumerate}
 \item The filename of the \href{http://draw.io}{draw.io} drawing
@@ -182,35 +188,6 @@ The structure of the information needed by the DPL runtime is minimal, consistin
 \item A bag of Connections between children (including connections to/from the container itself).
 
 \end{enumerate}
-and, is embodied in JSON as ... 
-\begin{verbatim}
-"file": "helloworld0d.drawio",
-"name": "main",
-"children": [
-    {
-        "name": "Echo",
-        "id": 6
-    },
-... (2 more children referring to the same template "Echo", but assigned
-Different ids) ...
-],
-"connections": [
-    {
-        "dir": 0,
-        "source": {
-        "name": "",
-        "id": 0
-    },
-    "source_port": "",
-    "target": {
-        "name": "Echo",
-        "id": 6
-    },
-    "target_port": ""
-},
-... [7 more connections as per the diagram] ...
-]
-\end{verbatim}
 
 The .drawio file containing this information is verbose and contains a great deal of graphic layout information that is not relevant at the semantic level.
 
@@ -263,7 +240,7 @@ And, from here we can derive the JSON form for a child component
 \end{verbatim}
 All of the above is currently achieved using an XML parser and by cherry-picking information out of
 the seemingly-complicated XML data. We argue, though, that this could, also, be replaced
-by a PEG parser which performs t2t (text-to-text) transformations.
+by a PEG parser which performs \emph{t2t} (text-to-text) transformations.
 
 In this example, the component id=6, derived from the Echo template, has one input port and one output port, seen in the graphml as
 \begin{verbatim}
@@ -319,40 +296,40 @@ The connection can be culled down to semantically interesting information, somew
 ...  
 \end{verbatim}
 Since the source and the targets are children of children of the drawing, the connection is deemed to be of type \emph{across}.
-We see these relationships because "...-74" has parent "...-73" which has parent "1" and "...-45" has parent "...-43 which has parent="1". Aside: in this DPL, children components cannot SEND messages directly to other children - they must rely on the parent ("1") to route their messages. This kind of indirect routing encourages design flexibility, i.e. LEGO®-like composition of components. We strongly recommend this kind of routing in DPL designs.
+We see these relationships because "...-74" has parent "...-73" which has parent "1" and "...-45" has parent "...-43 which has parent="1". 
 
 \section{Container and Leaf Components} \label{containerleaf}
 The diagram in Figure \ref{mot} represents two (2) kinds of components.
 
 The main diagram is, itself, a component. It is a Container which displays its implementation in diagrammatic form as a composition of four other components with connections between them.
 
-Containers can contain other Containers or other Leaf components. In this very simple example, the child components happen to all be Leaf components and, happen to all be derived from the same template - “Echo”. In more practical drawings, this is not usually the case - Containers generally contain components derived from a variety of templates.
+Containers can contain other Containers or other Leaf components. In this very simple example, the child components happen to all be Leaf components and, happen to all be derived from the same template - “Echo”. In more practical drawings, this is not usually the case.
 
 Leaf components contain executable code. Leaves do not contain other components.
 
 Children components are drawn as rectangles and contain other, smaller rectangles representing input and output ports for each child component.
 
-Connections are one-way and are drawn as arrows. Line width and style are ignored in this DPL. This allows software architects to choose graphic representations on a per-project basis, emphasizing certain aspects of the design and deemphasizing other aspects. In this example, we used 2pt line thickness to indicate “important” connections. Note that implementing bi-directional connections requires extra software. Bi-directional connections tend to obfuscate elements of the design.
+Connections are one-way and are drawn as arrows. Line width and style are ignored in this DPL. This allows software architects to choose graphic representations on a per-project basis, emphasizing certain aspects of the design and deemphasizing other aspects. In this example, we use 2pt line thickness to indicate “important” connections. Note that implementing bi-directional connections requires extra software. Bi-directional connections tend to,
+also, obfuscate elements of the design.
 
 Input and output ports of the diagram - “gates” - are drawn as rhombuses. 
-T
-he kind of each port or gate is determined by how arrows are attached to it. A port that has an arrowhead attached to it is an “input port”, while “output ports” have arrowtails attached to them. Gates, though, are opposite in sense. Gates that have arrowheads attached to them are “output gates” while gates that have arrowtails attached to them are “input gates”.
+The kind of each port or gate is determined by how arrows are attached to it. A port that has an arrowhead attached to it is an “input port”, while “output ports” have arrowtails attached to them. Gates, though, are opposite in sense. Gates that have arrowheads attached to them are “output gates” while gates that have arrowtails attached to them are “input gates”.
 
-All rectangles and rhombuses can have one text string associated with them. The text string is contained within the rectangles. Names represent template classes for components. For ports and gates, names are tags that are used by components to signify the kind of messages being received and sent. Note that empty strings are legal names and are reserved to mean UNIX®-like standard inputs and standard outputs.
+All rectangles and rhombuses can have one text string associated with them. The text string for components represent template classes. For ports and gates, text strings are tags that are used by components to signify the kind of messages being received and sent. Note that empty strings are legal names and are reserved to mean UNIX®-like standard inputs and standard outputs.
 
-The reader might notice a resemblance of this DPL with electronic components. In electronics, components are called “ICs”, and ports are called “pins”. Container diagrams are akin to “schematics”. ICs are black boxes encased in epoxy or plastic. One cannot peer “inside” of any IC to determine how it is implemented. Templates are called “connection diagrams” (found on IC datasheets). Components in this DPL and electronics ICs share the characteristic that they are completely asynchronous and completely isolated from one another. In contrast, software \emph{functions} and \emph{libraries} are tightly coupled and synchronous. Functions imply ad-hoc blocking - the caller must block indefinitely waiting for a response from the callee, and, the caller cannot rely on timing characteristics of callees due to the fact that callees can call other callees synchronously and block waiting for their response. 
+The astute reader might notice a resemblance of this DPL with electronic components. In electronics, components are called “ICs”, and ports are called “pins”. Container diagrams are akin to “schematics”. ICs are black boxes encased in epoxy or plastic. One cannot peer “inside” of any IC to determine how it is implemented. Templates are called “connection diagrams” (found on IC datasheets). Components in this DPL and electronics ICs share the characteristic that they are completely asynchronous and completely isolated from one another. In contrast, software \emph{functions} and \emph{libraries} are tightly coupled and synchronous.
 
 Each component instance - whether Container or Leaf - has exactly one input queue and exactly one output queue.
 
-A key feature of any DPL is that components are truly isolated from one another due to the use of FIFO queues instead of reliance on LIFO callstacks. This conforms with common human understanding of the operation of drawings, objects and actors. Other aspects of DPLs contribute to component isolation, in particular the use of input and output queues and the restrictions on message routing (components cannot directly send messages to other components. Message routing is handled solely by their parent Containers).
+A key feature of any DPL is that components are truly isolated from one another due to the use of FIFO queues instead of reliance on LIFO callstacks. This conforms with common human understanding of the operation of drawings, objects and actors. Other aspects of DPLs contribute to component isolation, in particular the use of input and output queues and the restrictions on message routing. Components cannot directly send messages to other components. Message routing is handled solely by their parent Containers.
 
 One cannot determine “from the outside” whether a component is a Container or a Leaf, nor know anything about its implementation. One cannot know if a component contains state or is a pure function. In fact, knowledge of these kinds of details is unnecessary. Programmers can dig deeper into the innards of components if they want to know such low-level details.
 
 Components process each incoming message. Processing is based on internal component state and the port tag contained in a message. A message is a 2-tuple \{port, payload\}.
 
-Output message processing consists of placing tagged messages \{tag, payload\} onto the component’s (single) output queue. Output messages are sent in a deferred manner. Output messages sit in a component’s output queue until the component has finished processing a step of its potential actions and returns control back to its parent (which is always a Container). The parent container empties a child’s output queue and routes messages in first to last (oldest to newest) order of output message creation (note that “recursion” works in an opposite manner, in a last to first order - most recent first).
+Output message processing consists of placing tagged messages \{tag, payload\} onto the component’s (single) output queue. Output messages are sent in a deferred manner. Output messages sit in a component’s output queue until the component has finished processing one step of its potential actions and returns control back to its parent (which is always a Container). The parent container empties a child’s output queue and routes messages in oldest to newest order of output message creation (note that “recursion” works in an opposite manner - most recent first).
 
-Output queues contain messages with port tags that are relative to the \emph{sender}. Input queues contains messages with port tags that are relative to the \emph{receiver}. Routers, i.e. Containers, must map from output tag of the sender to the appropriate input tags of the receivers.
+Output queues contain messages with port tags that are relative to the \emph{sender}. Input queues contain messages containing port tags that are relative to the \emph{receiver}. Routers, i.e. Containers, must map from output tag of the sender to the appropriate input tags of the receivers.
 
 Component instances need not be explicitly named. Their (x,y) position on a diagram uniquely identifies each instance. This agrees with normal human convention - visual placement on the diagram has semantic meaning.
 
@@ -368,7 +345,7 @@ Connections are triples \{direction, sender, receiver\}.
 
 Fan-in and fan-out are supported. Fan-in means that a single input port/gate can receive messages from multiple sources. This is straight-forward to implement using the FIFO queue structure of components. Fan-out, though, means that a single port/gate can send messages to several receivers. This requires copying of message payloads or the application of copy-on-write semantics in the receivers. There is no semantic difference between these two techniques - the choice of implementation (copying vs. copy-on-write) is purely one of optimization and does not matter at the design stages. Efficiency of implementation matters only during Production Engineering stages, i.e. when a design is stable enough to be productized.
 
-In Figure \ref{fanin} the output gate "par" shows fan-in, as it receives inputs from two different component instances. The outputs from the two "Echo" instances do not collide. The outputs are queued up on the diagram's output queue in the order that they were generated. See Figure \ref{fanin}.
+In Figure \ref{fanin} the output gate "par" shows fan-in, as it receives inputs from two different component instances. The outputs from the two "Echo" instances do not collide. The outputs are queued up on the diagram's output queue in the order that they were generated.
 
 
   \begin{wrapfigure}{r}{0.4\textwidth}
@@ -379,7 +356,7 @@ In Figure \ref{fanin} the output gate "par" shows fan-in, as it receives inputs 
 The corresponding input gate demonstrates fan out in Figure \ref{fanout}. Any message on the input gate is routed to both instances of the "Echo" component on the "Parallel Routing" subnet.
 
 
-Furthermore, fan-out requires atomic routing. A single output message must be delivered to all receivers in an atomic fashion without allowing interleaving messages to arrive from other sources. This requirement ensures that messages are queued in a consistent manner relative to one another. The actual, absolute timestamp of any message does not matter, and the final order of messages does not matter, but message relative-order does matter. If “A” arrives before “B” at one receiver, then, “A” must arrive before “B” at \emph{all} receivers. Physics informs us that, ultimately, we cannot tell if “A” arrived before “B” or if “B” arrived before “A”, and that that is the only real “race condition”. Programmers can deal with that single kind of “race condition” as long as message-relativity is preserved. In general, though, message relativity cannot be preserved across large distances (“A” might arrive before “B” at one receiver, but, “B” might arrive before “A” at another receiver because “B” has less-far to travel). Preserving message relativity in-the-small, inside a single application, makes it easier to write such application programs. Note that this DPL is “yet another notation”, like function-based programming, which can simplify programming in many cases, but, cannot be used in \emph{all} cases.
+Furthermore, fan-out requires atomic routing. A single output message must be delivered to all receivers in an atomic fashion without allowing interleaving messages to arrive from other sources. This requirement ensures that messages are queued in a consistent manner relative to one another. The actual, absolute timestamp of any message does not matter, and the final order of messages does not matter, but message relative-order does matter. If “A” arrives before “B” at one receiver, then, “A” must arrive before “B” at \emph{all} receivers. Physics informs us that, ultimately, we cannot tell if “A” arrived before “B” or if “B” arrived before “A”, and that this is the only real “race condition”. Programmers can deal with that single kind of “race condition” as long as message-relativity is preserved. In general, though, message relativity cannot be preserved across large distances (“A” might arrive before “B” at one receiver, but, “B” might arrive before “A” at another receiver because “B” has less-far to travel). Preserving message relativity in-the-small, inside a single application, makes it easier to write such application programs. Note that this DPL is “yet another notation”, like function-based programming, which can simplify programming in many cases, but, cannot be used in \emph{all} cases.
 
 Fan-out may be an inconvenience in the theoretical sense, but, is a vital feature for usability of DPLs. For example, fan-out makes it possible to abstract diagrams by grouping components together and pushing them over onto other diagrams, leaving only a single component with fewer ports on the originating diagram. This kind of usage is fundamental to one’s being able to layer a design in meaningful ways. In contrast, function-based programming relies on a single expression for layering - the function (aka “lambda”). The paucity of expression in function-based-only-programming leads to obfuscation of design intent (“DI”) and makes designs appear more complicated than necessary to casual readers.
 
@@ -453,11 +430,11 @@ def Echo_handler (eh, msg):
 Compilation and execution of this DPL consists of the steps listed below. Note that the diagrams are rough sketches intentionally simplified
 for overview purposes only.
 
-1. Convert DPL program diagrams to JSON.
+\subsection{Convert DPL program diagrams to JSON.}
 
   \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\linewidth]{./media/image2.png}
+    \includegraphics[width=0.6\linewidth]{./media/convert.png}
     \caption{Convert diagram to JSON}
     \label{fig:convert_to_json}
   \end{figure}
@@ -471,11 +448,9 @@ for overview purposes only.
 ...
 \end{verbatim}
   
-\item Load component templates from JSON.
-
+\subsection{Load component templates from JSON.}
   \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\linewidth]{./media/image3.png}
+    \includegraphics[scale=0.4]{./media/loader.png}
     \caption{Loader}
     \label{fig:load_templates}
   \end{figure}
@@ -484,16 +459,14 @@ for overview purposes only.
 
 \begin{verbatim}
     routings = json.loads(json_data)
-...
 \end{verbatim}
 
-\item Instantiate system.
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\linewidth]{./media/image4.png}
+\subsection{Instantiate system.}
+  \begin{wrapfigure}{r}{0.5\textwidth}
+    \includegraphics[scale=0.4]{./media/instantiate.png}
     \caption{Instantiate}
     \label{fig:instantiate_system}
-  \end{figure}
+  \end{wrapfigure}
 
   Instantiation\cite{run} of an application beginning with a top-level diagram
 and proceeds downwards to instantiate all children components needed in
@@ -513,27 +486,25 @@ using multiple approaches.
 \begin{verbatim}
 ...
     main_container = get_component_instance(pregistry,
-        main_container_name,
-        owner=None)
-
+        main_container_name,  owner=None)
 ...
 \end{verbatim}
 
 Software components are fully isolated from one another through the use
 of FIFO queues.
 
-\item Inject first message.
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\linewidth]{./media/image5.png}
+\subsection{Inject first message.}
+  \begin{wrapfigure}{r}{0.5\textwidth}
+    \includegraphics[scale=0.4]{./media/inject.png}
     \caption{Inject first message(s)}
     \label{fig:inject_first_message}
-  \end{figure}
+  \end{wrapfigure}
 
 The first message is constructed using the host language. The message is
 injected\cite{main} into the input queue of the top-most component.
 
 \begin{verbatim}
+
 ...
 def start_function (root_project, root_0D, arg, main_container):
     arg = new_datum_string (arg)
@@ -542,13 +513,12 @@ def start_function (root_project, root_0D, arg, main_container):
 ...
 \end{verbatim}
   
-\item Run.
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\linewidth]{./media/image7.png}
+\subsection{Run.}
+  \begin{wrapfigure}{m}{0.5\textwidth}
+    \includegraphics[scale=0.4]{./media/run.png}
     \caption{Run}
     \label{fig:run}
-  \end{figure}
+  \end{wrapfigure}
 The application is executed.
 
 The application is interpreted by repeatedly delivering messages along
@@ -566,10 +536,10 @@ for all children to reach quiescence.
 ...
 \end{verbatim}
   
-\item Display outputs.
+\subsection{Display outputs.}
   \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\linewidth]{./media/image7.png}
+    \includegraphics[scale=0.4]{./media/display.png}
     \caption{Display Outputs}
     \label{fig:display}
   \end{figure}
@@ -583,7 +553,6 @@ using the host language.
 ...
 \end{verbatim}
   
-\end{enumerate}
 
 The Python version of the runtime system consists of roughly 9 files of
 code consisting of about 2,500 lines of code (including blank lines and

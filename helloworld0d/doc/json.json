@@ -1,0 +1,12 @@
+[
+  {
+    "file": "helloworld0d.drawio",
+    "name": "main",
+    "children": [{"name": "Echo", "id": 6}, /*... 3 more children */],
+    "connections": [{"dir": 0,
+		     "source": {"name": "","id": 0},"source_port": "",
+		     "target": {"name": "Echo","id": 6},"target_port": ""},
+		    /*... 6 more connections */
+		   ]
+  }, /* ... */
+]
