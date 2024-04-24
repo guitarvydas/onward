@@ -215,16 +215,18 @@ In this DPL, the \emph{style} information is mostly noise from the perspective o
 When we remove the \emph{style} noise, we get pseudo-XML shown in Figure \ref{drawio2}.
 
  
-\begin{wrapfigure}{l}{0.4\textwidth}
-    \includegraphics[scale=0.4]{./media/drawio3.png}
+%%%% mxGeometry
+\begin{wrapfigure}{r}{0.4\textwidth}
+    \includegraphics[trim=2cm 2cm 2cm 1.7cm, clip, scale=0.4]{./media/drawio3.png}
     \caption{cull mxGeometry}
     \label{drawio3}
 \end{wrapfigure}
 Similarly, the \emph{mxGeometry} information affects the visual display of the diagram, but has no semantic value for this DPL.
 Figure \ref{drawio3} shows the pseudo-XML after culling the mxGeometry information.
   
-\begin{wrapfigure}{l}{0.8\textwidth}
-    \includegraphics[scale=0.4]{./media/drawio4.png}
+%%%% reduced id
+\begin{wrapfigure}{l}{0.3\textwidth}
+    \includegraphics[trim=2cm 2cm 2cm 1.7cm, clip, scale=0.4]{./media/drawio4.png}
     \caption{reduced id}
     \label{drawio4}
 \end{wrapfigure}
@@ -232,7 +234,7 @@ Furthermore, the id can be internally hashed on a per-file manner, resulting in 
 
 
 %%%% JSON snippet
-\begin{wrapfigure}{l}{0.3\textwidth}
+\begin{wrapfigure}{r}{0.3\textwidth}
     \includegraphics[trim=2cm 2cm 2cm 1.7cm, clip, scale=0.4]{./media/json5.png}
     \caption{Resulting JSON snippet}
     \label{json5}
