@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  25 APR 2024 05:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  25 APR 2024 05:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1032,7 +1032,7 @@ Class acmart Warning: A possible image without description on input line 183.
 File: ./media/drawio1.png Graphic file (type png)
 <use ./media/drawio1.png>
 Package pdftex.def Info: ./media/drawio1.png  used on input line 199.
-(pdftex.def)             Requested size: 286.31818pt x 106.37982pt.
+(pdftex.def)             Requested size: 286.31818pt x 107.51797pt.
 
 Class acmart Warning: A possible image without description on input line 203.
 
@@ -1048,7 +1048,12 @@ surrounding objects on input line 214.
 File: ./media/drawio2.png Graphic file (type png)
 <use ./media/drawio2.png>
 Package pdftex.def Info: ./media/drawio2.png  used on input line 216.
-(pdftex.def)             Requested size: 258.21368pt x 89.51712pt.
+(pdftex.def)             Requested size: 263.90413pt x 90.65527pt.
+
+Overfull \hbox (5.89874pt too wide) in paragraph at lines 216--217
+ [][] 
+ []
+
 [4.4 <./media/main.png>]
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
@@ -1066,7 +1071,7 @@ surrounding objects on input line 225.
 File: ./media/drawio3.png Graphic file (type png)
 <use ./media/drawio3.png>
 Package pdftex.def Info: ./media/drawio3.png  used on input line 227.
-(pdftex.def)             Requested size: 207.69511pt x 89.51712pt.
+(pdftex.def)             Requested size: 207.69511pt x 90.65527pt.
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 234.
@@ -1083,7 +1088,7 @@ surrounding objects on input line 237.
 File: ./media/drawio4.png Graphic file (type png)
 <use ./media/drawio4.png>
 Package pdftex.def Info: ./media/drawio4.png  used on input line 239.
-(pdftex.def)             Requested size: 140.24431pt x 89.51712pt.
+(pdftex.def)             Requested size: 140.24431pt x 90.65527pt.
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 245.
@@ -1100,7 +1105,12 @@ surrounding objects on input line 248.
 File: ./media/json5.png Graphic file (type png)
 <use ./media/json5.png>
 Package pdftex.def Info: ./media/json5.png  used on input line 249.
-(pdftex.def)             Requested size: 117.48251pt x 81.55052pt.
+(pdftex.def)             Requested size: 140.24431pt x 92.93143pt.
+
+Overfull \hbox (11.24162pt too wide) in paragraph at lines 249--250
+[][] 
+ []
+
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 255.
@@ -1286,10 +1296,6 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `anon.out' has not changed.
 (rerunfilecheck)             Checksum: E0F6652B3AFB4E7918983147779A3D2A;3266.
  ) 
@@ -1309,7 +1315,7 @@ ine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/li
 bertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
 ic/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
 /public/newtx/txsys.pfb>
-Output written on anon.pdf (14 pages, 1046523 bytes).
+Output written on anon.pdf (14 pages, 1046521 bytes).
 PDF statistics:
  369 PDF objects out of 1000 (max. 8388607)
  291 compressed objects within 3 object streams
