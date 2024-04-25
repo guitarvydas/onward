@@ -211,37 +211,38 @@ A Child derived from the Echo template is saved in the .drawio file as seen in F
 In this DPL, the \emph{style} information is mostly noise from the perspective of semantics. We do need, though, to peer into the style information to determine if the mxCell is a node or a connector (vertex="1" versus edge="1").
 
 %%%% cull style
-\begin{wrapfigure}{r}{0.6\textwidth}
-    \includegraphics[trim=1cm 2cm 1.5cm 2cm, clip, scale=0.4]{./media/drawio2.png}
+\begin{wrapfigure}[1]{r}{0.6\textwidth}
+   \centering
+    \includegraphics[trim=1cm 2cm 1.5cm 1cm, clip, scale=0.4]{./media/drawio2.png}
     \caption{Style noise culled out}
     \label{drawio2}
 \end{wrapfigure}
 When we remove the \emph{style} noise, we get pseudo-XML shown in Figure \ref{drawio2}.
 
- \vspace{\baselineskip}
- \vspace{\baselineskip}
- \vspace{\baselineskip}
- \vspace{\baselineskip}
- \vspace{\baselineskip}
- \vspace{\baselineskip}
+ \vspace{7\baselineskip}
 
 %%%% mxGeometry
-\begin{wrapfigure}{l}{0.4\textwidth}
-    \includegraphics[trim=2cm 2cm 2cm 1.7cm, clip, scale=0.4]{./media/drawio3.png}
+\begin{wrapfigure}[4]{l}{0.5\textwidth}
+   \centering
+    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/drawio3.png}
     \caption{cull mxGeometry}
     \label{drawio3}
 \end{wrapfigure}
 Similarly, the \emph{mxGeometry} information affects the visual display of the diagram, but has no semantic value for this DPL.
 Figure \ref{drawio3} shows the pseudo-XML after culling the mxGeometry information.
   
+ \vspace{5\baselineskip}
+
 %%%% reduced id
-\begin{wrapfigure}{l}{0.3\textwidth}
-    \includegraphics[trim=2cm 2cm 2cm 1.7cm, clip, scale=0.4]{./media/drawio4.png}
+\begin{wrapfigure}[2]{r}{0.4\textwidth}
+   \centering
+    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/drawio4.png}
     \caption{reduced id}
     \label{drawio4}
 \end{wrapfigure}
-Furthermore, the id can be internally hashed on a per-file manner, resulting in even less noise:
+Furthermore, the id can be internally hashed on a per-file manner, resulting in even less noise, as shown in Figure \ref{drawio4}.
 
+ \vspace{6\baselineskip}
 
 %%%% JSON snippet
 \begin{wrapfigure}{L}{0.3\textwidth}
@@ -251,7 +252,8 @@ Furthermore, the id can be internally hashed on a per-file manner, resulting in 
 \end{wrapfigure}
 And, from here we can derive the JSON form for a child component
 
-\vspace{1\baselineskip}
+ \vspace{6\baselineskip}
+
 All of the above is currently achieved using an XML parser and by cherry-picking information out of
 the seemingly-complicated XML data. We argue, though, that this could, also, be replaced
 by a PEG parser which performs \emph{t2t} (text-to-text) transformations.
