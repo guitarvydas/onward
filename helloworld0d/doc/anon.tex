@@ -174,15 +174,15 @@ A \href{http://draw.io}{draw.io} file can contain several diagrams, each on a se
 
 The structure of the information needed by the DPL runtime is minimal, consisting of about four (4) fields for each diagram, as seen in Figure \ref{main}:
 
-\vspace{0.3\baselineskip}
+\vspace{0.5\baselineskip}
 
 \begin{figure}[h]
-    \includegraphics[trim=1cm 2cm 1.5cm 1cm, clip, scale=0.4]{./media/main.png}
+    \includegraphics[trim=1cm 1.9cm 1.5cm 0.8cm, clip, scale=0.4]{./media/main.png}
     \caption{DPL diagram semantics as JSON}
     \label{main}
 \end{figure}
 
-\begin{enumerate}
+\begin{itemize}
 \item The filename of the \href{http://draw.io}{draw.io} drawing
 
 \item The tab-name of the top-most diagram.
@@ -191,24 +191,30 @@ The structure of the information needed by the DPL runtime is minimal, consistin
 
 \item A bag of Connections between children (including connections to/from the container itself).
 
-\end{enumerate}
+\end{itemize}
+
+\newpage
+
+The .drawio file containing this information is verbose and contains a great deal of graphic layout information that is not relevant at the semantic level.
+
+\emph{The following is simplified for discussion purposes.}
+\vspace{1\baselineskip}
 
 %%%% Raw
 %  \begin{wrapfigure}{l}{0.8\textwidth}
-  \begin{figure}
+  \begin{figure}[h]
+    \centering
     \includegraphics[trim=1cm 1.9cm 1.5cm 1cm, clip, scale=0.4]{./media/drawio1.png}
     \caption{Raw .drawio}
     \label{drawio1}
 %  \end{wrapfigure}
 \end{figure}
 
-The .drawio file containing this information is verbose and contains a great deal of graphic layout information that is not relevant at the semantic level.
-
-\emph{The following is simplified for discussion purposes.}
-
 A Child derived from the Echo template is saved in the .drawio file as seen in Figure \ref{drawio1} (shown with artificial line breaks)
 
 In this DPL, the \emph{style} information is mostly noise from the perspective of semantics. We do need, though, to peer into the style information to determine if the mxCell is a node or a connector (vertex="1" versus edge="1").
+
+\vspace{1\baselineskip}
 
 %%%% cull style
 \begin{wrapfigure}[1]{r}{0.6\textwidth}
@@ -219,7 +225,7 @@ In this DPL, the \emph{style} information is mostly noise from the perspective o
 \end{wrapfigure}
 When we remove the \emph{style} noise, we get pseudo-XML shown in Figure \ref{drawio2}.
 
- \vspace{7\baselineskip}
+ \vspace{6\baselineskip}
 
 %%%% mxGeometry
 \begin{wrapfigure}[4]{l}{0.5\textwidth}
@@ -228,6 +234,7 @@ When we remove the \emph{style} noise, we get pseudo-XML shown in Figure \ref{dr
     \caption{cull mxGeometry}
     \label{drawio3}
 \end{wrapfigure}
+\vspace{0.5\baselineskip}
 Similarly, the \emph{mxGeometry} information affects the visual display of the diagram, but has no semantic value for this DPL.
 Figure \ref{drawio3} shows the pseudo-XML after culling the mxGeometry information.
   
@@ -255,10 +262,10 @@ by a PEG parser which performs \emph{t2t} (text-to-text) transformations.
     \caption{Resulting JSON snippet}
     \label{json5}
 \end{wrapfigure}
-\vspace{1\baselineskip}
+\vspace{0.5\baselineskip}
 And, from here we can derive the JSON form for a child component
 
- \vspace{6\baselineskip}
+ \vspace{5\baselineskip}
 
 
 %%%% IO Ports of 6 culled
@@ -268,24 +275,31 @@ And, from here we can derive the JSON form for a child component
     \caption{Input and Output Ports of id=6}
     \label{ioports}
 \end{wrapfigure}
-\vspace{1\baselineskip}
+\vspace{1.5\baselineskip}
 In this example, the component id=6, derived from the Echo template, has one input port and one output port, seen in Figure \ref{ioports}.
 
- \vspace{6\baselineskip}
+ \vspace{6.2\baselineskip}
+
+Here, the ports refer to parent="kChx-vSpJG1CHjQ2RL-N-43" and contain a great deal of graphic information that has no bearing on the semantics.
+
+\newpage
 
 %%%% IO Ports of 6 culled
-\begin{wrapfigure}[4]{l}{0.45\textwidth}
+\begin{wrapfigure}[1]{l}{0.45\textwidth}
+\centering
     \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.37]{./media/ioportsculled.png}
     \caption{Input and Output Ports of id=6, culled}
     \label{ioportsculled}
 \end{wrapfigure}
-Here, the ports refer to parent="kChx-vSpJG1CHjQ2RL-N-43" and contain a great deal of graphic information that has no bearing on the semantics.
+
 Culling, we get Figure \ref{ioportsculled}.
+
+\vspace{2\baselineskip}
 
 \vspace{4\baselineskip}
 Note that "" is a valid port name - the null string. The input port and the output port have the same name (the null string), but, the names do not conflict since they are in different namespaces (input namespace of template "Echo" vs. output namespace of template "Echo").
 
-\newpage
+\vspace{1\baselineskip}
 
 %%%% Raw Connection
 \begin{wrapfigure}[6]{r}{0.5\textwidth}
@@ -298,7 +312,7 @@ Grinding further through the XML, we see several connections, one of which conta
 \vspace{2\baselineskip}
 
 %%%%% Culled connection
-\begin{wrapfigure}{r}{0.37\textwidth}
+\begin{wrapfigure}[5]{r}{0.37\textwidth}
     \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/connection2.png}
     \caption{Culled connection}
     \label{connection2}
@@ -306,6 +320,7 @@ Grinding further through the XML, we see several connections, one of which conta
 The connection can be culled down to semantically interesting information, as in Figure \ref{connection2}.
 Since the source and the targets are children of children of the drawing, the connection is deemed to be of type \emph{across}.
 We see these relationships because "...-74" has parent "...-73" which has parent "1" and "...-45" has parent "...-43 which has parent="1". 
+\vspace{1\baselineskip}
 
 
 \section{Container and Leaf Components} \label{containerleaf}
@@ -630,6 +645,7 @@ The fact that low-level concepts like \emph{loop}, and \emph{recursion}, don't m
 The fact that \emph{if-then-else} is too low level and leads to ad-hoc expressions of control-flow.
 
 \section{Future}
+%\begin{itemize}[noitemsep]
 \begin{itemize}
 \item Compilation, in addition to the interpretation, of DPLs.
 
