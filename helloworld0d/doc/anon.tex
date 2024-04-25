@@ -393,19 +393,24 @@ Each diagram is compiled into a container component containing the following inf
 \item bag of connection 3-tuples \{direction, \{sender, port\}, \{receiver, port\}\}
 \end{itemize}
 
-%%%% Echo
 \subsection{Leaf Component "Echo"}
-\begin{wrapfigure}{r}{0.5\textwidth}
-    \includegraphics[trim=1.7cm 2cm 1.7cm 1.5cm, clip, scale=0.4]{./media/echo.png}
-    \caption{Echo}
-    \label{fig:echo}
-\end{wrapfigure}
 In our implementation, we used the Odin programming language for
 creating the diagram parser, but, we use the Python programming
 language to load and execute the parsed results.
 
-Figure 1 refers to a Leaf component template called "Echo". The "Echo"
+\vspace{1\baselineskip}
+
+%%%% Echo
+\begin{wrapfigure}[2]{r}{0.5\textwidth}
+    \centering
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/echo.png}
+    \caption{Echo}
+    \label{fig:echo}
+\end{wrapfigure}
+Figure \ref{mot} refers to a Leaf component template called "Echo". The "Echo"
 component is instantiated three (3) times. 
+
+\vspace{5\baselineskip}
 
 Leaf components are
 implemented with code in some host language (Python, in our case) as in Figure \ref{fig:echo}. Software components
