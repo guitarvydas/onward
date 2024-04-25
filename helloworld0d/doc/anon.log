@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 22:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 22:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1001,7 +1001,7 @@ Underfull \vbox (badness 3965) has occurred while \output is active []
 
  [2.2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.
 enc}]
-<./media/HelloWorld0D.png, id=104, 718.685pt x 501.875pt>
+<./media/HelloWorld0D.png, id=100, 718.685pt x 501.875pt>
 File: ./media/HelloWorld0D.png Graphic file (type png)
 <use ./media/HelloWorld0D.png>
 Package pdftex.def Info: ./media/HelloWorld0D.png  used on input line 145.
@@ -1020,7 +1020,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 177.
 
-<./media/main.png, id=132, 1075.01625pt x 477.785pt>
+<./media/main.png, id=128, 1075.01625pt x 477.785pt>
 File: ./media/main.png Graphic file (type png)
 <use ./media/main.png>
 Package pdftex.def Info: ./media/main.png  used on input line 180.
@@ -1028,7 +1028,7 @@ Package pdftex.def Info: ./media/main.png  used on input line 180.
 
 Class acmart Warning: A possible image without description on input line 183.
 
-<./media/drawio1.png, id=135, 786.94pt x 351.3125pt>
+<./media/drawio1.png, id=131, 786.94pt x 351.3125pt>
 File: ./media/drawio1.png Graphic file (type png)
 <use ./media/drawio1.png>
 Package pdftex.def Info: ./media/drawio1.png  used on input line 199.
@@ -1044,7 +1044,7 @@ surrounding objects on input line 214.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 214.
 
-<./media/drawio2.png, id=138, 716.6775pt x 309.155pt>
+<./media/drawio2.png, id=134, 716.6775pt x 309.155pt>
 File: ./media/drawio2.png Graphic file (type png)
 <use ./media/drawio2.png>
 Package pdftex.def Info: ./media/drawio2.png  used on input line 215.
@@ -1062,7 +1062,7 @@ surrounding objects on input line 223.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 223.
 
-<./media/drawio3.png, id=158, 576.1525pt x 309.155pt>
+<./media/drawio3.png, id=154, 576.1525pt x 309.155pt>
 File: ./media/drawio3.png Graphic file (type png)
 <use ./media/drawio3.png>
 Package pdftex.def Info: ./media/drawio3.png  used on input line 224.
@@ -1088,7 +1088,7 @@ surrounding objects on input line 232.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 232.
 
-<./media/drawio4.png, id=161, 407.5225pt x 309.155pt>
+<./media/drawio4.png, id=157, 407.5225pt x 309.155pt>
 File: ./media/drawio4.png Graphic file (type png)
 <use ./media/drawio4.png>
 Package pdftex.def Info: ./media/drawio4.png  used on input line 233.
@@ -1109,7 +1109,7 @@ surrounding objects on input line 241.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 241.
 
-<./media/json5.png, id=163, 407.5225pt x 309.155pt>
+<./media/json5.png, id=159, 407.5225pt x 309.155pt>
 File: ./media/json5.png Graphic file (type png)
 <use ./media/json5.png>
 Package pdftex.def Info: ./media/json5.png  used on input line 242.
@@ -1130,7 +1130,7 @@ surrounding objects on input line 255.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 255.
 
-<./media/ioports.png, id=165, 695.59875pt x 393.47pt>
+<./media/ioports.png, id=161, 695.59875pt x 393.47pt>
 File: ./media/ioports.png Graphic file (type png)
 <use ./media/ioports.png>
 Package pdftex.def Info: ./media/ioports.png  used on input line 256.
@@ -1153,7 +1153,7 @@ surrounding objects on input line 264.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 264.
 
-<./media/ioportsculled.png, id=183, 611.28375pt x 309.155pt>
+<./media/ioportsculled.png, id=179, 611.28375pt x 309.155pt>
 File: ./media/ioportsculled.png Graphic file (type png)
 <use ./media/ioportsculled.png>
 Package pdftex.def Info: ./media/ioportsculled.png  used on input line 265.
@@ -1178,7 +1178,7 @@ surrounding objects on input line 275.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 275.
 
-<./media/connection1.png, id=186, 737.75626pt x 323.2075pt>
+<./media/connection1.png, id=182, 737.75626pt x 323.2075pt>
 File: ./media/connection1.png Graphic file (type png)
 <use ./media/connection1.png>
 Package pdftex.def Info: ./media/connection1.png  used on input line 276.
@@ -1202,7 +1202,7 @@ surrounding objects on input line 284.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 284.
 
-<./media/connection2.png, id=188, 477.785pt x 309.155pt>
+<./media/connection2.png, id=184, 477.785pt x 309.155pt>
 File: ./media/connection2.png Graphic file (type png)
 <use ./media/connection2.png>
 Package pdftex.def Info: ./media/connection2.png  used on input line 285.
@@ -1223,7 +1223,7 @@ surrounding objects on input line 333.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 333.
 
-<./media/fanin.png, id=217, 743.77875pt x 501.875pt>
+<./media/fanin.png, id=213, 743.77875pt x 501.875pt>
 File: ./media/fanin.png Graphic file (type png)
 <use ./media/fanin.png>
 Package pdftex.def Info: ./media/fanin.png  used on input line 334.
@@ -1236,7 +1236,7 @@ surrounding objects on input line 344.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 344.
 
-<./media/fanout.png, id=219, 753.81625pt x 501.875pt>
+<./media/fanout.png, id=215, 753.81625pt x 501.875pt>
 File: ./media/fanout.png Graphic file (type png)
 <use ./media/fanout.png>
 Package pdftex.def Info: ./media/fanout.png  used on input line 345.
@@ -1253,13 +1253,13 @@ surrounding objects on input line 381.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 381.
 
-<./media/echo.png, id=230, 597.23125pt x 309.155pt>
+<./media/echo.png, id=226, 597.23125pt x 309.155pt>
 File: ./media/echo.png Graphic file (type png)
 <use ./media/echo.png>
 Package pdftex.def Info: ./media/echo.png  used on input line 382.
 (pdftex.def)             Requested size: 200.19328pt x 83.82666pt.
 [9.9]
-<./media/full.png, id=238, 844.15375pt x 432.61626pt>
+<./media/full.png, id=234, 844.15375pt x 432.61626pt>
 File: ./media/full.png Graphic file (type png)
 <use ./media/full.png>
 Package pdftex.def Info: ./media/full.png  used on input line 416.
@@ -1308,40 +1308,29 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-Package rerunfilecheck Warning: File `anon.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `anon.out':
-(rerunfilecheck)             Before: 6676BFDA04F4DCFC7BA98B1F2ECEDA71;3373
-(rerunfilecheck)             After:  E0F6652B3AFB4E7918983147779A3D2A;3266.
+Package rerunfilecheck Info: File `anon.out' has not changed.
+(rerunfilecheck)             Checksum: E0F6652B3AFB4E7918983147779A3D2A;3266.
  ) 
 Here is how much of TeX's memory you used:
- 21289 strings out of 474116
- 343277 string characters out of 5743682
+ 21278 strings out of 474116
+ 343017 string characters out of 5743682
  1945187 words of memory out of 5000000
- 42710 multiletter control sequences out of 15000+600000
- 699461 words of font info for 316 fonts, out of 8000000 for 9000
+ 42709 multiletter control sequences out of 15000+600000
+ 698250 words of font info for 310 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,17n,131p,1433b,745s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{section.9} has been referenced but does not exist, 
-replaced by a fixed one
-
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-
-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinBi
-olinumT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/Li
-nBiolinumTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertin
-e/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libe
-rtine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public
-/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
-ublic/newtx/txsys.pfb>
-Output written on anon.pdf (14 pages, 1059686 bytes).
+ 90i,17n,131p,1433b,743s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolat
+a-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/Lin
+BiolinumT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/
+LinBiolinumTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libert
+ine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/li
+bertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
+ic/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
+/public/newtx/txsys.pfb>
+Output written on anon.pdf (14 pages, 1046527 bytes).
 PDF statistics:
- 372 PDF objects out of 1000 (max. 8388607)
- 294 compressed objects within 3 object streams
- 87 named destinations out of 1000 (max. 500000)
- 76598 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 368 PDF objects out of 1000 (max. 8388607)
+ 290 compressed objects within 3 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 76590 words of extra memory for PDF output out of 89155 (max. 10000000)
 
