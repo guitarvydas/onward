@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 18:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 22:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -726,7 +726,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 \WF@everypar=\toks40
 Package: wrapfig 2003/01/31  v 3.6
 )
-Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 26.
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 27.
 
 \c@theorem=\count315
 
@@ -740,55 +740,55 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 (./anon.aux)
 \openout1 = `anon.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 26.
+LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 27.
 LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line
- 26.
+ 27.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 27.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-26.
+27.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 27.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 26.
+ 27.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 27.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 26.
+e 27.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 26.
+(Font)              scaled to size 8.0pt on input line 27.
 LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF
- on input line 26.
+ on input line 27.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/libertine/OT1LinuxLibertineT-TLF.
 fd
@@ -796,58 +796,58 @@ File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 26.
+(Font)              scaled to size 8.0pt on input line 27.
 <<ot1.cmap>>
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.2pt on input line 26.
+(Font)              scaled to size 6.2pt on input line 27.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 26.
+(Font)              scaled to size 5.5pt on input line 27.
 <<oml.cmap>>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-26.
+27.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-26.
+27.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-26.
+27.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
-LaTeX Info: Command `\dddot' is already robust on input line 26.
-LaTeX Info: Command `\ddddot' is already robust on input line 26.
-LaTeX Info: Redefining \microtypecontext on input line 26.
-Package microtype Info: Applying patch `item' on input line 26.
-Package microtype Info: Applying patch `toc' on input line 26.
-Package microtype Info: Applying patch `eqnum' on input line 26.
-Package microtype Info: Applying patch `footnote' on input line 26.
-Package microtype Info: Applying patch `verbatim' on input line 26.
+LaTeX Info: Command `\dddot' is already robust on input line 27.
+LaTeX Info: Command `\ddddot' is already robust on input line 27.
+LaTeX Info: Redefining \microtypecontext on input line 27.
+Package microtype Info: Applying patch `item' on input line 27.
+Package microtype Info: Applying patch `toc' on input line 27.
+Package microtype Info: Applying patch `eqnum' on input line 27.
+Package microtype Info: Applying patch `footnote' on input line 27.
+Package microtype Info: Applying patch `verbatim' on input line 27.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 26.
+LaTeX Info: Redefining \showhyphens on input line 27.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -855,7 +855,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 27.
  (./anon.out)
 (./anon.out)
 \@outlinefile=\write4
@@ -929,28 +929,28 @@ Package caption Info: float package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 37.
+(Font)              scaled to size 14.4pt on input line 38.
 LaTeX Font Info:    Trying to load font information for T1+LinuxBiolinumT-TLF o
-n input line 37.
+n input line 38.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
 File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 37.
+(Font)              scaled to size 14.4pt on input line 38.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 37.
+(Font)              scaled to size 14.4pt on input line 38.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 37.
+(Font)              scaled to size 12.0pt on input line 38.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 37.
+(Font)              scaled to size 12.0pt on input line 38.
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
- on input line 37.
+ on input line 38.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.
 fd
@@ -958,25 +958,25 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 37.
+(Font)              scaled to size 8.0pt on input line 38.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 37.
+(Font)              scaled to size 9.0pt on input line 38.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 37.
+(Font)              scaled to size 9.0pt on input line 38.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 37.
+(Font)              scaled to size 9.0pt on input line 38.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 37.
+(Font)              scaled to size 9.0pt on input line 38.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 37.
+(Font)              scaled to size 7.3pt on input line 38.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
@@ -984,18 +984,18 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 39.
+(Font)              scaled to size 10.0pt on input line 40.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 39.
+(Font)              scaled to size 10.0pt on input line 40.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 69.
+(Font)              scaled to size 7.0pt on input line 70.
  [1.1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/us
 r/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/usr
 /local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/
 local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/usr/l
 ocal/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 98.
+(Font)              scaled to size 10.0pt on input line 99.
 
 Underfull \vbox (badness 3965) has occurred while \output is active []
 
@@ -1004,295 +1004,288 @@ enc}]
 <./media/HelloWorld0D.png, id=104, 718.685pt x 501.875pt>
 File: ./media/HelloWorld0D.png Graphic file (type png)
 <use ./media/HelloWorld0D.png>
-Package pdftex.def Info: ./media/HelloWorld0D.png  used on input line 144.
+Package pdftex.def Info: ./media/HelloWorld0D.png  used on input line 145.
 (pdftex.def)             Requested size: 344.005pt x 240.231pt.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 145.
+(Font)              scaled to size 9.0pt on input line 146.
 
 
-Class acmart Warning: A possible image without description on input line 147.
+Class acmart Warning: A possible image without description on input line 148.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3.3 <./media/HelloWorld0D.png>]
-<./media/main.png, id=131, 1075.01625pt x 477.785pt>
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 177.
+
+<./media/main.png, id=132, 1075.01625pt x 477.785pt>
 File: ./media/main.png Graphic file (type png)
 <use ./media/main.png>
-Package pdftex.def Info: ./media/main.png  used on input line 171.
-(pdftex.def)             Requested size: 429.99889pt x 191.11061pt.
+Package pdftex.def Info: ./media/main.png  used on input line 180.
+(pdftex.def)             Requested size: 401.54665pt x 156.96793pt.
 
+Class acmart Warning: A possible image without description on input line 183.
 
-Class acmart Warning: A possible image without description on input line 174.
-
-<./media/drawio1.png, id=136, 786.94pt x 351.3125pt>
+<./media/drawio1.png, id=135, 786.94pt x 351.3125pt>
 File: ./media/drawio1.png Graphic file (type png)
 <use ./media/drawio1.png>
-Package pdftex.def Info: ./media/drawio1.png  used on input line 195.
+Package pdftex.def Info: ./media/drawio1.png  used on input line 199.
 (pdftex.def)             Requested size: 286.31818pt x 106.37982pt.
 
-Class acmart Warning: A possible image without description on input line 199.
+Class acmart Warning: A possible image without description on input line 203.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 210.
+surrounding objects on input line 214.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 210.
+surrounding objects on input line 214.
 
 <./media/drawio2.png, id=138, 716.6775pt x 309.155pt>
 File: ./media/drawio2.png Graphic file (type png)
 <use ./media/drawio2.png>
-Package pdftex.def Info: ./media/drawio2.png  used on input line 211.
+Package pdftex.def Info: ./media/drawio2.png  used on input line 215.
 (pdftex.def)             Requested size: 258.21368pt x 89.51712pt.
 [4.4 <./media/main.png>]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 215.
-
-
-LaTeX Warning: Reference `drawio2' on page 5 undefined on input line 215.
-
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-219.
+223.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 219.
+surrounding objects on input line 223.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 219.
+surrounding objects on input line 223.
 
-<./media/drawio3.png, id=153, 576.1525pt x 309.155pt>
+<./media/drawio3.png, id=158, 576.1525pt x 309.155pt>
 File: ./media/drawio3.png Graphic file (type png)
 <use ./media/drawio3.png>
-Package pdftex.def Info: ./media/drawio3.png  used on input line 220.
+Package pdftex.def Info: ./media/drawio3.png  used on input line 224.
 (pdftex.def)             Requested size: 184.93332pt x 81.55052pt.
 
-Overfull \hbox (12.9341pt too wide) in paragraph at lines 220--221
+Overfull \hbox (12.9341pt too wide) in paragraph at lines 224--225
 [][] 
  []
 
 
 Package wrapfig Warning: Stationary wrapfigure forced to float on input line 22
-4.
+8.
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-228.
+232.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 228.
+surrounding objects on input line 232.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 228.
+surrounding objects on input line 232.
 
-<./media/drawio4.png, id=156, 407.5225pt x 309.155pt>
+<./media/drawio4.png, id=161, 407.5225pt x 309.155pt>
 File: ./media/drawio4.png Graphic file (type png)
 <use ./media/drawio4.png>
-Package pdftex.def Info: ./media/drawio4.png  used on input line 229.
+Package pdftex.def Info: ./media/drawio4.png  used on input line 233.
 (pdftex.def)             Requested size: 117.48251pt x 81.55052pt.
 
 Package wrapfig Warning: Stationary wrapfigure forced to float on input line 23
-3.
+7.
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-237.
+241.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 237.
+surrounding objects on input line 241.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 237.
+surrounding objects on input line 241.
 
-<./media/json5.png, id=158, 407.5225pt x 309.155pt>
+<./media/json5.png, id=163, 407.5225pt x 309.155pt>
 File: ./media/json5.png Graphic file (type png)
 <use ./media/json5.png>
-Package pdftex.def Info: ./media/json5.png  used on input line 238.
+Package pdftex.def Info: ./media/json5.png  used on input line 242.
 (pdftex.def)             Requested size: 117.48251pt x 81.55052pt.
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 244.
+surrounding objects on input line 248.
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-251.
+255.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 251.
+surrounding objects on input line 255.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 251.
+surrounding objects on input line 255.
 
-<./media/ioports.png, id=160, 695.59875pt x 393.47pt>
+<./media/ioports.png, id=165, 695.59875pt x 393.47pt>
 File: ./media/ioports.png Graphic file (type png)
 <use ./media/ioports.png>
-Package pdftex.def Info: ./media/ioports.png  used on input line 252.
+Package pdftex.def Info: ./media/ioports.png  used on input line 256.
 (pdftex.def)             Requested size: 232.71098pt x 115.27592pt.
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 256.
+surrounding objects on input line 260.
 
 [5.5 <./media/drawio1.png> <./media/drawio2.png> <./media/drawio3.png> <./media
 /drawio4.png>]
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-260.
+264.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 260.
+surrounding objects on input line 264.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 260.
+surrounding objects on input line 264.
 
-<./media/ioportsculled.png, id=179, 611.28375pt x 309.155pt>
+<./media/ioportsculled.png, id=183, 611.28375pt x 309.155pt>
 File: ./media/ioportsculled.png Graphic file (type png)
 <use ./media/ioportsculled.png>
-Package pdftex.def Info: ./media/ioportsculled.png  used on input line 261.
+Package pdftex.def Info: ./media/ioportsculled.png  used on input line 265.
 (pdftex.def)             Requested size: 184.06203pt x 75.43439pt.
 
 Package wrapfig Warning: Stationary wrapfigure forced to float on input line 26
-5.
+9.
+
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 27
+2.
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-271.
+275.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 271.
+surrounding objects on input line 275.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 271.
+surrounding objects on input line 275.
 
-<./media/connection1.png, id=182, 737.75626pt x 323.2075pt>
+<./media/connection1.png, id=186, 737.75626pt x 323.2075pt>
 File: ./media/connection1.png Graphic file (type png)
 <use ./media/connection1.png>
-Package pdftex.def Info: ./media/connection1.png  used on input line 272.
+Package pdftex.def Info: ./media/connection1.png  used on input line 276.
 (pdftex.def)             Requested size: 218.38411pt x 76.27748pt.
 
-Overfull \hbox (24.88335pt too wide) in paragraph at lines 272--273
+Overfull \hbox (24.88335pt too wide) in paragraph at lines 276--277
 [][] 
  []
 
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 27
-6.
-
-
-Package wrapfig Warning: Collision between wrapping environments on input line 
-280.
-
-
-Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 280.
+Underfull \hbox (badness 1259) in paragraph at lines 280--281
+\T1/LinuxLibertineT-TLF/m/n/10 (+20) con-nec-tions, one of which con-tains a re
+f-er-ence to
+ []
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 280.
+surrounding objects on input line 284.
 
-<./media/connection2.png, id=184, 477.785pt x 309.155pt>
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 284.
+
+<./media/connection2.png, id=188, 477.785pt x 309.155pt>
 File: ./media/connection2.png Graphic file (type png)
 <use ./media/connection2.png>
-Package pdftex.def Info: ./media/connection2.png  used on input line 281.
+Package pdftex.def Info: ./media/connection2.png  used on input line 285.
 (pdftex.def)             Requested size: 145.58702pt x 81.55052pt.
-[6.6 <./media/json5.png> <./media/ioports.png> <./media/ioportsculled.png> <./m
-edia/connection1.png> <./media/connection2.png>]
+
+Underfull \vbox (badness 2753) has occurred while \output is active []
+
+ [6.6 <./media/json5.png> <./media/ioports.png> <./media/ioportsculled.png> <./
+media/connection1.png>]
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 307.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7.7]
+(Font)              scaled to size 10.0pt on input line 311.
+ [7.7 <./media/connection2.png>]
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 329.
+surrounding objects on input line 333.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 329.
+surrounding objects on input line 333.
 
-<./media/fanin.png, id=213, 743.77875pt x 501.875pt>
+<./media/fanin.png, id=217, 743.77875pt x 501.875pt>
 File: ./media/fanin.png Graphic file (type png)
 <use ./media/fanin.png>
-Package pdftex.def Info: ./media/fanin.png  used on input line 330.
+Package pdftex.def Info: ./media/fanin.png  used on input line 334.
 (pdftex.def)             Requested size: 74.38223pt x 50.19043pt.
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 340.
+surrounding objects on input line 344.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 340.
+surrounding objects on input line 344.
 
-<./media/fanout.png, id=215, 753.81625pt x 501.875pt>
+<./media/fanout.png, id=219, 753.81625pt x 501.875pt>
 File: ./media/fanout.png Graphic file (type png)
 <use ./media/fanout.png>
-Package pdftex.def Info: ./media/fanout.png  used on input line 341.
+Package pdftex.def Info: ./media/fanout.png  used on input line 345.
 (pdftex.def)             Requested size: 75.38603pt x 50.19043pt.
 [8.8 <./media/fanin.png> <./media/fanout.png>]
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 359.
+(Font)              scaled to size 10.0pt on input line 363.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 377.
+surrounding objects on input line 381.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 377.
+surrounding objects on input line 381.
 
-<./media/echo.png, id=226, 597.23125pt x 309.155pt>
+<./media/echo.png, id=230, 597.23125pt x 309.155pt>
 File: ./media/echo.png Graphic file (type png)
 <use ./media/echo.png>
-Package pdftex.def Info: ./media/echo.png  used on input line 378.
+Package pdftex.def Info: ./media/echo.png  used on input line 382.
 (pdftex.def)             Requested size: 200.19328pt x 83.82666pt.
-
-Underfull \vbox (badness 1968) has occurred while \output is active []
-
- [9.9]
-<./media/full.png, id=234, 844.15375pt x 432.61626pt>
+[9.9]
+<./media/full.png, id=238, 844.15375pt x 432.61626pt>
 File: ./media/full.png Graphic file (type png)
 <use ./media/full.png>
-Package pdftex.def Info: ./media/full.png  used on input line 412.
+Package pdftex.def Info: ./media/full.png  used on input line 416.
 (pdftex.def)             Requested size: 337.65552pt x 173.04343pt.
 
 
-Class acmart Warning: A possible image without description on input line 416.
+Class acmart Warning: A possible image without description on input line 420.
 
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 42
-7.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 43
+1.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 427.
+(Font)              scaled to size 10.0pt on input line 431.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Underfull \vbox (badness 1389) has occurred while \output is active []
-
  [10.10 <./media/full.png> <./media/echo.png>] [11.11{/usr/local/texlive/2024/t
 exmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}]
 Underfull \vbox (badness 2698) has occurred while \output is active []
 
  [12.12]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 639.
+(Font)              scaled to size 8.0pt on input line 644.
 
 [13.13]
 
@@ -1315,24 +1308,17 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `anon.out' has not changed.
 (rerunfilecheck)             Checksum: 6676BFDA04F4DCFC7BA98B1F2ECEDA71;3373.
  ) 
 Here is how much of TeX's memory you used:
  21289 strings out of 474116
- 343341 string characters out of 5743682
+ 343277 string characters out of 5743682
  1945187 words of memory out of 5000000
  42710 multiletter control sequences out of 15000+600000
- 704472 words of font info for 316 fonts, out of 8000000 for 9000
+ 699461 words of font info for 316 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,17n,131p,1433b,739s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,131p,1433b,735s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolat
 a-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/Lin
 BiolinumT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/
@@ -1341,10 +1327,10 @@ ine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/li
 bertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
 ic/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
 /public/newtx/txsys.pfb>
-Output written on anon.pdf (14 pages, 1059225 bytes).
+Output written on anon.pdf (14 pages, 1059970 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 288 compressed objects within 3 object streams
- 86 named destinations out of 1000 (max. 500000)
- 80688 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 372 PDF objects out of 1000 (max. 8388607)
+ 294 compressed objects within 3 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 76598 words of extra memory for PDF output out of 89155 (max. 10000000)
 

@@ -3,6 +3,7 @@
 
 \setlength{\intextsep}{2pt}
 \setlength{\abovecaptionskip}{1pt}
+\setlength{\belowcaptionskip}{4pt}
 
 \title{Extending Programming with Diagrammatic Programming Languages}
 \author{Zac Nowicki}
@@ -55,12 +56,12 @@ support vector graphics and overlapping, resizable windows and widgets of variou
 Early electronic hardware strongly encouraged the use of a small number of characters. Programming languages standardized on the use of ASCII, which limited the available number of printable characters to about 96 possibilities.
 
 Early electronic hardware was made to be reprogrammable by the invention of
-the Central Processing Unit - CPU. CPUs were originally designed to be
+the Central Processing Unit. CPUs were originally designed to be
 non-reentrant and single threaded. The high cost of early CPU-based
 computers prevented use of multiple CPUs in projects, thus, causing the
 need for extra software for simulating multiple CPUs on single
 hardware devices. Today, though, CPUs - and memory - are inexpensive and
-plentiful, a fact which enables the use of alternate forms of
+plentiful, a fact which enables the use of alternate forms for
 expressing programs. Additionally, the simulation of multiple CPUs via software 
 allowed for direct memory sharing between simulated CPUs by default. Physical 
 hardware CPUs do not share memory unless such features are specifically 
@@ -96,7 +97,7 @@ We use the the term "DPL" - Diagrammatic Programming Languages - when
 referring to this class of new programming syntax.
 
 DPLs might be used \emph{alongside} of existing TPLs (Textual
-Programming Languages) and that DPLs are hybrids of diagram and textual
+Programming Languages). DPLs are hybrids of diagram and textual
 notations. TPLs are useful for expressing a specific kind of program -
 computation - whereas other syntaxes make it more fruitful to express
 other kinds of programs that don't lend themselves to being expressed in
@@ -149,7 +150,7 @@ principles whose discussion is deferred.
 Figure \ref{mot} shows but one sample of a practical DPL syntax. Variations and
 improvements on this syntax can be imagined. This syntax is currently being used
 to produce actual applications like term-rewriting (\emph{t2t} -
-text-to-text - rewriting) compilers, LLMs, DSLs for creating DSLs,
+text-to-text - rewriting) compilers, LLM experimentation workbenches, DSLs for creating DSLs,
 Visual Shell prototypes, games, etc.
 
 This DPL syntax consists of only a few kinds of closed figures plus
@@ -158,7 +159,7 @@ considered to be a comment, and, is ignored. For example the bold text
 "Sequential Routing" is ignored. Colors are ignored. Line shapes and
 line widths are ignored, and so on.
 
-Figure \ref{mot}was drawn using an off-the-shelf diagram editor -
+Figure \ref{mot} was drawn using an off-the-shelf diagram editor -
 draw.io\cite{diagrams_net}. Draw.io saves the diagram in a modified form of XML, called graphML\cite{graphml}.
 
 The graphML file can be processed using off-the-shelf tools, like an XML parser library or a PEG\cite{peg}-based parser\cite{ohmjs}.
@@ -167,16 +168,19 @@ In our case, we used the Odin programming language\cite{odin} and the XML parsin
 
 We choose not to reproduce the code for the actual diagram parser here, due to space limitations. The draw.io-specific parser consists of under 250 lines of Odin code (including comments and blank lines). The full source code for the functioning diagram parser is in an open-source repo\cite{d2j}.
 
-\begin{figure}
-    \includegraphics[scale=0.4]{./media/main.png}
-    \caption{DPL diagram semantics as JSON}
-    \label{main}
-\end{figure}
 The diagram parser produces internal data structures in the host programming language and/or JSON\cite{json} files.
 
 A \href{http://draw.io}{draw.io} file can contain several diagrams, each on a separate tab (window) in the editor.
 
 The structure of the information needed by the DPL runtime is minimal, consisting of about four (4) fields for each diagram, as seen in Figure \ref{main}:
+
+\vspace{0.3\baselineskip}
+
+\begin{figure}[h]
+    \includegraphics[trim=1cm 2cm 1.5cm 1cm, clip, scale=0.4]{./media/main.png}
+    \caption{DPL diagram semantics as JSON}
+    \label{main}
+\end{figure}
 
 \begin{enumerate}
 \item The filename of the \href{http://draw.io}{draw.io} drawing
@@ -202,15 +206,15 @@ The .drawio file containing this information is verbose and contains a great dea
 
 \emph{The following is simplified for discussion purposes.}
 
-A Child derived from the Echo template is saved in the .drawio file as: (shown with artificial line breaks)
+A Child derived from the Echo template is saved in the .drawio file as seen in Figure \ref{drawio1} (shown with artificial line breaks)
 
 In this DPL, the \emph{style} information is mostly noise from the perspective of semantics. We do need, though, to peer into the style information to determine if the mxCell is a node or a connector (vertex="1" versus edge="1").
 
 %%%% cull style
 \begin{wrapfigure}{l}{0.6\textwidth}
     \includegraphics[trim=1cm 2cm 1.5cm 1cm, clip, scale=0.4]{./media/drawio2.png}
-    \caption{Cull style noise}
-    \label{Darwin}
+    \caption{Style noise culled out}
+    \label{drawio2}
 \end{wrapfigure}
 When we remove the \emph{style} noise, we get pseudo-XML shown in Figure \ref{drawio2}.
 
@@ -522,8 +526,8 @@ using the host language.
 %\end{verbatim}
   
 
-The Python version of the runtime system consists of roughly 9 files of
-code consisting of about 2,500 lines of code (including blank lines and
+The Python version of the runtime system consists of roughly 9 files containing
+about 2,500 lines of code (including blank lines and
 comments) and is supported by a standard library consisting of another 5
 files of code containing about 430 lines of code.
 
@@ -532,19 +536,20 @@ files of code containing about 430 lines of code.
 %system processes. As such, programs written this way "feel" like
 %\emph{programs} instead of as \emph{processes} in terms of efficiency.
 Programs written this way "feel" like
-\emph{programs} instead of as \emph{processes} in terms of efficiency because anonymous functions and closures are used instead of processes.
+\emph{programs} instead of as \emph{processes} in terms of efficiency because anonymous functions and closures are used instead of processes 
+while maintaining isolation of data and control flow.
 
 \section{Work In Progress}
 We have built working examples of various other technologies, using the
 DPL described in this paper, including,
-\underline{VSH}\cite{vsh} a Visual SHell that works like /bin/sh pipelines employing more input and output ports,
+\underline{VSH}\cite{vsh} a Visual SHell that works like /bin/sh pipelines albeit allowing more input and output ports,
 \underline{arith0d}\cite{arith0d} OhmJS' arithmetic grammar that concurrently emits four (4) target languages (Javascript, Python, Common Lisp, WASM),
 \underline{LLM0D}\cite{llm0d} a single component diagram that uses the Go programming language as a host language to connect to openai's LLM for experimenting with LLMs,
 \underline{transpiler}\cite{transpiler} a workbench for creating new textual syntaxes, uses OhmJS more than once in a pipeline,
 \underline{kinopio2md}\cite{k2m} experiment for converting Kinopio "mindmaps" into markdown based on connections between ideas expressed in Kinopio,
-\underline{Scheme to Javascript}\cite{scm2js}, \underline{Scheme to Python}\cite{scm2py} - conversion of Nils Holm's Scheme code used in "Prolog Control Flow in 6 Slides" to produce a Prolog-like inferencing engine for Javascript, currently working on conversion to Python,
+\underline{Scheme to Javascript}\cite{scm2js}, \underline{Scheme to Python}\cite{scm2py} - conversion of Nils Holm's Scheme code used in "Prolog Control Flow in 6 Slides"\cite{holm} to produce a Prolog-like inferencing engine for Javascript, and, currently working on conversion to Python,
 \underline{delay0d}\cite{delay0d},
-\underline{dc0d}\cite{dc0d} game based on Chris Marten's "dungeon crawler" example\cite{ceptre_paper}; including gen0D generates components (in Odin) from the diagram (instead of interpreting the diagram, gen0D creates leaf components that are used in conjunction with the diagram),
+\underline{dc0d}\cite{dc0d} game based on Chris Marten's "dungeon crawler" example\cite{ceptre_paper}; including \underline{gen0D} which generates leaf components (in Odin) that are used in conjunction with the diagram,
 \underline{0D odin}\cite{odin0d} a DPL engine written in the Odin programming language (Odin is statically typed, and, does not provide garbage collection, similar to languages like C),
 \underline{Crystal 0D}\cite{crystal0d} a DPL engine written in the Crystal programming language, which is currently being used in a production system,
 \underline{0D cookbook}\cite{0dcookbook} ongoing effort to document all standard DPL components as \href{http://draw.io}{draw.io} diagrams
@@ -552,7 +557,7 @@ DPL described in this paper, including,
 \section{Fundamental Principles}
 Software components are fully isolated from one another through the use
 of FIFO queues. Using the LIFO callstack for inter-component
-communication leads to hidden dependencies which leads to avoidance of
+communication leads to hidden dependencies which leads to avoidance of the use of
 DPLs. This is a requirement for enabling LEGO®-like composition of software components.
 FIFO-based callstacks only give the illusion of LEGO®-like composition of software libraries,
 but, actually result in dynamic, tight coupling of components.
@@ -594,10 +599,10 @@ to reasons of space.
 \emph{Multiple syntaxes - notations - instead of general purpose programming languages},
 \emph{Using existing GPLs as assemblers},
 \emph{Writing code that writes code},
-\emph{Inferencing semantic information from diagrams using various techniques},
+\emph{Infering semantic information from diagrams using various techniques},
 \emph{Simple relations, like intersection, larger, smaller, above, below, left-of, right-of},
-\emph{Low-level concepts like \emph{loop}, and \emph{recursion}, don't make sense in a distributed environment},
-\emph{if-then-else is too low level and ad-hoc for expressing control-flow}.
+\emph{The fact that low-level concepts like \emph{loop}, and \emph{recursion}, don't make sense in a distributed environment},
+\emph{The fact that \emph{if-then-else} is too low level and leads to ad-hoc expressions of control-flow}.
 
 \section{Future}
 \begin{itemize}
@@ -685,6 +690,9 @@ Martens, Chris. Ceptre: A Language for Modeling Generative Interactive Systems. 
 
 \bibitem{0dcookbook}
 \emph{anonymous repository}
+
+\bibitem{holm}
+\url{http://www.t3x.org/bits/prolog-6-code.scm.html} (Accessed: April 22, 2024)
 
 \end{thebibliography}
 
