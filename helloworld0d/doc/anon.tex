@@ -196,7 +196,7 @@ The structure of the information needed by the DPL runtime is minimal, consistin
 %%%% Raw
 %  \begin{wrapfigure}{l}{0.8\textwidth}
   \begin{figure}
-    \includegraphics[trim=1cm 2cm 1.5cm 1cm, clip, scale=0.4]{./media/drawio1.png}
+    \includegraphics[trim=1cm 1.9cm 1.5cm 1cm, clip, scale=0.4]{./media/drawio1.png}
     \caption{Raw .drawio}
     \label{drawio1}
 %  \end{wrapfigure}
@@ -213,7 +213,7 @@ In this DPL, the \emph{style} information is mostly noise from the perspective o
 %%%% cull style
 \begin{wrapfigure}[1]{r}{0.6\textwidth}
    \centering
-    \includegraphics[trim=1cm 2cm 1.5cm 1cm, clip, scale=0.4]{./media/drawio2.png}
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/drawio2.png}
     \caption{Style noise culled out}
     \label{drawio2}
 \end{wrapfigure}
@@ -224,7 +224,7 @@ When we remove the \emph{style} noise, we get pseudo-XML shown in Figure \ref{dr
 %%%% mxGeometry
 \begin{wrapfigure}[4]{l}{0.5\textwidth}
    \centering
-    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/drawio3.png}
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/drawio3.png}
     \caption{cull mxGeometry}
     \label{drawio3}
 \end{wrapfigure}
@@ -236,7 +236,7 @@ Figure \ref{drawio3} shows the pseudo-XML after culling the mxGeometry informati
 %%%% reduced id
 \begin{wrapfigure}[2]{r}{0.4\textwidth}
    \centering
-    \includegraphics[trim=1cm 2cm 1cm 1cm, clip, scale=0.4]{./media/drawio4.png}
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/drawio4.png}
     \caption{reduced id}
     \label{drawio4}
 \end{wrapfigure}
@@ -244,53 +244,62 @@ Furthermore, the id can be internally hashed on a per-file manner, resulting in 
 
  \vspace{6\baselineskip}
 
-%%%% JSON snippet
-\begin{wrapfigure}{L}{0.3\textwidth}
-    \includegraphics[trim=2cm 2cm 2cm 1.7cm, clip, scale=0.4]{./media/json5.png}
-    \caption{Resulting JSON snippet}
-    \label{json5}
-\end{wrapfigure}
-And, from here we can derive the JSON form for a child component
-
- \vspace{6\baselineskip}
-
 All of the above is currently achieved using an XML parser and by cherry-picking information out of
 the seemingly-complicated XML data. We argue, though, that this could, also, be replaced
 by a PEG parser which performs \emph{t2t} (text-to-text) transformations.
 
+%%%% JSON snippet
+\begin{wrapfigure}[2]{L}{0.4\textwidth}
+    \centering
+    \includegraphics[trim=1cm 1.7cm 1cm 1cm, clip, scale=0.4]{./media/json5.png}
+    \caption{Resulting JSON snippet}
+    \label{json5}
+\end{wrapfigure}
+\vspace{1\baselineskip}
+And, from here we can derive the JSON form for a child component
+
+ \vspace{6\baselineskip}
+
 
 %%%% IO Ports of 6 culled
-\begin{wrapfigure}{R}{0.6\textwidth}
-    \includegraphics[trim=2cm 2cm 2cm 1.7cm, clip, scale=0.4]{./media/ioports.png}
+\begin{wrapfigure}[3]{r}{0.6\textwidth}
+    \centering
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/ioports.png}
     \caption{Input and Output Ports of id=6}
     \label{ioports}
 \end{wrapfigure}
 \vspace{1\baselineskip}
 In this example, the component id=6, derived from the Echo template, has one input port and one output port, seen in Figure \ref{ioports}.
 
+ \vspace{6\baselineskip}
+
 %%%% IO Ports of 6 culled
-\begin{wrapfigure}{r}{0.45\textwidth}
-    \includegraphics[trim=2cm 2cm 2cm 1.7cm, clip, scale=0.37]{./media/ioportsculled.png}
+\begin{wrapfigure}[4]{l}{0.45\textwidth}
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.37]{./media/ioportsculled.png}
     \caption{Input and Output Ports of id=6, culled}
     \label{ioportsculled}
 \end{wrapfigure}
 Here, the ports refer to parent="kChx-vSpJG1CHjQ2RL-N-43" and contain a great deal of graphic information that has no bearing on the semantics.
 Culling, we get Figure \ref{ioportsculled}.
 
+\vspace{4\baselineskip}
 Note that "" is a valid port name - the null string. The input port and the output port have the same name (the null string), but, the names do not conflict since they are in different namespaces (input namespace of template "Echo" vs. output namespace of template "Echo").
 
+\newpage
+
 %%%% Raw Connection
-\begin{wrapfigure}{r}{0.45\textwidth}
-    \includegraphics[trim=2cm 2cm 2cm 1.7cm, clip, scale=0.35]{./media/connection1.png}
+\begin{wrapfigure}[6]{r}{0.5\textwidth}
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.35]{./media/connection1.png}
     \caption{Raw connection}
     \label{connection}
 \end{wrapfigure}
 Grinding further through the XML, we see several connections, one of which contains a reference to "kChx-vSpJG1CHjQ2RL-N-45". In this case, the reference lists the id as a \emph{source}. This implies that "kChx-vSpJG1CHjQ2RL-N-45" is an output port (there is more nuance to this, but, for simplicity, we'll skip over the nuance for now).
 
+\vspace{2\baselineskip}
 
 %%%%% Culled connection
 \begin{wrapfigure}{r}{0.37\textwidth}
-    \includegraphics[trim=2cm 2cm 2cm 1.7cm, clip, scale=0.4]{./media/connection2.png}
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/connection2.png}
     \caption{Culled connection}
     \label{connection2}
 \end{wrapfigure}
@@ -384,19 +393,24 @@ Each diagram is compiled into a container component containing the following inf
 \item bag of connection 3-tuples \{direction, \{sender, port\}, \{receiver, port\}\}
 \end{itemize}
 
-%%%% Echo
 \subsection{Leaf Component "Echo"}
-\begin{wrapfigure}{r}{0.5\textwidth}
-    \includegraphics[trim=1.7cm 2cm 1.7cm 1.5cm, clip, scale=0.4]{./media/echo.png}
-    \caption{Echo}
-    \label{fig:echo}
-\end{wrapfigure}
 In our implementation, we used the Odin programming language for
 creating the diagram parser, but, we use the Python programming
 language to load and execute the parsed results.
 
-Figure 1 refers to a Leaf component template called "Echo". The "Echo"
+\vspace{1\baselineskip}
+
+%%%% Echo
+\begin{wrapfigure}[2]{r}{0.5\textwidth}
+    \centering
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/echo.png}
+    \caption{Echo}
+    \label{fig:echo}
+\end{wrapfigure}
+Figure \ref{mot} refers to a Leaf component template called "Echo". The "Echo"
 component is instantiated three (3) times. 
+
+\vspace{5\baselineskip}
 
 Leaf components are
 implemented with code in some host language (Python, in our case) as in Figure \ref{fig:echo}. Software components
@@ -418,14 +432,17 @@ Compilation and execution of this DPL consists of the steps listed below. Note t
 for overview purposes only.
 
 \subsection{Convert DPL program diagrams to JSON.}
+\vspace{0.2\baselineskip}
+
 %%%% Compilation & Execution
 \begin{figure}[h]
-% \begin{wrapfigure}{r}{1\textwidth}
-    \includegraphics[scale=0.4]{./media/full.png}
+    \centering
+    \includegraphics[trim=0 0cm 0 0, clip, scale=0.4]{./media/full.png}
     \caption{Compilation and Execution}
     \label{fig:full}
-% \end{wrapfigure}
 \end{figure}
+
+\vspace{0.1\baselineskip}
 
 %  \begin{figure}[h]
 %    \centering
