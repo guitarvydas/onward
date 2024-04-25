@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 22:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.19)  24 APR 2024 22:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1285,7 +1285,7 @@ Underfull \vbox (badness 2698) has occurred while \output is active []
 
  [12.12]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 644.
+(Font)              scaled to size 8.0pt on input line 642.
 
 [13.13]
 
@@ -1308,8 +1308,15 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `anon.out' has not changed.
-(rerunfilecheck)             Checksum: 6676BFDA04F4DCFC7BA98B1F2ECEDA71;3373.
+
+
+Package rerunfilecheck Warning: File `anon.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `anon.out':
+(rerunfilecheck)             Before: 6676BFDA04F4DCFC7BA98B1F2ECEDA71;3373
+(rerunfilecheck)             After:  E0F6652B3AFB4E7918983147779A3D2A;3266.
  ) 
 Here is how much of TeX's memory you used:
  21289 strings out of 474116
@@ -1318,16 +1325,20 @@ Here is how much of TeX's memory you used:
  42710 multiletter control sequences out of 15000+600000
  699461 words of font info for 316 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,17n,131p,1433b,735s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolat
-a-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/Lin
-BiolinumT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/
-LinBiolinumTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libert
-ine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/li
-bertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
-ic/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
-/public/newtx/txsys.pfb>
-Output written on anon.pdf (14 pages, 1059970 bytes).
+ 90i,17n,131p,1433b,745s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{section.9} has been referenced but does not exist, 
+replaced by a fixed one
+
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-
+zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinBi
+olinumT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/Li
+nBiolinumTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertin
+e/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libe
+rtine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public
+/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
+ublic/newtx/txsys.pfb>
+Output written on anon.pdf (14 pages, 1059686 bytes).
 PDF statistics:
  372 PDF objects out of 1000 (max. 8388607)
  294 compressed objects within 3 object streams
