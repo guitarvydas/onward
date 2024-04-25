@@ -244,19 +244,21 @@ Furthermore, the id can be internally hashed on a per-file manner, resulting in 
 
  \vspace{6\baselineskip}
 
+All of the above is currently achieved using an XML parser and by cherry-picking information out of
+the seemingly-complicated XML data. We argue, though, that this could, also, be replaced
+by a PEG parser which performs \emph{t2t} (text-to-text) transformations.
+
 %%%% JSON snippet
-\begin{wrapfigure}{L}{0.3\textwidth}
+\begin{wrapfigure}[2]{L}{0.4\textwidth}
+    \centering
     \includegraphics[trim=1cm 1.7cm 1cm 1cm, clip, scale=0.4]{./media/json5.png}
     \caption{Resulting JSON snippet}
     \label{json5}
 \end{wrapfigure}
+\vspace{1\baselineskip}
 And, from here we can derive the JSON form for a child component
 
  \vspace{6\baselineskip}
-
-All of the above is currently achieved using an XML parser and by cherry-picking information out of
-the seemingly-complicated XML data. We argue, though, that this could, also, be replaced
-by a PEG parser which performs \emph{t2t} (text-to-text) transformations.
 
 
 %%%% IO Ports of 6 culled
