@@ -168,7 +168,6 @@ The structure of the information needed by the DPL runtime is minimal, consistin
 
 \end{itemize}
 
-\newpage
 
 The .drawio file containing this information is verbose and contains a great deal of graphic layout information that is not relevant at the semantic level.
 
@@ -257,8 +256,6 @@ In this example, the component id=6, derived from the Echo template, has one inp
 
 Here, the ports refer to parent="kChx-vSpJG1CHjQ2RL-N-43" and contain a great deal of graphic information that has no bearing on the semantics.
 
-\newpage
-
 %%%% IO Ports of 6 culled
 \begin{wrapfigure}[1]{l}{0.45\textwidth}
 \centering
@@ -275,6 +272,8 @@ Culling, we get Figure \ref{ioportsculled}.
 Note that "" is a valid port name - the null string. The input port and the output port have the same name (the null string), but, the names do not conflict since they are in different namespaces (input namespace of template "Echo" vs. output namespace of template "Echo").
 
 \vspace{1\baselineskip}
+
+\newpage
 
 %%%% Raw Connection
 \begin{wrapfigure}[6]{r}{0.5\textwidth}
@@ -451,6 +450,8 @@ for overview purposes only.
 %\begin{verbatim}
 %    xml, xml_err := xml.parse(file)
 %\end{verbatim}
+
+ \vspace{-0.7\baselineskip}
   
 \subsection{Load component templates from JSON.}
 %\begin{wrapfigure}[4]{r}{0.5\textwidth}
@@ -463,6 +464,8 @@ for overview purposes only.
 %\begin{verbatim}
  %   routings = json.loads(json_data)
 %\end{verbatim}
+
+ \vspace{-0.7\baselineskip}
 
 \subsection{Instantiate system.}
 %  \begin{wrapfigure}{l}{0.5\textwidth}
@@ -490,6 +493,8 @@ using multiple approaches.
 Software components are fully isolated from one another through the use
 of FIFO queues.
 
+ \vspace{-0.7\baselineskip}
+
 \subsection{Inject first message.}
 %  \begin{wrapfigure}{r}{0.5\textwidth}
 %    \includegraphics[scale=0.4]{./media/inject.png}
@@ -507,6 +512,7 @@ injected\cite{main} into the input queue of the top-most component.
 %    inject (main_container, msg)
 %\end{verbatim}
   
+\vspace{-0.7\baselineskip}
 \subsection{Run.}
 %  \begin{wrapfigure}{m}{0.5\textwidth}
 %    \includegraphics[scale=0.4]{./media/run.png}
@@ -528,6 +534,7 @@ for all children to reach quiescence.
 %       injectfn (root_project, root_0D, arg, main_container)
 %\end{verbatim}
   
+ \vspace{-0.7\baselineskip}
 \subsection{Display outputs.}
 %  \begin{figure}[h]
 %    \centering
@@ -562,15 +569,16 @@ We have built working examples of various other technologies, using the
 DPL described in this paper, including,
 \underline{VSH}\cite{vsh} a Visual SHell that works like /bin/sh pipelines albeit allowing more input and output ports,
 \underline{arith0d}\cite{arith0d} OhmJS' arithmetic grammar that concurrently emits four (4) target languages (Javascript, Python, Common Lisp, WASM),
-\underline{LLM0D}\cite{llm0d} a single component diagram that uses the Go programming language as a host language to connect to openai's LLM for experimenting with LLMs,
+\underline{LLM0D}\cite{llm0d} a single component diagram that uses the Go programming language as a host language to connect to openai's LLM for experimention,
 \underline{transpiler}\cite{transpiler} a workbench for creating new textual syntaxes, uses OhmJS more than once in a pipeline,
 \underline{kinopio2md}\cite{k2m} experiment for converting Kinopio "mindmaps" into markdown based on connections between ideas expressed in Kinopio,
 \underline{Scheme to Javascript}\cite{scm2js}, \underline{Scheme to Python}\cite{scm2py} - conversion of Nils Holm's Scheme code used in "Prolog Control Flow in 6 Slides"\cite{holm} to produce a Prolog-like inferencing engine for Javascript, and, currently working on conversion to Python,
 \underline{delay0d}\cite{delay0d},
-\underline{dc0d}\cite{dc0d} game based on Chris Marten's "dungeon crawler" example\cite{ceptre_paper}; including \underline{gen0D} which generates leaf components (in Odin) that are used in conjunction with the diagram,
-\underline{0D odin}\cite{odin0d} a DPL engine written in the Odin programming language (Odin is statically typed, and, does not provide garbage collection, similar to languages like C),
+\underline{dc0d}\cite{dc0d} game based on Chris Marten's "dungeon crawler" example\cite{ceptre_paper}; 
+\underline{gen0D} which generates leaf components that are used in conjunction with dc0d,
+\underline{0D odin}\cite{odin0d} a DPL engine written in the Odin programming language,
 \underline{Crystal 0D}\cite{crystal0d} a DPL engine written in the Crystal programming language, which is currently being used in a production system,
-\underline{0D cookbook}\cite{0dcookbook} ongoing effort to document all standard DPL components as \href{http://draw.io}{draw.io} diagrams
+\underline{0D cookbook}\cite{0dcookbook} ongoing effort to document all standard DPL components as \href{http://draw.io}{draw.io} diagrams.
 
 \section{Fundamental Principles}
 Software components are fully isolated from one another through the use
