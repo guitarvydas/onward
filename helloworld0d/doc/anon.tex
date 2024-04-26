@@ -111,32 +111,6 @@ This paper touches on some of the key aspects of making compilable and
 understandable drawings of programs, e.g. 0D, syntactic simplicity, DI
 (Design Intent), etc.
 
-We do not discuss fundamental DPL principles in this paper and refer the
-reader to other related writings on these subjects.
-
-This paper is laid out in 8 sections.
-
-\begin{enumerate}
-\item Introduction - Diagrams as Additional Syntax for Programming
-Languages
-
-\item Motivating Example
-
-\item Container and Leaf Components
-
-\item Compilation and Execution
-
-\item Work In Progress
-
-\item Fundamental Principles - describes the basic principles
-for convenient development of programs
-
-\item Relevant Principles and Issues - lists various
-principles whose discussion is deferred.
-
-\item Future - lists possible avenues for further research.
-
-\end{enumerate}
 
 \section{Motivating Example}
 
@@ -426,7 +400,7 @@ language to load and execute the parsed results.
     \label{fig:echo}
 \end{wrapfigure}
 Figure \ref{mot} refers to a Leaf component template called "Echo". The "Echo"
-component is instantiated three (3) times. 
+component is instantiated four (4) times. 
 
 \vspace{5\baselineskip}
 
@@ -437,7 +411,7 @@ entry points for each software component:
 \begin{itemize}
 \setlength\itemsep{-0.3em}
 \item The code to instantiate a component from the "Echo" template. In Figure
-1, the "Echo" code creates three (3) instances, each being unique, but,
+1, the "Echo" code creates four (4) instances, each being unique, but,
 derived from the same template.
 
 \item The code to handle incoming messages for each instance derived from the
