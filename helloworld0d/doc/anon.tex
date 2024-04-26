@@ -183,6 +183,7 @@ The structure of the information needed by the DPL runtime is minimal, consistin
 \end{figure}
 
 \begin{itemize}
+\setlength\itemsep{-0.3em}
 \item The filename of the \href{http://draw.io}{draw.io} drawing
 
 \item The tab-name of the top-most diagram.
@@ -392,6 +393,7 @@ Fan-out may be an inconvenience in the theoretical sense, but, is a vital featur
 
 In this DPL, there are four (4) connection directions
 \begin{itemize}
+\setlength\itemsep{-0.3em}
 \item down
 \item across
 \item up
@@ -403,6 +405,7 @@ As already mentioned, mapping from sender-ports to receiver-ports must be done b
 \subsection{Container Component}
 Each diagram is compiled into a container component containing the following information:
 \begin{itemize}
+\setlength\itemsep{-0.3em}
 \item template name - the name of the diagram
 \item bag of children 2-tuples \{template, instance-id\}
 \item bag of connection 3-tuples \{direction, \{sender, port\}, \{receiver, port\}\}
@@ -432,6 +435,7 @@ implemented with code in some host language (Python, in our case) as in Figure \
 appear as rectangles on the drawing. The implementation provides two (2)
 entry points for each software component:
 \begin{itemize}
+\setlength\itemsep{-0.3em}
 \item The code to instantiate a component from the "Echo" template. In Figure
 1, the "Echo" code creates three (3) instances, each being unique, but,
 derived from the same template.
@@ -647,6 +651,7 @@ The fact that \emph{if-then-else} is too low level and leads to ad-hoc expressio
 \section{Future}
 %\begin{itemize}[noitemsep]
 \begin{itemize}
+\setlength\itemsep{-0.3em}
 \item Compilation, in addition to the interpretation, of DPLs.
 
 \item Parsing XML using the \emph{Transpiler} component instead of calling XML parsing libraries.
