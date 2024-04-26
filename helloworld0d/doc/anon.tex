@@ -1,8 +1,9 @@
 \documentclass[10pt,anonymous,review]{acmart}
 \usepackage{wrapfig}
 
-%\setlength{\intextsep}{1pt}
+\setlength{\intextsep}{2pt}
 \setlength{\abovecaptionskip}{1pt}
+\setlength{\belowcaptionskip}{4pt}
 
 \title{Extending Programming with Diagrammatic Programming Languages}
 \author{Zac Nowicki}
@@ -52,17 +53,15 @@ Early electronic hardware was only capable of supporting grids of
 non-overlapping bitmaps called "characters". Today, though, hardware can
 support vector graphics and overlapping, resizable windows and widgets of various sizes.
 
-Early electronic hardware strongly encouraged the use of a small number of characters.
-Programming languages standardized on the use of ASCII, which limited the available number
-of printable characters to about 96 possibilities.
+Early electronic hardware strongly encouraged the use of a small number of characters. Programming languages standardized on the use of ASCII, which limited the available number of printable characters to about 96 possibilities.
 
 Early electronic hardware was made to be reprogrammable by the invention of
-the Central Processing Unit - CPU. CPUs were originally designed to be
+the Central Processing Unit. CPUs were originally designed to be
 non-reentrant and single threaded. The high cost of early CPU-based
 computers prevented use of multiple CPUs in projects, thus, causing the
 need for extra software for simulating multiple CPUs on single
 hardware devices. Today, though, CPUs - and memory - are inexpensive and
-plentiful, a fact which enables the use of alternate forms of
+plentiful, a fact which enables the use of alternate forms for
 expressing programs. Additionally, the simulation of multiple CPUs via software 
 allowed for direct memory sharing between simulated CPUs by default. Physical 
 hardware CPUs do not share memory unless such features are specifically 
@@ -98,7 +97,7 @@ We use the the term "DPL" - Diagrammatic Programming Languages - when
 referring to this class of new programming syntax.
 
 DPLs might be used \emph{alongside} of existing TPLs (Textual
-Programming Languages) and that DPLs are hybrids of diagram and textual
+Programming Languages). DPLs are hybrids of diagram and textual
 notations. TPLs are useful for expressing a specific kind of program -
 computation - whereas other syntaxes make it more fruitful to express
 other kinds of programs that don't lend themselves to being expressed in
@@ -151,7 +150,7 @@ principles whose discussion is deferred.
 Figure \ref{mot} shows but one sample of a practical DPL syntax. Variations and
 improvements on this syntax can be imagined. This syntax is currently being used
 to produce actual applications like term-rewriting (\emph{t2t} -
-text-to-text - rewriting) compilers, LLMs, DSLs for creating DSLs,
+text-to-text - rewriting) compilers, LLM experimentation workbenches, DSLs for creating DSLs,
 Visual Shell prototypes, games, etc.
 
 This DPL syntax consists of only a few kinds of closed figures plus
@@ -160,7 +159,7 @@ considered to be a comment, and, is ignored. For example the bold text
 "Sequential Routing" is ignored. Colors are ignored. Line shapes and
 line widths are ignored, and so on.
 
-Figure \ref{mot}was drawn using an off-the-shelf diagram editor -
+Figure \ref{mot} was drawn using an off-the-shelf diagram editor -
 draw.io\cite{diagrams_net}. Draw.io saves the diagram in a modified form of XML, called graphML\cite{graphml}.
 
 The graphML file can be processed using off-the-shelf tools, like an XML parser library or a PEG\cite{peg}-based parser\cite{ohmjs}.
@@ -169,18 +168,21 @@ In our case, we used the Odin programming language\cite{odin} and the XML parsin
 
 We choose not to reproduce the code for the actual diagram parser here, due to space limitations. The draw.io-specific parser consists of under 250 lines of Odin code (including comments and blank lines). The full source code for the functioning diagram parser is in an open-source repo\cite{d2j}.
 
-\begin{figure}
-    \includegraphics[scale=0.4]{./media/main.png}
-    \caption{DPL diagram semantics as JSON}
-    \label{main}
-\end{figure}
 The diagram parser produces internal data structures in the host programming language and/or JSON\cite{json} files.
 
 A \href{http://draw.io}{draw.io} file can contain several diagrams, each on a separate tab (window) in the editor.
 
 The structure of the information needed by the DPL runtime is minimal, consisting of about four (4) fields for each diagram, as seen in Figure \ref{main}:
 
-\begin{enumerate}
+\vspace{0.5\baselineskip}
+
+\begin{figure}[h]
+    \includegraphics[trim=1cm 1.9cm 1.5cm 0.8cm, clip, scale=0.4]{./media/main.png}
+    \caption{DPL diagram semantics as JSON}
+    \label{main}
+\end{figure}
+
+\begin{itemize}
 \item The filename of the \href{http://draw.io}{draw.io} drawing
 
 \item The tab-name of the top-most diagram.
@@ -189,101 +191,137 @@ The structure of the information needed by the DPL runtime is minimal, consistin
 
 \item A bag of Connections between children (including connections to/from the container itself).
 
-\end{enumerate}
+\end{itemize}
 
+\newpage
+
+The .drawio file containing this information is verbose and contains a great deal of graphic layout information that is not relevant at the semantic level.
+
+\emph{The following is simplified for discussion purposes.}
+\vspace{1\baselineskip}
+
+%%%% Raw
 %  \begin{wrapfigure}{l}{0.8\textwidth}
-  \begin{figure}
-    \includegraphics[scale=0.4]{./media/drawio1.png}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[trim=1cm 1.9cm 1.5cm 1cm, clip, scale=0.4]{./media/drawio1.png}
     \caption{Raw .drawio}
     \label{drawio1}
 %  \end{wrapfigure}
 \end{figure}
 
-The .drawio file containing this information is verbose and contains a great deal of graphic layout information that is not relevant at the semantic level.
-
-\emph{The following is simplified for discussion purposes.}
-
-A Child derived from the Echo template is saved in the .drawio file as: (shown with artificial line breaks)
+A Child derived from the Echo template is saved in the .drawio file as seen in Figure \ref{drawio1} (shown with artificial line breaks)
 
 In this DPL, the \emph{style} information is mostly noise from the perspective of semantics. We do need, though, to peer into the style information to determine if the mxCell is a node or a connector (vertex="1" versus edge="1").
 
-%\begin{wrapfigure}{l}{0.7\textwidth}
-\begin{figure}
-    \includegraphics[scale=0.4]{./media/drawio2.png}
-    \caption{Cull style noise}
-    \label{Darwin}
-%\end{wrapfigure}
-\end{figure}
+\vspace{1\baselineskip}
+
+%%%% cull style
+\begin{wrapfigure}[1]{r}{0.6\textwidth}
+   \centering
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/drawio2.png}
+    \caption{Style noise culled out}
+    \label{drawio2}
+\end{wrapfigure}
 When we remove the \emph{style} noise, we get pseudo-XML shown in Figure \ref{drawio2}.
 
- 
-\begin{wrapfigure}{l}{0.4\textwidth}
-    \includegraphics[scale=0.4]{./media/drawio3.png}
+ \vspace{6\baselineskip}
+
+%%%% mxGeometry
+\begin{wrapfigure}[4]{l}{0.5\textwidth}
+   \centering
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/drawio3.png}
     \caption{cull mxGeometry}
     \label{drawio3}
 \end{wrapfigure}
+\vspace{0.5\baselineskip}
 Similarly, the \emph{mxGeometry} information affects the visual display of the diagram, but has no semantic value for this DPL.
 Figure \ref{drawio3} shows the pseudo-XML after culling the mxGeometry information.
   
-\begin{wrapfigure}{l}{0.8\textwidth}
-    \includegraphics[scale=0.4]{./media/drawio4.png}
+ \vspace{5\baselineskip}
+
+%%%% reduced id
+\begin{wrapfigure}[2]{r}{0.4\textwidth}
+   \centering
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/drawio4.png}
     \caption{reduced id}
     \label{drawio4}
 \end{wrapfigure}
-Furthermore, the id can be internally hashed on a per-file manner, resulting in even less noise:
+Furthermore, the id can be internally hashed on a per-file manner, resulting in even less noise, as shown in Figure \ref{drawio4}.
 
+ \vspace{6\baselineskip}
 
-\begin{wrapfigure}{l}{0.4\textwidth}
-    \includegraphics[scale=0.4]{./media/json5.png}
-    \caption{Resulting JSON snippet}
-    \label{json5}
-\end{wrapfigure}
-And, from here we can derive the JSON form for a child component
-
-\vspace{1\baselineskip}
 All of the above is currently achieved using an XML parser and by cherry-picking information out of
 the seemingly-complicated XML data. We argue, though, that this could, also, be replaced
 by a PEG parser which performs \emph{t2t} (text-to-text) transformations.
 
-\vspace{5.3\baselineskip}
+%%%% JSON snippet
+\begin{wrapfigure}[2]{L}{0.4\textwidth}
+    \centering
+    \includegraphics[trim=1cm 1.7cm 1cm 1cm, clip, scale=0.4]{./media/json5.png}
+    \caption{Resulting JSON snippet}
+    \label{json5}
+\end{wrapfigure}
+\vspace{0.5\baselineskip}
+And, from here we can derive the JSON form for a child component
 
-%  \begin{wrapfigure}{l}{0.7\textwidth}
-\begin{figure}[h]
-    \includegraphics[scale=0.4]{./media/ioports.png}
+ \vspace{5\baselineskip}
+
+
+%%%% IO Ports of 6 culled
+\begin{wrapfigure}[3]{r}{0.6\textwidth}
+    \centering
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/ioports.png}
     \caption{Input and Output Ports of id=6}
     \label{ioports}
- % \end{wrapfigure}
-\end{figure}
+\end{wrapfigure}
+\vspace{1.5\baselineskip}
 In this example, the component id=6, derived from the Echo template, has one input port and one output port, seen in Figure \ref{ioports}.
 
-%  \begin{wrapfigure}{l}{0.4\textwidth}
-\begin{figure}
-    \includegraphics[scale=0.4]{./media/ioportsculled.png}
+ \vspace{6.2\baselineskip}
+
+Here, the ports refer to parent="kChx-vSpJG1CHjQ2RL-N-43" and contain a great deal of graphic information that has no bearing on the semantics.
+
+\newpage
+
+%%%% IO Ports of 6 culled
+\begin{wrapfigure}[1]{l}{0.45\textwidth}
+\centering
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.37]{./media/ioportsculled.png}
     \caption{Input and Output Ports of id=6, culled}
     \label{ioportsculled}
- % \end{wrapfigure}
-\end{figure}
-Here, the ports refer to parent="kChx-vSpJG1CHjQ2RL-N-43" and contain a great deal of graphic information that has no bearing on the semantics.
+\end{wrapfigure}
+
 Culling, we get Figure \ref{ioportsculled}.
 
+\vspace{2\baselineskip}
+
+\vspace{4\baselineskip}
 Note that "" is a valid port name - the null string. The input port and the output port have the same name (the null string), but, the names do not conflict since they are in different namespaces (input namespace of template "Echo" vs. output namespace of template "Echo").
 
-\begin{wrapfigure}{l}{0.7\textwidth}
-    \includegraphics[scale=0.4]{./media/connection1.png}
+\vspace{1\baselineskip}
+
+%%%% Raw Connection
+\begin{wrapfigure}[6]{r}{0.5\textwidth}
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.35]{./media/connection1.png}
     \caption{Raw connection}
     \label{connection}
 \end{wrapfigure}
 Grinding further through the XML, we see several connections, one of which contains a reference to "kChx-vSpJG1CHjQ2RL-N-45". In this case, the reference lists the id as a \emph{source}. This implies that "kChx-vSpJG1CHjQ2RL-N-45" is an output port (there is more nuance to this, but, for simplicity, we'll skip over the nuance for now).
 
-\begin{wrapfigure}{r}{0.4\textwidth}
-    \includegraphics[scale=0.4]{./media/connection2.png}
+\vspace{2\baselineskip}
+
+%%%%% Culled connection
+\begin{wrapfigure}[5]{r}{0.37\textwidth}
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/connection2.png}
     \caption{Culled connection}
     \label{connection2}
 \end{wrapfigure}
-The connection can be culled down to semantically interesting information, as in Figure \ref{connection2}
-
+The connection can be culled down to semantically interesting information, as in Figure \ref{connection2}.
 Since the source and the targets are children of children of the drawing, the connection is deemed to be of type \emph{across}.
 We see these relationships because "...-74" has parent "...-73" which has parent "1" and "...-45" has parent "...-43 which has parent="1". 
+\vspace{1\baselineskip}
+
 
 \section{Container and Leaf Components} \label{containerleaf}
 The diagram in Figure \ref{mot} represents two (2) kinds of components.
@@ -324,8 +362,8 @@ Component instances need not be explicitly named. Their (x,y) position on a diag
 Connections are triples \{direction, sender, receiver\}.
 
 
-  \begin{wrapfigure}{l}{0.4\textwidth}
-    \includegraphics[scale=0.2]{./media/fanin.png}
+  \begin{wrapfigure}{l}{0.2\textwidth}
+    \includegraphics[scale=0.1]{./media/fanin.png}
     \caption{Fan In}
     \label{fanin}
   \end{wrapfigure}
@@ -335,8 +373,8 @@ Fan-in and fan-out are supported. Fan-in means that a single input port/gate can
 In Figure \ref{fanin} the output gate "par" shows fan-in, as it receives inputs from two different component instances. The outputs from the two "Echo" instances do not collide. The outputs are queued up on the diagram's output queue in the order that they were generated.
 
 
-  \begin{wrapfigure}{r}{0.4\textwidth}
-    \includegraphics[scale=0.2]{./media/fanout.png}
+  \begin{wrapfigure}{r}{0.2\textwidth}
+    \includegraphics[scale=0.1]{./media/fanout.png}
     \caption{Fan Out}
     \label{fanout}
   \end{wrapfigure}
@@ -370,19 +408,24 @@ Each diagram is compiled into a container component containing the following inf
 \item bag of connection 3-tuples \{direction, \{sender, port\}, \{receiver, port\}\}
 \end{itemize}
 
-
 \subsection{Leaf Component "Echo"}
-\begin{wrapfigure}{r}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/echo.png}
-    \caption{Echo}
-    \label{fig:echo}
-\end{wrapfigure}
 In our implementation, we used the Odin programming language for
 creating the diagram parser, but, we use the Python programming
 language to load and execute the parsed results.
 
-Figure 1 refers to a Leaf component template called "Echo". The "Echo"
+\vspace{1\baselineskip}
+
+%%%% Echo
+\begin{wrapfigure}[2]{r}{0.5\textwidth}
+    \centering
+    \includegraphics[trim=1cm 1.9cm 1cm 1cm, clip, scale=0.4]{./media/echo.png}
+    \caption{Echo}
+    \label{fig:echo}
+\end{wrapfigure}
+Figure \ref{mot} refers to a Leaf component template called "Echo". The "Echo"
 component is instantiated three (3) times. 
+
+\vspace{5\baselineskip}
 
 Leaf components are
 implemented with code in some host language (Python, in our case) as in Figure \ref{fig:echo}. Software components
@@ -404,13 +447,24 @@ Compilation and execution of this DPL consists of the steps listed below. Note t
 for overview purposes only.
 
 \subsection{Convert DPL program diagrams to JSON.}
+\vspace{0.2\baselineskip}
 
-  \begin{figure}[h]
+%%%% Compilation & Execution
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\linewidth]{./media/convert.png}
-    \caption{Convert diagram to JSON}
-    \label{fig:convert_to_json}
-  \end{figure}
+    \includegraphics[trim=0 0cm 0 0, clip, scale=0.4]{./media/full.png}
+    \caption{Compilation and Execution}
+    \label{fig:full}
+\end{figure}
+
+\vspace{0.1\baselineskip}
+
+%  \begin{figure}[h]
+%    \centering
+%    \includegraphics[width=0.6\linewidth]{./media/convert.png}
+%    \caption{Convert diagram to JSON}
+%    \label{fig:convert_to_json}
+%  \end{figure}
 
   Transpilation of the diagrams (XML) into JSON (or internal data structures, if efficiency is at a premium). The diagrams represent \emph{templates} for components.
   
@@ -421,11 +475,11 @@ for overview purposes only.
 %\end{verbatim}
   
 \subsection{Load component templates from JSON.}
-\begin{wrapfigure}[4]{r}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/loader.png}
-    \caption{Loader}
-    \label{fig:load_templates}
-  \end{wrapfigure}
+%\begin{wrapfigure}[4]{r}{0.5\textwidth}
+%    \includegraphics[scale=0.4]{./media/loader.png}
+%    \caption{Loader}
+%    \label{fig:load_templates}
+%  \end{wrapfigure}
   Ingestion of the JSON, or internal data structures into an internal database that we call a \emph{registry}. Registries can be implemented as a \emph{dictionaries, maps} or \emph{databases}.
 %
 %\begin{verbatim}
@@ -433,11 +487,11 @@ for overview purposes only.
 %\end{verbatim}
 
 \subsection{Instantiate system.}
-  \begin{wrapfigure}{l}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/instantiate.png}
-    \caption{Instantiate}
-    \label{fig:instantiate_system}
-  \end{wrapfigure}
+%  \begin{wrapfigure}{l}{0.5\textwidth}
+%    \includegraphics[scale=0.4]{./media/instantiate.png}
+%    \caption{Instantiate}
+%    \label{fig:instantiate_system}
+%  \end{wrapfigure}
 
   Instantiation\cite{run} of an application beginning with a top-level diagram
 and proceeds downwards to instantiate all children components needed in
@@ -459,11 +513,11 @@ Software components are fully isolated from one another through the use
 of FIFO queues.
 
 \subsection{Inject first message.}
-  \begin{wrapfigure}{r}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/inject.png}
-    \caption{Inject first message(s)}
-    \label{fig:inject_first_message}
-  \end{wrapfigure}
+%  \begin{wrapfigure}{r}{0.5\textwidth}
+%    \includegraphics[scale=0.4]{./media/inject.png}
+%    \caption{Inject first message(s)}
+%    \label{fig:inject_first_message}
+%  \end{wrapfigure}
 
 The first message is constructed using the host language. The message is
 injected\cite{main} into the input queue of the top-most component.
@@ -476,11 +530,11 @@ injected\cite{main} into the input queue of the top-most component.
 %\end{verbatim}
   
 \subsection{Run.}
-  \begin{wrapfigure}{m}{0.5\textwidth}
-    \includegraphics[scale=0.4]{./media/run.png}
-    \caption{Run}
-    \label{fig:run}
-  \end{wrapfigure}
+%  \begin{wrapfigure}{m}{0.5\textwidth}
+%    \includegraphics[scale=0.4]{./media/run.png}
+%    \caption{Run}
+%    \label{fig:run}
+%  \end{wrapfigure}
 The application is executed.
 
 The application is interpreted by repeatedly delivering messages along
@@ -497,12 +551,12 @@ for all children to reach quiescence.
 %\end{verbatim}
   
 \subsection{Display outputs.}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.4]{./media/display.png}
-    \caption{Display Outputs}
-    \label{fig:display}
-  \end{figure}
+%  \begin{figure}[h]
+%    \centering
+%    \includegraphics[scale=0.4]{./media/display.png}
+%    \caption{Display Outputs}
+%    \label{fig:display}
+%  \end{figure}
 
 The outputs in the output queue of the top-level component are displayed
 using the host language.
@@ -512,8 +566,8 @@ using the host language.
 %\end{verbatim}
   
 
-The Python version of the runtime system consists of roughly 9 files of
-code consisting of about 2,500 lines of code (including blank lines and
+The Python version of the runtime system consists of roughly 9 files containing
+about 2,500 lines of code (including blank lines and
 comments) and is supported by a standard library consisting of another 5
 files of code containing about 430 lines of code.
 
@@ -522,19 +576,20 @@ files of code containing about 430 lines of code.
 %system processes. As such, programs written this way "feel" like
 %\emph{programs} instead of as \emph{processes} in terms of efficiency.
 Programs written this way "feel" like
-\emph{programs} instead of as \emph{processes} in terms of efficiency because anonymous functions and closures are used instead of processes.
+\emph{programs} instead of as \emph{processes} in terms of efficiency because anonymous functions and closures are used instead of processes 
+while maintaining isolation of data and control flow.
 
 \section{Work In Progress}
 We have built working examples of various other technologies, using the
 DPL described in this paper, including,
-\underline{VSH}\cite{vsh} a Visual SHell that works like /bin/sh pipelines employing more input and output ports,
+\underline{VSH}\cite{vsh} a Visual SHell that works like /bin/sh pipelines albeit allowing more input and output ports,
 \underline{arith0d}\cite{arith0d} OhmJS' arithmetic grammar that concurrently emits four (4) target languages (Javascript, Python, Common Lisp, WASM),
 \underline{LLM0D}\cite{llm0d} a single component diagram that uses the Go programming language as a host language to connect to openai's LLM for experimenting with LLMs,
 \underline{transpiler}\cite{transpiler} a workbench for creating new textual syntaxes, uses OhmJS more than once in a pipeline,
 \underline{kinopio2md}\cite{k2m} experiment for converting Kinopio "mindmaps" into markdown based on connections between ideas expressed in Kinopio,
-\underline{Scheme to Javascript}\cite{scm2js}, \underline{Scheme to Python}\cite{scm2py} - conversion of Nils Holm's Scheme code used in "Prolog Control Flow in 6 Slides" to produce a Prolog-like inferencing engine for Javascript, currently working on conversion to Python,
+\underline{Scheme to Javascript}\cite{scm2js}, \underline{Scheme to Python}\cite{scm2py} - conversion of Nils Holm's Scheme code used in "Prolog Control Flow in 6 Slides"\cite{holm} to produce a Prolog-like inferencing engine for Javascript, and, currently working on conversion to Python,
 \underline{delay0d}\cite{delay0d},
-\underline{dc0d}\cite{dc0d} game based on Chris Marten's "dungeon crawler" example\cite{ceptre_paper}; including gen0D generates components (in Odin) from the diagram (instead of interpreting the diagram, gen0D creates leaf components that are used in conjunction with the diagram),
+\underline{dc0d}\cite{dc0d} game based on Chris Marten's "dungeon crawler" example\cite{ceptre_paper}; including \underline{gen0D} which generates leaf components (in Odin) that are used in conjunction with the diagram,
 \underline{0D odin}\cite{odin0d} a DPL engine written in the Odin programming language (Odin is statically typed, and, does not provide garbage collection, similar to languages like C),
 \underline{Crystal 0D}\cite{crystal0d} a DPL engine written in the Crystal programming language, which is currently being used in a production system,
 \underline{0D cookbook}\cite{0dcookbook} ongoing effort to document all standard DPL components as \href{http://draw.io}{draw.io} diagrams
@@ -542,7 +597,7 @@ DPL described in this paper, including,
 \section{Fundamental Principles}
 Software components are fully isolated from one another through the use
 of FIFO queues. Using the LIFO callstack for inter-component
-communication leads to hidden dependencies which leads to avoidance of
+communication leads to hidden dependencies which leads to avoidance of the use of
 DPLs. This is a requirement for enabling LEGO®-like composition of software components.
 FIFO-based callstacks only give the illusion of LEGO®-like composition of software libraries,
 but, actually result in dynamic, tight coupling of components.
@@ -565,31 +620,32 @@ Routings are handled solely by parent Containers of components. Components, them
 We do not discuss the following principles in detail in this paper, due
 to reasons of space.
 
-\emph{Structured Message Passing},
-\emph{Rule of 7},
-\emph{Parental Authority},
-\emph{Asynchronicity and time-relative ordering},
-\emph{SEND in addition to CALL},
-\emph{Locality of Reference},
-\emph{Scoping of names},
-\emph{Children cannot change the behaviour of their parents},
-\emph{CPUs are meant to be single-threaded},
-\emph{Multiple happy paths of equal importance},
-\emph{Subroutines are not functions},
-\emph{Hidden dependencies},
-\emph{Build-and-forget},
-\emph{Breaking free of the function-based paradigm},
-\emph{Building new paradigms using existing tools},
-\emph{t2t - text-to-text transpilation pipelines},
-\emph{Multiple syntaxes - notations - instead of general purpose programming languages},
-\emph{Using existing GPLs as assemblers},
-\emph{Writing code that writes code},
-\emph{Inferencing semantic information from diagrams using various techniques},
-\emph{Simple relations, like intersection, larger, smaller, above, below, left-of, right-of},
-\emph{Low-level concepts like \emph{loop}, and \emph{recursion}, don't make sense in a distributed environment},
-\emph{if-then-else is too low level and ad-hoc for expressing control-flow}.
+Structured Message Passing;
+Rule of 7;
+Parental Authority;
+Asynchronousity and time-relative ordering;
+SEND in addition to CALL;
+Locality of Reference;
+Scoping of names;
+Children cannot change the behaviour of their parents;
+CPUs are meant to be single-threaded;
+Multiple happy paths of equal importance;
+Subroutines are not functions;
+Hidden dependencies;
+Build-and-forget;
+Breaking free of the function-based paradigm;
+Building new paradigms using existing tools;
+\emph{t2t} - text-to-text transpilation pipelines;
+Multiple syntaxes - notations - instead of general purpose programming languages;
+Using existing GPLs as assemblers;
+Writing code that writes code;
+Infering semantic information from diagrams using various techniques;
+Simple relations, like \emph{intersection}, \emph{larger}, \emph{smaller}, \emph{above}, \emph{below}, \emph{left-of}, \emph{right-of};
+The fact that low-level concepts like \emph{loop}, and \emph{recursion}, don't make sense in a distributed environment;
+The fact that \emph{if-then-else} is too low level and leads to ad-hoc expressions of control-flow.
 
 \section{Future}
+%\begin{itemize}[noitemsep]
 \begin{itemize}
 \item Compilation, in addition to the interpretation, of DPLs.
 
@@ -598,8 +654,6 @@ to reasons of space.
 \item Testing, unit testing, coverage testing.
 
 \end{itemize}
-
-\section{References}
 
 \begin{thebibliography}{9}
 
@@ -675,6 +729,9 @@ Martens, Chris. Ceptre: A Language for Modeling Generative Interactive Systems. 
 
 \bibitem{0dcookbook}
 \emph{anonymous repository}
+
+\bibitem{holm}
+\url{http://www.t3x.org/bits/prolog-6-code.scm.html} (Accessed: April 22, 2024)
 
 \end{thebibliography}
 
